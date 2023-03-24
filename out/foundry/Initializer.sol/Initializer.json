@@ -1,0 +1,2272 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "init",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x608060405234801561001057600080fd5b5061046f806100206000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c8063e1c7392a14610030575b600080fd5b61003861003a565b005b7fc8fcad8db84d3cc18b4c41d551ea0ee66dd599cde068d998e57d5e09332c131e6020527f673a26ab9c976db950bbe987aa80c5e387f329563bb0afe093ddccc970489e318054600160ff1991821681179092557f9bed265332efc30fa7643cc339edc91cb284a0f6566818a5788922af58c86b5080548216831790557f795db15802e151b19272d3e7b72ebd9d0cedc282cc23a6e937c8c3c90d9e213780548216831790556307f5828d60e41b6000527fe616bea4664e595328e525b24998219caecea2090de91847473acfb3efaa8aad805490911690911790557fc8fcad8db84d3cc18b4c41d551ea0ee66dd599cde068d998e57d5e09332c131c7f84e508d57dadc535817af594804944c3bc341cdb6befa5a0747e20285912a7eb6101886301e13380610182600461017c6b033b2e3c9fd0803ce8000000600a610272565b90610287565b90610272565b60008080526004830160205260409020556001808201556101b66b033b2e3c9fd0803ce80000006003610287565b60038201556203f480600282015560408051808201909152601681527525b0b4b937b99029bab838363c902837b9b4ba34b7b760511b60208201527f9dcac861a288165fa5a7e007597a30abcd2d73e174280cf7c6967f5a922a443990819061021f9082610332565b5060408051808201909152600381526204b53560ec1b602082015260018201906102499082610332565b50506380ac58cd60e01b600090815260029092016020525060409020805460ff19166001179055565b600061027e82846103f2565b90505b92915050565b600061027e8284610414565b634e487b7160e01b600052604160045260246000fd5b600181811c908216806102bd57607f821691505b6020821081036102dd57634e487b7160e01b600052602260045260246000fd5b50919050565b601f82111561032d57600081815260208120601f850160051c8101602086101561030a5750805b601f850160051c820191505b8181101561032957828155600101610316565b5050505b505050565b815167ffffffffffffffff81111561034c5761034c610293565b6103608161035a84546102a9565b846102e3565b602080601f831160018114610395576000841561037d5750858301515b600019600386901b1c1916600185901b178555610329565b600085815260208120601f198616915b828110156103c4578886015182559484019460019091019084016103a5565b50858210156103e25787850151600019600388901b60f8161c191681555b5050505050600190811b01905550565b60008261040f57634e487b7160e01b600052601260045260246000fd5b500490565b808202811582820484141761028157634e487b7160e01b600052601160045260246000fdfea2646970667358221220eadba7ca4c29a9eb31de5514c7304f651367bd47fb3e9473215fed00da03742564736f6c63430008120033",
+    "sourceMap": "874:1106:57:-:0;;;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x608060405234801561001057600080fd5b506004361061002b5760003560e01c8063e1c7392a14610030575b600080fd5b61003861003a565b005b7fc8fcad8db84d3cc18b4c41d551ea0ee66dd599cde068d998e57d5e09332c131e6020527f673a26ab9c976db950bbe987aa80c5e387f329563bb0afe093ddccc970489e318054600160ff1991821681179092557f9bed265332efc30fa7643cc339edc91cb284a0f6566818a5788922af58c86b5080548216831790557f795db15802e151b19272d3e7b72ebd9d0cedc282cc23a6e937c8c3c90d9e213780548216831790556307f5828d60e41b6000527fe616bea4664e595328e525b24998219caecea2090de91847473acfb3efaa8aad805490911690911790557fc8fcad8db84d3cc18b4c41d551ea0ee66dd599cde068d998e57d5e09332c131c7f84e508d57dadc535817af594804944c3bc341cdb6befa5a0747e20285912a7eb6101886301e13380610182600461017c6b033b2e3c9fd0803ce8000000600a610272565b90610287565b90610272565b60008080526004830160205260409020556001808201556101b66b033b2e3c9fd0803ce80000006003610287565b60038201556203f480600282015560408051808201909152601681527525b0b4b937b99029bab838363c902837b9b4ba34b7b760511b60208201527f9dcac861a288165fa5a7e007597a30abcd2d73e174280cf7c6967f5a922a443990819061021f9082610332565b5060408051808201909152600381526204b53560ec1b602082015260018201906102499082610332565b50506380ac58cd60e01b600090815260029092016020525060409020805460ff19166001179055565b600061027e82846103f2565b90505b92915050565b600061027e8284610414565b634e487b7160e01b600052604160045260246000fd5b600181811c908216806102bd57607f821691505b6020821081036102dd57634e487b7160e01b600052602260045260246000fd5b50919050565b601f82111561032d57600081815260208120601f850160051c8101602086101561030a5750805b601f850160051c820191505b8181101561032957828155600101610316565b5050505b505050565b815167ffffffffffffffff81111561034c5761034c610293565b6103608161035a84546102a9565b846102e3565b602080601f831160018114610395576000841561037d5750858301515b600019600386901b1c1916600185901b178555610329565b600085815260208120601f198616915b828110156103c4578886015182559484019460019091019084016103a5565b50858210156103e25787850151600019600388901b60f8161c191681555b5050505050600190811b01905550565b60008261040f57634e487b7160e01b600052601260045260246000fd5b500490565b808202811582820484141761028157634e487b7160e01b600052601160045260246000fdfea2646970667358221220eadba7ca4c29a9eb31de5514c7304f651367bd47fb3e9473215fed00da03742564736f6c63430008120033",
+    "sourceMap": "874:1106:57:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1032:946;;;:::i;:::-;;;1173:22;:49;;;:56;;1225:4;-1:-1:-1;;1173:56:57;;;;;;;;1239:53;:60;;;;;;;;1309:55;:62;;;;;;;;-1:-1:-1;;;;1381:49:57;;:56;;;;;;;;;;1654:45:27;438:41:54;1553:32:57;1576:8;1553:18;1569:1;1553:11;720:4:54;1561:2:57;1553:7;:11::i;:::-;:15;;:18::i;:::-;:22;;:32::i;:::-;1534:16;;;;:13;;;:16;;;;;:51;1627:1;1606:18;;;:22;1666:10;720:4:54;1674:1:57;1666:7;:10::i;:::-;1638:25;;;:38;1711:6;1638:13;;;1686:31;1844:34;;;;;;;;;;;;-1:-1:-1;;;1844:34:57;;;;510:48:54;;;;1844:34:57;;510:48:54;1844:34:57;:::i;:::-;-1:-1:-1;1888:17:57;;;;;;;;;;;;-1:-1:-1;;;1888:17:57;;;;:9;;;;:17;;:9;:17;:::i;:::-;-1:-1:-1;;;;;1915:49:57;;;;:22;;;;:49;;-1:-1:-1;1915:49:57;;;:56;;-1:-1:-1;;1915:56:57;1967:4;1915:56;;;1032:946::o;1454:110:86:-;1508:3;1539:17;1555:1;1550;1539:17;:::i;:::-;1523:34;;1454:110;;;;;:::o;919:::-;973:3;1004:17;1020:1;1015;1004:17;:::i;14:127:112:-;75:10;70:3;66:20;63:1;56:31;106:4;103:1;96:15;130:4;127:1;120:15;146:380;225:1;221:12;;;;268;;;289:61;;343:4;335:6;331:17;321:27;;289:61;396:2;388:6;385:14;365:18;362:38;359:161;;442:10;437:3;433:20;430:1;423:31;477:4;474:1;467:15;505:4;502:1;495:15;359:161;;146:380;;;:::o;657:545::-;759:2;754:3;751:11;748:448;;;795:1;820:5;816:2;809:17;865:4;861:2;851:19;935:2;923:10;919:19;916:1;912:27;906:4;902:38;971:4;959:10;956:20;953:47;;;-1:-1:-1;994:4:112;953:47;1049:2;1044:3;1040:12;1037:1;1033:20;1027:4;1023:31;1013:41;;1104:82;1122:2;1115:5;1112:13;1104:82;;;1167:17;;;1148:1;1137:13;1104:82;;;1108:3;;;748:448;657:545;;;:::o;1378:1352::-;1504:3;1498:10;1531:18;1523:6;1520:30;1517:56;;;1553:18;;:::i;:::-;1582:97;1672:6;1632:38;1664:4;1658:11;1632:38;:::i;:::-;1626:4;1582:97;:::i;:::-;1734:4;;1798:2;1787:14;;1815:1;1810:663;;;;2517:1;2534:6;2531:89;;;-1:-1:-1;2586:19:112;;;2580:26;2531:89;-1:-1:-1;;1335:1:112;1331:11;;;1327:24;1323:29;1313:40;1359:1;1355:11;;;1310:57;2633:81;;1780:944;;1810:663;604:1;597:14;;;641:4;628:18;;-1:-1:-1;;1846:20:112;;;1964:236;1978:7;1975:1;1972:14;1964:236;;;2067:19;;;2061:26;2046:42;;2159:27;;;;2127:1;2115:14;;;;1994:19;;1964:236;;;1968:3;2228:6;2219:7;2216:19;2213:201;;;2289:19;;;2283:26;-1:-1:-1;;2372:1:112;2368:14;;;2384:3;2364:24;2360:37;2356:42;2341:58;2326:74;;2213:201;-1:-1:-1;;;;;2460:1:112;2444:14;;;2440:22;2427:36;;-1:-1:-1;1378:1352:112:o;2735:217::-;2775:1;2801;2791:132;;2845:10;2840:3;2836:20;2833:1;2826:31;2880:4;2877:1;2870:15;2908:4;2905:1;2898:15;2791:132;-1:-1:-1;2937:9:112;;2735:217::o;2957:265::-;3030:9;;;3061;;3078:15;;;3072:22;;3058:37;3048:168;;3138:10;3133:3;3129:20;3126:1;3119:31;3173:4;3170:1;3163:15;3201:4;3198:1;3191:15",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "init()": "e1c7392a"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.18+commit.87f61d96\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"init\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"init()\":{\"details\":\"specify this method in diamond constructor\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"init()\":{\"notice\":\"initilizes the kairos protocol\"}},\"notice\":\"initilizes the kairos protocol\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/Initializer.sol\":\"Initializer\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":diamond/=node_modules/diamond/\",\":ds-test/=node_modules/ds-test/src/\",\":forge-std/=node_modules/forge-std/src/\",\":solmate/=node_modules/solmate/\"]},\"sources\":{\"node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34\",\"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr\"]},\"node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol\":{\"keccak256\":\"0xab28a56179c1db258c9bf5235b382698cb650debecb51b23d12be9e241374b68\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://daae589a9d6fa7e55f99f86c0a16796ca490f243fb3693632c3711c0646c1d56\",\"dweb:/ipfs/QmR3zpd7wNw3rcUdekwiv6FYHJqksuTCXLVioTxu6Fbxk3\"]},\"node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol\":{\"keccak256\":\"0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f\",\"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy\"]},\"node_modules/diamond/contracts/interfaces/IDiamond.sol\":{\"keccak256\":\"0x37be579b243559c0c16a8de037d2c428e8fafdfdd9cde69fa165a07f5adfda2c\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0f16b9edb01e35edf96566f6460c4986fcc3fb9bff6291fab5be17d256cd0fd2\",\"dweb:/ipfs/Qmdq869cYabBjfnYZgcF5BSHsFQXT1EZNg2umHMAxZqWEH\"]},\"node_modules/diamond/contracts/interfaces/IDiamondCut.sol\":{\"keccak256\":\"0x9ecd4a637b7cb44c26a4ab7760766defce42a6dc36a355b92dfeef9ce4391fee\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://cd0e7ad69374bc41bc62c90428f9795c8a06360599c4c6b06e76bd8a1b91e28f\",\"dweb:/ipfs/QmfZk5ZiKQQaudjYf3qEumVsW87gELxcYMNRu3AHSLuk4n\"]},\"node_modules/diamond/contracts/interfaces/IDiamondLoupe.sol\":{\"keccak256\":\"0x10884024af2c0f7deca0fac4ddf84e76da5dba35b6e02fabeac8ea54c1a5c6f7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://df3404a4aed3bbda2f5e441d7035b354237d8c9d7c27b149ccf66d13a1d81d45\",\"dweb:/ipfs/QmZvHWgRCge8tLJ3x3Lf3JQkbNTgAN6LzwCGBabbgk8tew\"]},\"node_modules/diamond/contracts/interfaces/IERC165.sol\":{\"keccak256\":\"0x7541f7408d0f74162bc4664d5e012427f2ceaab2abadca0353269ef15ee03d8b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a8e7a34b3ea39f4c0dfa6f5ace5d9415e4d0c90cb3f4264e6946b808f2d4011c\",\"dweb:/ipfs/QmWdcRF4krMMb1ua3hmV8avdHKYa4XXt1iw7sxx1ntsEJa\"]},\"node_modules/diamond/contracts/interfaces/IERC173.sol\":{\"keccak256\":\"0x001e07b0fbc894300b939d496ffb005abe398b5bc609802d319b8cdeafe5d36b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8e59f66879ef993892410cbe834b1d2dd34891f47066b7be601ff825b0748361\",\"dweb:/ipfs/QmZedQ668we8ohPPZF5tPP5gKpJ5n22h3FDFkoFT5VXpEu\"]},\"node_modules/diamond/contracts/libraries/LibDiamond.sol\":{\"keccak256\":\"0x4090c1e2191d081ff33e1631eabbebfb69e29ac1bf67516d7f4430bb2e0b2983\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3c66e113d032be747262abe642abcec8c132400fe156414721590412d9af6485\",\"dweb:/ipfs/QmfLg3p9wZ748cSDrfh4TmxCuMU8oVZU9BzAGhJSFQysWM\"]},\"src/DataStructure/Global.sol\":{\"keccak256\":\"0x9596c1bdf1271dd447db6a8f26ca493253674e252c9f63a7bc13c8689a7b6e49\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://3ff822127c6c674400e9730466eb6832d19a72eaf991f3bbf62d251a6e2b49d5\",\"dweb:/ipfs/QmZPGbWwS7rTPF3NiyjivxDseeBW64GhfkGvVNuaCbnzDv\"]},\"src/DataStructure/Objects.sol\":{\"keccak256\":\"0x251dd6c3f36c5a2c8a6a867aa29c9ba8b4bb7f2ec1a7321d630fea19f6bbd83a\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://a7f620222a6b6d909e8aa2d7191200b312345b6c704eecdf40729982e238f44e\",\"dweb:/ipfs/QmTikrgA5SKJrsJanid1atHw1M7opEvwuGKNRQTbjeM4sq\"]},\"src/DataStructure/Storage.sol\":{\"keccak256\":\"0x8f99f5f94641c826d0b4bd2dadb065745ff877b195fb1eb7392362a026d01380\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://f2c2362ee8472e6076f7f18a51264c96e63a346e61da6a7234abe5e3c034de38\",\"dweb:/ipfs/QmW59HJM49LDieB2svjKnYzo7hdYKG24rLKgb7AfiXht4z\"]},\"src/Initializer.sol\":{\"keccak256\":\"0x2400749a505a09269464e17bbfa3f04527f244072eaee576de9ae45541e20f02\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://6053eb025e26e3b63049ea01cbbaf45131ba61d5eea820335a673879ef1f2ea3\",\"dweb:/ipfs/QmezYCLAohL7UwJgicbk2NWACqSZTWQ9piKcVrfSH6bojb\"]},\"src/utils/RayMath.sol\":{\"keccak256\":\"0x234068d17599aefc86ca6f5febb25be32bb71c0b45326c24936b23dd9cc876ac\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://421375b2a164c6ffa1e018c533e2a231395fc4f582acc3a43672a24e51fbe328\",\"dweb:/ipfs/QmUFEZi7BjELW2fDZuUpeDCTrNw1YhMmeqJvoMk2MfuxDU\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.18+commit.87f61d96"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "init"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "init()": {
+            "details": "specify this method in diamond constructor"
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "init()": {
+            "notice": "initilizes the kairos protocol"
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":diamond/=node_modules/diamond/",
+        ":ds-test/=node_modules/ds-test/src/",
+        ":forge-std/=node_modules/forge-std/src/",
+        ":solmate/=node_modules/solmate/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/Initializer.sol": "Initializer"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+        "keccak256": "0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b",
+        "urls": [
+          "bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34",
+          "dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol": {
+        "keccak256": "0xab28a56179c1db258c9bf5235b382698cb650debecb51b23d12be9e241374b68",
+        "urls": [
+          "bzz-raw://daae589a9d6fa7e55f99f86c0a16796ca490f243fb3693632c3711c0646c1d56",
+          "dweb:/ipfs/QmR3zpd7wNw3rcUdekwiv6FYHJqksuTCXLVioTxu6Fbxk3"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+        "keccak256": "0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1",
+        "urls": [
+          "bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f",
+          "dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/diamond/contracts/interfaces/IDiamond.sol": {
+        "keccak256": "0x37be579b243559c0c16a8de037d2c428e8fafdfdd9cde69fa165a07f5adfda2c",
+        "urls": [
+          "bzz-raw://0f16b9edb01e35edf96566f6460c4986fcc3fb9bff6291fab5be17d256cd0fd2",
+          "dweb:/ipfs/Qmdq869cYabBjfnYZgcF5BSHsFQXT1EZNg2umHMAxZqWEH"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/diamond/contracts/interfaces/IDiamondCut.sol": {
+        "keccak256": "0x9ecd4a637b7cb44c26a4ab7760766defce42a6dc36a355b92dfeef9ce4391fee",
+        "urls": [
+          "bzz-raw://cd0e7ad69374bc41bc62c90428f9795c8a06360599c4c6b06e76bd8a1b91e28f",
+          "dweb:/ipfs/QmfZk5ZiKQQaudjYf3qEumVsW87gELxcYMNRu3AHSLuk4n"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/diamond/contracts/interfaces/IDiamondLoupe.sol": {
+        "keccak256": "0x10884024af2c0f7deca0fac4ddf84e76da5dba35b6e02fabeac8ea54c1a5c6f7",
+        "urls": [
+          "bzz-raw://df3404a4aed3bbda2f5e441d7035b354237d8c9d7c27b149ccf66d13a1d81d45",
+          "dweb:/ipfs/QmZvHWgRCge8tLJ3x3Lf3JQkbNTgAN6LzwCGBabbgk8tew"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/diamond/contracts/interfaces/IERC165.sol": {
+        "keccak256": "0x7541f7408d0f74162bc4664d5e012427f2ceaab2abadca0353269ef15ee03d8b",
+        "urls": [
+          "bzz-raw://a8e7a34b3ea39f4c0dfa6f5ace5d9415e4d0c90cb3f4264e6946b808f2d4011c",
+          "dweb:/ipfs/QmWdcRF4krMMb1ua3hmV8avdHKYa4XXt1iw7sxx1ntsEJa"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/diamond/contracts/interfaces/IERC173.sol": {
+        "keccak256": "0x001e07b0fbc894300b939d496ffb005abe398b5bc609802d319b8cdeafe5d36b",
+        "urls": [
+          "bzz-raw://8e59f66879ef993892410cbe834b1d2dd34891f47066b7be601ff825b0748361",
+          "dweb:/ipfs/QmZedQ668we8ohPPZF5tPP5gKpJ5n22h3FDFkoFT5VXpEu"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/diamond/contracts/libraries/LibDiamond.sol": {
+        "keccak256": "0x4090c1e2191d081ff33e1631eabbebfb69e29ac1bf67516d7f4430bb2e0b2983",
+        "urls": [
+          "bzz-raw://3c66e113d032be747262abe642abcec8c132400fe156414721590412d9af6485",
+          "dweb:/ipfs/QmfLg3p9wZ748cSDrfh4TmxCuMU8oVZU9BzAGhJSFQysWM"
+        ],
+        "license": "MIT"
+      },
+      "src/DataStructure/Global.sol": {
+        "keccak256": "0x9596c1bdf1271dd447db6a8f26ca493253674e252c9f63a7bc13c8689a7b6e49",
+        "urls": [
+          "bzz-raw://3ff822127c6c674400e9730466eb6832d19a72eaf991f3bbf62d251a6e2b49d5",
+          "dweb:/ipfs/QmZPGbWwS7rTPF3NiyjivxDseeBW64GhfkGvVNuaCbnzDv"
+        ],
+        "license": "UNLICENSED"
+      },
+      "src/DataStructure/Objects.sol": {
+        "keccak256": "0x251dd6c3f36c5a2c8a6a867aa29c9ba8b4bb7f2ec1a7321d630fea19f6bbd83a",
+        "urls": [
+          "bzz-raw://a7f620222a6b6d909e8aa2d7191200b312345b6c704eecdf40729982e238f44e",
+          "dweb:/ipfs/QmTikrgA5SKJrsJanid1atHw1M7opEvwuGKNRQTbjeM4sq"
+        ],
+        "license": "UNLICENSED"
+      },
+      "src/DataStructure/Storage.sol": {
+        "keccak256": "0x8f99f5f94641c826d0b4bd2dadb065745ff877b195fb1eb7392362a026d01380",
+        "urls": [
+          "bzz-raw://f2c2362ee8472e6076f7f18a51264c96e63a346e61da6a7234abe5e3c034de38",
+          "dweb:/ipfs/QmW59HJM49LDieB2svjKnYzo7hdYKG24rLKgb7AfiXht4z"
+        ],
+        "license": "UNLICENSED"
+      },
+      "src/Initializer.sol": {
+        "keccak256": "0x2400749a505a09269464e17bbfa3f04527f244072eaee576de9ae45541e20f02",
+        "urls": [
+          "bzz-raw://6053eb025e26e3b63049ea01cbbaf45131ba61d5eea820335a673879ef1f2ea3",
+          "dweb:/ipfs/QmezYCLAohL7UwJgicbk2NWACqSZTWQ9piKcVrfSH6bojb"
+        ],
+        "license": "UNLICENSED"
+      },
+      "src/utils/RayMath.sol": {
+        "keccak256": "0x234068d17599aefc86ca6f5febb25be32bb71c0b45326c24936b23dd9cc876ac",
+        "urls": [
+          "bzz-raw://421375b2a164c6ffa1e018c533e2a231395fc4f582acc3a43672a24e51fbe328",
+          "dweb:/ipfs/QmUFEZi7BjELW2fDZuUpeDCTrNw1YhMmeqJvoMk2MfuxDU"
+        ],
+        "license": "UNLICENSED"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/Initializer.sol",
+    "id": 36994,
+    "exportedSymbols": {
+      "IDiamondCut": [
+        4786
+      ],
+      "IDiamondLoupe": [
+        4827
+      ],
+      "IERC165": [
+        4838
+      ],
+      "IERC173": [
+        4861
+      ],
+      "IERC721": [
+        1732
+      ],
+      "Initializer": [
+        36993
+      ],
+      "LibDiamond": [
+        5567
+      ],
+      "ONE": [
+        36604
+      ],
+      "Protocol": [
+        36749
+      ],
+      "Ray": [
+        36644
+      ],
+      "RayMath": [
+        39997
+      ],
+      "SupplyPosition": [
+        36819
+      ],
+      "protocolStorage": [
+        36624
+      ],
+      "supplyPositionStorage": [
+        36636
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "39:1942:57",
+    "nodes": [
+      {
+        "id": 36829,
+        "nodeType": "PragmaDirective",
+        "src": "39:23:57",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".18"
+        ]
+      },
+      {
+        "id": 36831,
+        "nodeType": "ImportDirective",
+        "src": "148:73:57",
+        "nodes": [],
+        "absolutePath": "node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol",
+        "file": "@openzeppelin/contracts/token/ERC721/IERC721.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 36994,
+        "sourceUnit": 1733,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 36830,
+              "name": "IERC721",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 1732,
+              "src": "156:7:57",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 36833,
+        "nodeType": "ImportDirective",
+        "src": "222:70:57",
+        "nodes": [],
+        "absolutePath": "node_modules/diamond/contracts/libraries/LibDiamond.sol",
+        "file": "diamond/contracts/libraries/LibDiamond.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 36994,
+        "sourceUnit": 5568,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 36832,
+              "name": "LibDiamond",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 5567,
+              "src": "230:10:57",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 36835,
+        "nodeType": "ImportDirective",
+        "src": "293:77:57",
+        "nodes": [],
+        "absolutePath": "node_modules/diamond/contracts/interfaces/IDiamondLoupe.sol",
+        "file": "diamond/contracts/interfaces/IDiamondLoupe.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 36994,
+        "sourceUnit": 4828,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 36834,
+              "name": "IDiamondLoupe",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 4827,
+              "src": "301:13:57",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 36837,
+        "nodeType": "ImportDirective",
+        "src": "371:73:57",
+        "nodes": [],
+        "absolutePath": "node_modules/diamond/contracts/interfaces/IDiamondCut.sol",
+        "file": "diamond/contracts/interfaces/IDiamondCut.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 36994,
+        "sourceUnit": 4787,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 36836,
+              "name": "IDiamondCut",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 4786,
+              "src": "379:11:57",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 36839,
+        "nodeType": "ImportDirective",
+        "src": "445:65:57",
+        "nodes": [],
+        "absolutePath": "node_modules/diamond/contracts/interfaces/IERC173.sol",
+        "file": "diamond/contracts/interfaces/IERC173.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 36994,
+        "sourceUnit": 4862,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 36838,
+              "name": "IERC173",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 4861,
+              "src": "453:7:57",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 36841,
+        "nodeType": "ImportDirective",
+        "src": "511:65:57",
+        "nodes": [],
+        "absolutePath": "node_modules/diamond/contracts/interfaces/IERC165.sol",
+        "file": "diamond/contracts/interfaces/IERC165.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 36994,
+        "sourceUnit": 4839,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 36840,
+              "name": "IERC165",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 4838,
+              "src": "519:7:57",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 36845,
+        "nodeType": "ImportDirective",
+        "src": "578:87:57",
+        "nodes": [],
+        "absolutePath": "src/DataStructure/Global.sol",
+        "file": "./DataStructure/Global.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 36994,
+        "sourceUnit": 36637,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 36842,
+              "name": "ONE",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 36604,
+              "src": "586:3:57",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 36843,
+              "name": "protocolStorage",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 36624,
+              "src": "591:15:57",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 36844,
+              "name": "supplyPositionStorage",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 36636,
+              "src": "608:21:57",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 36847,
+        "nodeType": "ImportDirective",
+        "src": "666:48:57",
+        "nodes": [],
+        "absolutePath": "src/DataStructure/Objects.sol",
+        "file": "./DataStructure/Objects.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 36994,
+        "sourceUnit": 36709,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 36846,
+              "name": "Ray",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 36644,
+              "src": "674:3:57",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 36850,
+        "nodeType": "ImportDirective",
+        "src": "715:69:57",
+        "nodes": [],
+        "absolutePath": "src/DataStructure/Storage.sol",
+        "file": "./DataStructure/Storage.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 36994,
+        "sourceUnit": 36828,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 36848,
+              "name": "Protocol",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 36749,
+              "src": "723:8:57",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 36849,
+              "name": "SupplyPosition",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 36819,
+              "src": "733:14:57",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 36852,
+        "nodeType": "ImportDirective",
+        "src": "785:44:57",
+        "nodes": [],
+        "absolutePath": "src/utils/RayMath.sol",
+        "file": "./utils/RayMath.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 36994,
+        "sourceUnit": 39998,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 36851,
+              "name": "RayMath",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 39997,
+              "src": "793:7:57",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 36993,
+        "nodeType": "ContractDefinition",
+        "src": "874:1106:57",
+        "nodes": [
+          {
+            "id": 36857,
+            "nodeType": "UsingForDirective",
+            "src": "901:22:57",
+            "nodes": [],
+            "global": false,
+            "libraryName": {
+              "id": 36854,
+              "name": "RayMath",
+              "nameLocations": [
+                "907:7:57"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 39997,
+              "src": "907:7:57"
+            },
+            "typeName": {
+              "id": 36856,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 36855,
+                "name": "Ray",
+                "nameLocations": [
+                  "919:3:57"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 36644,
+                "src": "919:3:57"
+              },
+              "referencedDeclaration": 36644,
+              "src": "919:3:57",
+              "typeDescriptions": {
+                "typeIdentifier": "t_userDefinedValueType$_Ray_$36644",
+                "typeString": "Ray"
+              }
+            }
+          },
+          {
+            "id": 36992,
+            "nodeType": "FunctionDefinition",
+            "src": "1032:946:57",
+            "nodes": [],
+            "body": {
+              "id": 36991,
+              "nodeType": "Block",
+              "src": "1057:921:57",
+              "nodes": [],
+              "statements": [
+                {
+                  "assignments": [
+                    36865
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 36865,
+                      "mutability": "mutable",
+                      "name": "ds",
+                      "nameLocation": "1131:2:57",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 36991,
+                      "src": "1097:36:57",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_DiamondStorage_$4958_storage_ptr",
+                        "typeString": "struct LibDiamond.DiamondStorage"
+                      },
+                      "typeName": {
+                        "id": 36864,
+                        "nodeType": "UserDefinedTypeName",
+                        "pathNode": {
+                          "id": 36863,
+                          "name": "LibDiamond.DiamondStorage",
+                          "nameLocations": [
+                            "1097:10:57",
+                            "1108:14:57"
+                          ],
+                          "nodeType": "IdentifierPath",
+                          "referencedDeclaration": 4958,
+                          "src": "1097:25:57"
+                        },
+                        "referencedDeclaration": 4958,
+                        "src": "1097:25:57",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_DiamondStorage_$4958_storage_ptr",
+                          "typeString": "struct LibDiamond.DiamondStorage"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 36869,
+                  "initialValue": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "id": 36866,
+                        "name": "LibDiamond",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5567,
+                        "src": "1136:10:57",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_LibDiamond_$5567_$",
+                          "typeString": "type(library LibDiamond)"
+                        }
+                      },
+                      "id": 36867,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "1147:14:57",
+                      "memberName": "diamondStorage",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 4970,
+                      "src": "1136:25:57",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$__$returns$_t_struct$_DiamondStorage_$4958_storage_ptr_$",
+                        "typeString": "function () pure returns (struct LibDiamond.DiamondStorage storage pointer)"
+                      }
+                    },
+                    "id": 36868,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1136:27:57",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_DiamondStorage_$4958_storage_ptr",
+                      "typeString": "struct LibDiamond.DiamondStorage storage pointer"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1097:66:57"
+                },
+                {
+                  "expression": {
+                    "id": 36879,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "baseExpression": {
+                        "expression": {
+                          "id": 36870,
+                          "name": "ds",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 36865,
+                          "src": "1173:2:57",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_DiamondStorage_$4958_storage_ptr",
+                            "typeString": "struct LibDiamond.DiamondStorage storage pointer"
+                          }
+                        },
+                        "id": 36876,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "1176:19:57",
+                        "memberName": "supportedInterfaces",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 4955,
+                        "src": "1173:22:57",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes4_$_t_bool_$",
+                          "typeString": "mapping(bytes4 => bool)"
+                        }
+                      },
+                      "id": 36877,
+                      "indexExpression": {
+                        "expression": {
+                          "arguments": [
+                            {
+                              "id": 36873,
+                              "name": "IERC165",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 4838,
+                              "src": "1201:7:57",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_contract$_IERC165_$4838_$",
+                                "typeString": "type(contract IERC165)"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_type$_t_contract$_IERC165_$4838_$",
+                                "typeString": "type(contract IERC165)"
+                              }
+                            ],
+                            "id": 36872,
+                            "name": "type",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -27,
+                            "src": "1196:4:57",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_metatype_pure$__$returns$__$",
+                              "typeString": "function () pure"
+                            }
+                          },
+                          "id": 36874,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "nameLocations": [],
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1196:13:57",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_meta_type_t_contract$_IERC165_$4838",
+                            "typeString": "type(contract IERC165)"
+                          }
+                        },
+                        "id": 36875,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "memberLocation": "1210:11:57",
+                        "memberName": "interfaceId",
+                        "nodeType": "MemberAccess",
+                        "src": "1196:25:57",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1173:49:57",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "hexValue": "74727565",
+                      "id": 36878,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1225:4:57",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "1173:56:57",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 36880,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1173:56:57"
+                },
+                {
+                  "expression": {
+                    "id": 36890,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "baseExpression": {
+                        "expression": {
+                          "id": 36881,
+                          "name": "ds",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 36865,
+                          "src": "1239:2:57",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_DiamondStorage_$4958_storage_ptr",
+                            "typeString": "struct LibDiamond.DiamondStorage storage pointer"
+                          }
+                        },
+                        "id": 36887,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "1242:19:57",
+                        "memberName": "supportedInterfaces",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 4955,
+                        "src": "1239:22:57",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes4_$_t_bool_$",
+                          "typeString": "mapping(bytes4 => bool)"
+                        }
+                      },
+                      "id": 36888,
+                      "indexExpression": {
+                        "expression": {
+                          "arguments": [
+                            {
+                              "id": 36884,
+                              "name": "IDiamondCut",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 4786,
+                              "src": "1267:11:57",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_contract$_IDiamondCut_$4786_$",
+                                "typeString": "type(contract IDiamondCut)"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_type$_t_contract$_IDiamondCut_$4786_$",
+                                "typeString": "type(contract IDiamondCut)"
+                              }
+                            ],
+                            "id": 36883,
+                            "name": "type",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -27,
+                            "src": "1262:4:57",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_metatype_pure$__$returns$__$",
+                              "typeString": "function () pure"
+                            }
+                          },
+                          "id": 36885,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "nameLocations": [],
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1262:17:57",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_meta_type_t_contract$_IDiamondCut_$4786",
+                            "typeString": "type(contract IDiamondCut)"
+                          }
+                        },
+                        "id": 36886,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "memberLocation": "1280:11:57",
+                        "memberName": "interfaceId",
+                        "nodeType": "MemberAccess",
+                        "src": "1262:29:57",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1239:53:57",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "hexValue": "74727565",
+                      "id": 36889,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1295:4:57",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "1239:60:57",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 36891,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1239:60:57"
+                },
+                {
+                  "expression": {
+                    "id": 36901,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "baseExpression": {
+                        "expression": {
+                          "id": 36892,
+                          "name": "ds",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 36865,
+                          "src": "1309:2:57",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_DiamondStorage_$4958_storage_ptr",
+                            "typeString": "struct LibDiamond.DiamondStorage storage pointer"
+                          }
+                        },
+                        "id": 36898,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "1312:19:57",
+                        "memberName": "supportedInterfaces",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 4955,
+                        "src": "1309:22:57",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes4_$_t_bool_$",
+                          "typeString": "mapping(bytes4 => bool)"
+                        }
+                      },
+                      "id": 36899,
+                      "indexExpression": {
+                        "expression": {
+                          "arguments": [
+                            {
+                              "id": 36895,
+                              "name": "IDiamondLoupe",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 4827,
+                              "src": "1337:13:57",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_contract$_IDiamondLoupe_$4827_$",
+                                "typeString": "type(contract IDiamondLoupe)"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_type$_t_contract$_IDiamondLoupe_$4827_$",
+                                "typeString": "type(contract IDiamondLoupe)"
+                              }
+                            ],
+                            "id": 36894,
+                            "name": "type",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -27,
+                            "src": "1332:4:57",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_metatype_pure$__$returns$__$",
+                              "typeString": "function () pure"
+                            }
+                          },
+                          "id": 36896,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "nameLocations": [],
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1332:19:57",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_meta_type_t_contract$_IDiamondLoupe_$4827",
+                            "typeString": "type(contract IDiamondLoupe)"
+                          }
+                        },
+                        "id": 36897,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "memberLocation": "1352:11:57",
+                        "memberName": "interfaceId",
+                        "nodeType": "MemberAccess",
+                        "src": "1332:31:57",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1309:55:57",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "hexValue": "74727565",
+                      "id": 36900,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1367:4:57",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "1309:62:57",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 36902,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1309:62:57"
+                },
+                {
+                  "expression": {
+                    "id": 36912,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "baseExpression": {
+                        "expression": {
+                          "id": 36903,
+                          "name": "ds",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 36865,
+                          "src": "1381:2:57",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_DiamondStorage_$4958_storage_ptr",
+                            "typeString": "struct LibDiamond.DiamondStorage storage pointer"
+                          }
+                        },
+                        "id": 36909,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "1384:19:57",
+                        "memberName": "supportedInterfaces",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 4955,
+                        "src": "1381:22:57",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes4_$_t_bool_$",
+                          "typeString": "mapping(bytes4 => bool)"
+                        }
+                      },
+                      "id": 36910,
+                      "indexExpression": {
+                        "expression": {
+                          "arguments": [
+                            {
+                              "id": 36906,
+                              "name": "IERC173",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 4861,
+                              "src": "1409:7:57",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_contract$_IERC173_$4861_$",
+                                "typeString": "type(contract IERC173)"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_type$_t_contract$_IERC173_$4861_$",
+                                "typeString": "type(contract IERC173)"
+                              }
+                            ],
+                            "id": 36905,
+                            "name": "type",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -27,
+                            "src": "1404:4:57",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_metatype_pure$__$returns$__$",
+                              "typeString": "function () pure"
+                            }
+                          },
+                          "id": 36907,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "nameLocations": [],
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1404:13:57",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_meta_type_t_contract$_IERC173_$4861",
+                            "typeString": "type(contract IERC173)"
+                          }
+                        },
+                        "id": 36908,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "memberLocation": "1418:11:57",
+                        "memberName": "interfaceId",
+                        "nodeType": "MemberAccess",
+                        "src": "1404:25:57",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1381:49:57",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "hexValue": "74727565",
+                      "id": 36911,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1433:4:57",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "1381:56:57",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 36913,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1381:56:57"
+                },
+                {
+                  "assignments": [
+                    36916
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 36916,
+                      "mutability": "mutable",
+                      "name": "proto",
+                      "nameLocation": "1498:5:57",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 36991,
+                      "src": "1481:22:57",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Protocol_$36749_storage_ptr",
+                        "typeString": "struct Protocol"
+                      },
+                      "typeName": {
+                        "id": 36915,
+                        "nodeType": "UserDefinedTypeName",
+                        "pathNode": {
+                          "id": 36914,
+                          "name": "Protocol",
+                          "nameLocations": [
+                            "1481:8:57"
+                          ],
+                          "nodeType": "IdentifierPath",
+                          "referencedDeclaration": 36749,
+                          "src": "1481:8:57"
+                        },
+                        "referencedDeclaration": 36749,
+                        "src": "1481:8:57",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Protocol_$36749_storage_ptr",
+                          "typeString": "struct Protocol"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 36919,
+                  "initialValue": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 36917,
+                      "name": "protocolStorage",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 36624,
+                      "src": "1506:15:57",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$__$returns$_t_struct$_Protocol_$36749_storage_ptr_$",
+                        "typeString": "function () pure returns (struct Protocol storage pointer)"
+                      }
+                    },
+                    "id": 36918,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1506:17:57",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Protocol_$36749_storage_ptr",
+                      "typeString": "struct Protocol storage pointer"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1481:42:57"
+                },
+                {
+                  "expression": {
+                    "id": 36935,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "baseExpression": {
+                        "expression": {
+                          "id": 36920,
+                          "name": "proto",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 36916,
+                          "src": "1534:5:57",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Protocol_$36749_storage_ptr",
+                            "typeString": "struct Protocol storage pointer"
+                          }
+                        },
+                        "id": 36923,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "1540:7:57",
+                        "memberName": "tranche",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 36733,
+                        "src": "1534:13:57",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_userDefinedValueType$_Ray_$36644_$",
+                          "typeString": "mapping(uint256 => Ray)"
+                        }
+                      },
+                      "id": 36924,
+                      "indexExpression": {
+                        "hexValue": "30",
+                        "id": 36922,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1548:1:57",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        },
+                        "value": "0"
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1534:16:57",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_userDefinedValueType$_Ray_$36644",
+                        "typeString": "Ray"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "hexValue": "333635",
+                          "id": 36933,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1576:8:57",
+                          "subdenomination": "days",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_31536000_by_1",
+                            "typeString": "int_const 31536000"
+                          },
+                          "value": "365"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_rational_31536000_by_1",
+                            "typeString": "int_const 31536000"
+                          }
+                        ],
+                        "expression": {
+                          "arguments": [
+                            {
+                              "hexValue": "34",
+                              "id": 36930,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "1569:1:57",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_4_by_1",
+                                "typeString": "int_const 4"
+                              },
+                              "value": "4"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_4_by_1",
+                                "typeString": "int_const 4"
+                              }
+                            ],
+                            "expression": {
+                              "arguments": [
+                                {
+                                  "hexValue": "3130",
+                                  "id": 36927,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "kind": "number",
+                                  "lValueRequested": false,
+                                  "nodeType": "Literal",
+                                  "src": "1561:2:57",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_rational_10_by_1",
+                                    "typeString": "int_const 10"
+                                  },
+                                  "value": "10"
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_rational_10_by_1",
+                                    "typeString": "int_const 10"
+                                  }
+                                ],
+                                "expression": {
+                                  "id": 36925,
+                                  "name": "ONE",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 36604,
+                                  "src": "1553:3:57",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_userDefinedValueType$_Ray_$36644",
+                                    "typeString": "Ray"
+                                  }
+                                },
+                                "id": 36926,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "memberLocation": "1557:3:57",
+                                "memberName": "div",
+                                "nodeType": "MemberAccess",
+                                "referencedDeclaration": 39842,
+                                "src": "1553:7:57",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_function_internal_pure$_t_userDefinedValueType$_Ray_$36644_$_t_uint256_$returns$_t_userDefinedValueType$_Ray_$36644_$attached_to$_t_userDefinedValueType$_Ray_$36644_$",
+                                  "typeString": "function (Ray,uint256) pure returns (Ray)"
+                                }
+                              },
+                              "id": 36928,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "kind": "functionCall",
+                              "lValueRequested": false,
+                              "nameLocations": [],
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "1553:11:57",
+                              "tryCall": false,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_userDefinedValueType$_Ray_$36644",
+                                "typeString": "Ray"
+                              }
+                            },
+                            "id": 36929,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberLocation": "1565:3:57",
+                            "memberName": "mul",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 39767,
+                            "src": "1553:15:57",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_pure$_t_userDefinedValueType$_Ray_$36644_$_t_uint256_$returns$_t_userDefinedValueType$_Ray_$36644_$attached_to$_t_userDefinedValueType$_Ray_$36644_$",
+                              "typeString": "function (Ray,uint256) pure returns (Ray)"
+                            }
+                          },
+                          "id": 36931,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "nameLocations": [],
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1553:18:57",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_userDefinedValueType$_Ray_$36644",
+                            "typeString": "Ray"
+                          }
+                        },
+                        "id": 36932,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "1572:3:57",
+                        "memberName": "div",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 39842,
+                        "src": "1553:22:57",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_pure$_t_userDefinedValueType$_Ray_$36644_$_t_uint256_$returns$_t_userDefinedValueType$_Ray_$36644_$attached_to$_t_userDefinedValueType$_Ray_$36644_$",
+                          "typeString": "function (Ray,uint256) pure returns (Ray)"
+                        }
+                      },
+                      "id": 36934,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "nameLocations": [],
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1553:32:57",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_userDefinedValueType$_Ray_$36644",
+                        "typeString": "Ray"
+                      }
+                    },
+                    "src": "1534:51:57",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Ray_$36644",
+                      "typeString": "Ray"
+                    }
+                  },
+                  "id": 36936,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1534:51:57"
+                },
+                {
+                  "expression": {
+                    "id": 36941,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "expression": {
+                        "id": 36937,
+                        "name": "proto",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 36916,
+                        "src": "1606:5:57",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Protocol_$36749_storage_ptr",
+                          "typeString": "struct Protocol storage pointer"
+                        }
+                      },
+                      "id": 36939,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberLocation": "1612:12:57",
+                      "memberName": "nbOfTranches",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 36725,
+                      "src": "1606:18:57",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "hexValue": "31",
+                      "id": 36940,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1627:1:57",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "src": "1606:22:57",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 36942,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1606:22:57"
+                },
+                {
+                  "expression": {
+                    "id": 36952,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "expression": {
+                        "expression": {
+                          "id": 36943,
+                          "name": "proto",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 36916,
+                          "src": "1638:5:57",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Protocol_$36749_storage_ptr",
+                            "typeString": "struct Protocol storage pointer"
+                          }
+                        },
+                        "id": 36946,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "1644:7:57",
+                        "memberName": "auction",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 36728,
+                        "src": "1638:13:57",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Auction_$36721_storage",
+                          "typeString": "struct Auction storage ref"
+                        }
+                      },
+                      "id": 36947,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberLocation": "1652:11:57",
+                      "memberName": "priceFactor",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 36720,
+                      "src": "1638:25:57",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_userDefinedValueType$_Ray_$36644",
+                        "typeString": "Ray"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "hexValue": "33",
+                          "id": 36950,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1674:1:57",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_3_by_1",
+                            "typeString": "int_const 3"
+                          },
+                          "value": "3"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_rational_3_by_1",
+                            "typeString": "int_const 3"
+                          }
+                        ],
+                        "expression": {
+                          "id": 36948,
+                          "name": "ONE",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 36604,
+                          "src": "1666:3:57",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_userDefinedValueType$_Ray_$36644",
+                            "typeString": "Ray"
+                          }
+                        },
+                        "id": 36949,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "1670:3:57",
+                        "memberName": "mul",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 39767,
+                        "src": "1666:7:57",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_pure$_t_userDefinedValueType$_Ray_$36644_$_t_uint256_$returns$_t_userDefinedValueType$_Ray_$36644_$attached_to$_t_userDefinedValueType$_Ray_$36644_$",
+                          "typeString": "function (Ray,uint256) pure returns (Ray)"
+                        }
+                      },
+                      "id": 36951,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "nameLocations": [],
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1666:10:57",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_userDefinedValueType$_Ray_$36644",
+                        "typeString": "Ray"
+                      }
+                    },
+                    "src": "1638:38:57",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Ray_$36644",
+                      "typeString": "Ray"
+                    }
+                  },
+                  "id": 36953,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1638:38:57"
+                },
+                {
+                  "expression": {
+                    "id": 36960,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "expression": {
+                        "expression": {
+                          "id": 36954,
+                          "name": "proto",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 36916,
+                          "src": "1686:5:57",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Protocol_$36749_storage_ptr",
+                            "typeString": "struct Protocol storage pointer"
+                          }
+                        },
+                        "id": 36957,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "1692:7:57",
+                        "memberName": "auction",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 36728,
+                        "src": "1686:13:57",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Auction_$36721_storage",
+                          "typeString": "struct Auction storage ref"
+                        }
+                      },
+                      "id": 36958,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberLocation": "1700:8:57",
+                      "memberName": "duration",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 36717,
+                      "src": "1686:22:57",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "hexValue": "33",
+                      "id": 36959,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1711:6:57",
+                      "subdenomination": "days",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_259200_by_1",
+                        "typeString": "int_const 259200"
+                      },
+                      "value": "3"
+                    },
+                    "src": "1686:31:57",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 36961,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1686:31:57"
+                },
+                {
+                  "assignments": [
+                    36964
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 36964,
+                      "mutability": "mutable",
+                      "name": "sp",
+                      "nameLocation": "1806:2:57",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 36991,
+                      "src": "1783:25:57",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_SupplyPosition_$36819_storage_ptr",
+                        "typeString": "struct SupplyPosition"
+                      },
+                      "typeName": {
+                        "id": 36963,
+                        "nodeType": "UserDefinedTypeName",
+                        "pathNode": {
+                          "id": 36962,
+                          "name": "SupplyPosition",
+                          "nameLocations": [
+                            "1783:14:57"
+                          ],
+                          "nodeType": "IdentifierPath",
+                          "referencedDeclaration": 36819,
+                          "src": "1783:14:57"
+                        },
+                        "referencedDeclaration": 36819,
+                        "src": "1783:14:57",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_SupplyPosition_$36819_storage_ptr",
+                          "typeString": "struct SupplyPosition"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 36967,
+                  "initialValue": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 36965,
+                      "name": "supplyPositionStorage",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 36636,
+                      "src": "1811:21:57",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$__$returns$_t_struct$_SupplyPosition_$36819_storage_ptr_$",
+                        "typeString": "function () pure returns (struct SupplyPosition storage pointer)"
+                      }
+                    },
+                    "id": 36966,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1811:23:57",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_SupplyPosition_$36819_storage_ptr",
+                      "typeString": "struct SupplyPosition storage pointer"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1783:51:57"
+                },
+                {
+                  "expression": {
+                    "id": 36972,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "expression": {
+                        "id": 36968,
+                        "name": "sp",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 36964,
+                        "src": "1844:2:57",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_SupplyPosition_$36819_storage_ptr",
+                          "typeString": "struct SupplyPosition storage pointer"
+                        }
+                      },
+                      "id": 36970,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberLocation": "1847:4:57",
+                      "memberName": "name",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 36791,
+                      "src": "1844:7:57",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "hexValue": "4b6169726f7320537570706c7920506f736974696f6e",
+                      "id": 36971,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "string",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1854:24:57",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_stringliteral_376411bc9999e5b7b1a81b589c833cd32576e442cc46411d3fefd7567434634b",
+                        "typeString": "literal_string \"Kairos Supply Position\""
+                      },
+                      "value": "Kairos Supply Position"
+                    },
+                    "src": "1844:34:57",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 36973,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1844:34:57"
+                },
+                {
+                  "expression": {
+                    "id": 36978,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "expression": {
+                        "id": 36974,
+                        "name": "sp",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 36964,
+                        "src": "1888:2:57",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_SupplyPosition_$36819_storage_ptr",
+                          "typeString": "struct SupplyPosition storage pointer"
+                        }
+                      },
+                      "id": 36976,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberLocation": "1891:6:57",
+                      "memberName": "symbol",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 36793,
+                      "src": "1888:9:57",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "hexValue": "4b5350",
+                      "id": 36977,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "string",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1900:5:57",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_stringliteral_1390905f21a14323d09534933c48417c0b31b50dc46fe848d5dd75f22ee3b983",
+                        "typeString": "literal_string \"KSP\""
+                      },
+                      "value": "KSP"
+                    },
+                    "src": "1888:17:57",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 36979,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1888:17:57"
+                },
+                {
+                  "expression": {
+                    "id": 36989,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "baseExpression": {
+                        "expression": {
+                          "id": 36980,
+                          "name": "ds",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 36865,
+                          "src": "1915:2:57",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_DiamondStorage_$4958_storage_ptr",
+                            "typeString": "struct LibDiamond.DiamondStorage storage pointer"
+                          }
+                        },
+                        "id": 36986,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "1918:19:57",
+                        "memberName": "supportedInterfaces",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 4955,
+                        "src": "1915:22:57",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes4_$_t_bool_$",
+                          "typeString": "mapping(bytes4 => bool)"
+                        }
+                      },
+                      "id": 36987,
+                      "indexExpression": {
+                        "expression": {
+                          "arguments": [
+                            {
+                              "id": 36983,
+                              "name": "IERC721",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 1732,
+                              "src": "1943:7:57",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_contract$_IERC721_$1732_$",
+                                "typeString": "type(contract IERC721)"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_type$_t_contract$_IERC721_$1732_$",
+                                "typeString": "type(contract IERC721)"
+                              }
+                            ],
+                            "id": 36982,
+                            "name": "type",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -27,
+                            "src": "1938:4:57",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_metatype_pure$__$returns$__$",
+                              "typeString": "function () pure"
+                            }
+                          },
+                          "id": 36984,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "nameLocations": [],
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1938:13:57",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_meta_type_t_contract$_IERC721_$1732",
+                            "typeString": "type(contract IERC721)"
+                          }
+                        },
+                        "id": 36985,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "memberLocation": "1952:11:57",
+                        "memberName": "interfaceId",
+                        "nodeType": "MemberAccess",
+                        "src": "1938:25:57",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1915:49:57",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "hexValue": "74727565",
+                      "id": 36988,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1967:4:57",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "1915:56:57",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 36990,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1915:56:57"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 36858,
+              "nodeType": "StructuredDocumentation",
+              "src": "929:98:57",
+              "text": "@notice initilizes the kairos protocol\n @dev specify this method in diamond constructor"
+            },
+            "functionSelector": "e1c7392a",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "init",
+            "nameLocation": "1041:4:57",
+            "parameters": {
+              "id": 36859,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1045:2:57"
+            },
+            "returnParameters": {
+              "id": 36860,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1057:0:57"
+            },
+            "scope": 36993,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "Initializer",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 36853,
+          "nodeType": "StructuredDocumentation",
+          "src": "831:43:57",
+          "text": "@notice initilizes the kairos protocol"
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          36993
+        ],
+        "name": "Initializer",
+        "nameLocation": "883:11:57",
+        "scope": 36994,
+        "usedErrors": []
+      }
+    ],
+    "license": "UNLICENSED"
+  },
+  "id": 57
+}

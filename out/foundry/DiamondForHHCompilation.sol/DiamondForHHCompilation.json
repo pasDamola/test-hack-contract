@@ -1,0 +1,575 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "_selector",
+          "type": "bytes4"
+        }
+      ],
+      "name": "CannotAddFunctionToDiamondThatAlreadyExists",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4[]",
+          "name": "_selectors",
+          "type": "bytes4[]"
+        }
+      ],
+      "name": "CannotAddSelectorsToZeroAddress",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "_selector",
+          "type": "bytes4"
+        }
+      ],
+      "name": "CannotRemoveFunctionThatDoesNotExist",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "_selector",
+          "type": "bytes4"
+        }
+      ],
+      "name": "CannotRemoveImmutableFunction",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "_selector",
+          "type": "bytes4"
+        }
+      ],
+      "name": "CannotReplaceFunctionThatDoesNotExists",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "_selector",
+          "type": "bytes4"
+        }
+      ],
+      "name": "CannotReplaceFunctionWithTheSameFunctionFromTheSameFacet",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4[]",
+          "name": "_selectors",
+          "type": "bytes4[]"
+        }
+      ],
+      "name": "CannotReplaceFunctionsFromFacetWithZeroAddress",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "_selector",
+          "type": "bytes4"
+        }
+      ],
+      "name": "CannotReplaceImmutableFunction",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "_functionSelector",
+          "type": "bytes4"
+        }
+      ],
+      "name": "FunctionNotFound",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint8",
+          "name": "_action",
+          "type": "uint8"
+        }
+      ],
+      "name": "IncorrectFacetCutAction",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_initializationContractAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_calldata",
+          "type": "bytes"
+        }
+      ],
+      "name": "InitializationFunctionReverted",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_contractAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "_message",
+          "type": "string"
+        }
+      ],
+      "name": "NoBytecodeAtAddress",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_facetAddress",
+          "type": "address"
+        }
+      ],
+      "name": "NoSelectorsProvidedForFacetForCut",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_facetAddress",
+          "type": "address"
+        }
+      ],
+      "name": "RemoveFacetAddressMustBeZeroAddress",
+      "type": "error"
+    },
+    {
+      "stateMutability": "payable",
+      "type": "fallback"
+    },
+    {
+      "stateMutability": "payable",
+      "type": "receive"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.18+commit.87f61d96\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"_selector\",\"type\":\"bytes4\"}],\"name\":\"CannotAddFunctionToDiamondThatAlreadyExists\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"bytes4[]\",\"name\":\"_selectors\",\"type\":\"bytes4[]\"}],\"name\":\"CannotAddSelectorsToZeroAddress\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"_selector\",\"type\":\"bytes4\"}],\"name\":\"CannotRemoveFunctionThatDoesNotExist\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"_selector\",\"type\":\"bytes4\"}],\"name\":\"CannotRemoveImmutableFunction\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"_selector\",\"type\":\"bytes4\"}],\"name\":\"CannotReplaceFunctionThatDoesNotExists\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"_selector\",\"type\":\"bytes4\"}],\"name\":\"CannotReplaceFunctionWithTheSameFunctionFromTheSameFacet\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"bytes4[]\",\"name\":\"_selectors\",\"type\":\"bytes4[]\"}],\"name\":\"CannotReplaceFunctionsFromFacetWithZeroAddress\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"_selector\",\"type\":\"bytes4\"}],\"name\":\"CannotReplaceImmutableFunction\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"_functionSelector\",\"type\":\"bytes4\"}],\"name\":\"FunctionNotFound\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"_action\",\"type\":\"uint8\"}],\"name\":\"IncorrectFacetCutAction\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_initializationContractAddress\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"_calldata\",\"type\":\"bytes\"}],\"name\":\"InitializationFunctionReverted\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_contractAddress\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"_message\",\"type\":\"string\"}],\"name\":\"NoBytecodeAtAddress\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_facetAddress\",\"type\":\"address\"}],\"name\":\"NoSelectorsProvidedForFacetForCut\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_facetAddress\",\"type\":\"address\"}],\"name\":\"RemoveFacetAddressMustBeZeroAddress\",\"type\":\"error\"},{\"stateMutability\":\"payable\",\"type\":\"fallback\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/utils/DiamondForHHCompilation.sol\":\"DiamondForHHCompilation\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":diamond/=node_modules/diamond/\",\":ds-test/=node_modules/ds-test/src/\",\":forge-std/=node_modules/forge-std/src/\",\":solmate/=node_modules/solmate/\"]},\"sources\":{\"node_modules/diamond/contracts/Diamond.sol\":{\"keccak256\":\"0x601df4cba1a6bcd197fdaba80275464fff1ef63535b4d9f227e74eead842ebcd\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f1b218bef68b991330301ed7b4e38344b42653dc69056f58eeed66a1eb6d8a6a\",\"dweb:/ipfs/QmZAMwS92YJJoQ1UsJ5oxhv8AUGQM6FTPv1H5yPN3ibBVg\"]},\"node_modules/diamond/contracts/interfaces/IDiamond.sol\":{\"keccak256\":\"0x37be579b243559c0c16a8de037d2c428e8fafdfdd9cde69fa165a07f5adfda2c\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0f16b9edb01e35edf96566f6460c4986fcc3fb9bff6291fab5be17d256cd0fd2\",\"dweb:/ipfs/Qmdq869cYabBjfnYZgcF5BSHsFQXT1EZNg2umHMAxZqWEH\"]},\"node_modules/diamond/contracts/interfaces/IDiamondCut.sol\":{\"keccak256\":\"0x9ecd4a637b7cb44c26a4ab7760766defce42a6dc36a355b92dfeef9ce4391fee\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://cd0e7ad69374bc41bc62c90428f9795c8a06360599c4c6b06e76bd8a1b91e28f\",\"dweb:/ipfs/QmfZk5ZiKQQaudjYf3qEumVsW87gELxcYMNRu3AHSLuk4n\"]},\"node_modules/diamond/contracts/interfaces/IDiamondLoupe.sol\":{\"keccak256\":\"0x10884024af2c0f7deca0fac4ddf84e76da5dba35b6e02fabeac8ea54c1a5c6f7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://df3404a4aed3bbda2f5e441d7035b354237d8c9d7c27b149ccf66d13a1d81d45\",\"dweb:/ipfs/QmZvHWgRCge8tLJ3x3Lf3JQkbNTgAN6LzwCGBabbgk8tew\"]},\"node_modules/diamond/contracts/interfaces/IERC165.sol\":{\"keccak256\":\"0x7541f7408d0f74162bc4664d5e012427f2ceaab2abadca0353269ef15ee03d8b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a8e7a34b3ea39f4c0dfa6f5ace5d9415e4d0c90cb3f4264e6946b808f2d4011c\",\"dweb:/ipfs/QmWdcRF4krMMb1ua3hmV8avdHKYa4XXt1iw7sxx1ntsEJa\"]},\"node_modules/diamond/contracts/interfaces/IERC173.sol\":{\"keccak256\":\"0x001e07b0fbc894300b939d496ffb005abe398b5bc609802d319b8cdeafe5d36b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8e59f66879ef993892410cbe834b1d2dd34891f47066b7be601ff825b0748361\",\"dweb:/ipfs/QmZedQ668we8ohPPZF5tPP5gKpJ5n22h3FDFkoFT5VXpEu\"]},\"node_modules/diamond/contracts/libraries/LibDiamond.sol\":{\"keccak256\":\"0x4090c1e2191d081ff33e1631eabbebfb69e29ac1bf67516d7f4430bb2e0b2983\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3c66e113d032be747262abe642abcec8c132400fe156414721590412d9af6485\",\"dweb:/ipfs/QmfLg3p9wZ748cSDrfh4TmxCuMU8oVZU9BzAGhJSFQysWM\"]},\"src/utils/DiamondForHHCompilation.sol\":{\"keccak256\":\"0x8305c7155ea38c6ed78f3e326772d932d8986ca5392e8e522ceac6f0356cc6bb\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://68df47fabc6713f5d319d56f1f06829070b3d239ae5c7411a0290228712bf991\",\"dweb:/ipfs/QmXGQuv92Vw8fg4FZSmthMtdHjqwsRUjmR4iv6J7fqUSsH\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.18+commit.87f61d96"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "bytes4",
+              "name": "_selector",
+              "type": "bytes4"
+            }
+          ],
+          "type": "error",
+          "name": "CannotAddFunctionToDiamondThatAlreadyExists"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes4[]",
+              "name": "_selectors",
+              "type": "bytes4[]"
+            }
+          ],
+          "type": "error",
+          "name": "CannotAddSelectorsToZeroAddress"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes4",
+              "name": "_selector",
+              "type": "bytes4"
+            }
+          ],
+          "type": "error",
+          "name": "CannotRemoveFunctionThatDoesNotExist"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes4",
+              "name": "_selector",
+              "type": "bytes4"
+            }
+          ],
+          "type": "error",
+          "name": "CannotRemoveImmutableFunction"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes4",
+              "name": "_selector",
+              "type": "bytes4"
+            }
+          ],
+          "type": "error",
+          "name": "CannotReplaceFunctionThatDoesNotExists"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes4",
+              "name": "_selector",
+              "type": "bytes4"
+            }
+          ],
+          "type": "error",
+          "name": "CannotReplaceFunctionWithTheSameFunctionFromTheSameFacet"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes4[]",
+              "name": "_selectors",
+              "type": "bytes4[]"
+            }
+          ],
+          "type": "error",
+          "name": "CannotReplaceFunctionsFromFacetWithZeroAddress"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes4",
+              "name": "_selector",
+              "type": "bytes4"
+            }
+          ],
+          "type": "error",
+          "name": "CannotReplaceImmutableFunction"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes4",
+              "name": "_functionSelector",
+              "type": "bytes4"
+            }
+          ],
+          "type": "error",
+          "name": "FunctionNotFound"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint8",
+              "name": "_action",
+              "type": "uint8"
+            }
+          ],
+          "type": "error",
+          "name": "IncorrectFacetCutAction"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_initializationContractAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes",
+              "name": "_calldata",
+              "type": "bytes"
+            }
+          ],
+          "type": "error",
+          "name": "InitializationFunctionReverted"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_contractAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "string",
+              "name": "_message",
+              "type": "string"
+            }
+          ],
+          "type": "error",
+          "name": "NoBytecodeAtAddress"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_facetAddress",
+              "type": "address"
+            }
+          ],
+          "type": "error",
+          "name": "NoSelectorsProvidedForFacetForCut"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_facetAddress",
+              "type": "address"
+            }
+          ],
+          "type": "error",
+          "name": "RemoveFacetAddressMustBeZeroAddress"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "payable",
+          "type": "fallback"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "payable",
+          "type": "receive"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":diamond/=node_modules/diamond/",
+        ":ds-test/=node_modules/ds-test/src/",
+        ":forge-std/=node_modules/forge-std/src/",
+        ":solmate/=node_modules/solmate/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/utils/DiamondForHHCompilation.sol": "DiamondForHHCompilation"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "node_modules/diamond/contracts/Diamond.sol": {
+        "keccak256": "0x601df4cba1a6bcd197fdaba80275464fff1ef63535b4d9f227e74eead842ebcd",
+        "urls": [
+          "bzz-raw://f1b218bef68b991330301ed7b4e38344b42653dc69056f58eeed66a1eb6d8a6a",
+          "dweb:/ipfs/QmZAMwS92YJJoQ1UsJ5oxhv8AUGQM6FTPv1H5yPN3ibBVg"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/diamond/contracts/interfaces/IDiamond.sol": {
+        "keccak256": "0x37be579b243559c0c16a8de037d2c428e8fafdfdd9cde69fa165a07f5adfda2c",
+        "urls": [
+          "bzz-raw://0f16b9edb01e35edf96566f6460c4986fcc3fb9bff6291fab5be17d256cd0fd2",
+          "dweb:/ipfs/Qmdq869cYabBjfnYZgcF5BSHsFQXT1EZNg2umHMAxZqWEH"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/diamond/contracts/interfaces/IDiamondCut.sol": {
+        "keccak256": "0x9ecd4a637b7cb44c26a4ab7760766defce42a6dc36a355b92dfeef9ce4391fee",
+        "urls": [
+          "bzz-raw://cd0e7ad69374bc41bc62c90428f9795c8a06360599c4c6b06e76bd8a1b91e28f",
+          "dweb:/ipfs/QmfZk5ZiKQQaudjYf3qEumVsW87gELxcYMNRu3AHSLuk4n"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/diamond/contracts/interfaces/IDiamondLoupe.sol": {
+        "keccak256": "0x10884024af2c0f7deca0fac4ddf84e76da5dba35b6e02fabeac8ea54c1a5c6f7",
+        "urls": [
+          "bzz-raw://df3404a4aed3bbda2f5e441d7035b354237d8c9d7c27b149ccf66d13a1d81d45",
+          "dweb:/ipfs/QmZvHWgRCge8tLJ3x3Lf3JQkbNTgAN6LzwCGBabbgk8tew"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/diamond/contracts/interfaces/IERC165.sol": {
+        "keccak256": "0x7541f7408d0f74162bc4664d5e012427f2ceaab2abadca0353269ef15ee03d8b",
+        "urls": [
+          "bzz-raw://a8e7a34b3ea39f4c0dfa6f5ace5d9415e4d0c90cb3f4264e6946b808f2d4011c",
+          "dweb:/ipfs/QmWdcRF4krMMb1ua3hmV8avdHKYa4XXt1iw7sxx1ntsEJa"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/diamond/contracts/interfaces/IERC173.sol": {
+        "keccak256": "0x001e07b0fbc894300b939d496ffb005abe398b5bc609802d319b8cdeafe5d36b",
+        "urls": [
+          "bzz-raw://8e59f66879ef993892410cbe834b1d2dd34891f47066b7be601ff825b0748361",
+          "dweb:/ipfs/QmZedQ668we8ohPPZF5tPP5gKpJ5n22h3FDFkoFT5VXpEu"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/diamond/contracts/libraries/LibDiamond.sol": {
+        "keccak256": "0x4090c1e2191d081ff33e1631eabbebfb69e29ac1bf67516d7f4430bb2e0b2983",
+        "urls": [
+          "bzz-raw://3c66e113d032be747262abe642abcec8c132400fe156414721590412d9af6485",
+          "dweb:/ipfs/QmfLg3p9wZ748cSDrfh4TmxCuMU8oVZU9BzAGhJSFQysWM"
+        ],
+        "license": "MIT"
+      },
+      "src/utils/DiamondForHHCompilation.sol": {
+        "keccak256": "0x8305c7155ea38c6ed78f3e326772d932d8986ca5392e8e522ceac6f0356cc6bb",
+        "urls": [
+          "bzz-raw://68df47fabc6713f5d319d56f1f06829070b3d239ae5c7411a0290228712bf991",
+          "dweb:/ipfs/QmXGQuv92Vw8fg4FZSmthMtdHjqwsRUjmR4iv6J7fqUSsH"
+        ],
+        "license": "UNLICENSED"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/utils/DiamondForHHCompilation.sol",
+    "id": 39003,
+    "exportedSymbols": {
+      "Diamond": [
+        4227
+      ],
+      "DiamondForHHCompilation": [
+        39002
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "39:177:82",
+    "nodes": [
+      {
+        "id": 38997,
+        "nodeType": "PragmaDirective",
+        "src": "39:23:82",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".18"
+        ]
+      },
+      {
+        "id": 38999,
+        "nodeType": "ImportDirective",
+        "src": "64:54:82",
+        "nodes": [],
+        "absolutePath": "node_modules/diamond/contracts/Diamond.sol",
+        "file": "diamond/contracts/Diamond.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 39003,
+        "sourceUnit": 4228,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 38998,
+              "name": "Diamond",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 4227,
+              "src": "72:7:82",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 39002,
+        "nodeType": "ContractDefinition",
+        "src": "158:57:82",
+        "nodes": [],
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 39000,
+              "name": "Diamond",
+              "nameLocations": [
+                "203:7:82"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 4227,
+              "src": "203:7:82"
+            },
+            "id": 39001,
+            "nodeType": "InheritanceSpecifier",
+            "src": "203:7:82"
+          }
+        ],
+        "canonicalName": "DiamondForHHCompilation",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          39002,
+          4227
+        ],
+        "name": "DiamondForHHCompilation",
+        "nameLocation": "176:23:82",
+        "scope": 39003,
+        "usedErrors": [
+          4148,
+          4879,
+          4884,
+          4890,
+          4894,
+          4898,
+          4903,
+          4907,
+          4911,
+          4915,
+          4919,
+          4923,
+          4927,
+          4933
+        ]
+      }
+    ],
+    "license": "UNLICENSED"
+  },
+  "id": 82
+}

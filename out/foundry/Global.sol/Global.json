@@ -1,0 +1,882 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "src/DataStructure/Global.sol",
+    "id": 36637,
+    "exportedSymbols": {
+      "ONE": [
+        36604
+      ],
+      "PROTOCOL_SP": [
+        36589
+      ],
+      "Protocol": [
+        36749
+      ],
+      "RAY": [
+        36597
+      ],
+      "Ray": [
+        36644
+      ],
+      "SUPPLY_SP": [
+        36594
+      ],
+      "SupplyPosition": [
+        36819
+      ],
+      "ZERO": [
+        36611
+      ],
+      "protocolStorage": [
+        36624
+      ],
+      "supplyPositionStorage": [
+        36636
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "39:1398:54",
+    "nodes": [
+      {
+        "id": 36579,
+        "nodeType": "PragmaDirective",
+        "src": "39:23:54",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".18"
+        ]
+      },
+      {
+        "id": 36582,
+        "nodeType": "ImportDirective",
+        "src": "64:55:54",
+        "nodes": [],
+        "absolutePath": "src/DataStructure/Storage.sol",
+        "file": "./Storage.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 36637,
+        "sourceUnit": 36828,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 36580,
+              "name": "Protocol",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 36749,
+              "src": "72:8:54",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 36581,
+              "name": "SupplyPosition",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 36819,
+              "src": "82:14:54",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 36584,
+        "nodeType": "ImportDirective",
+        "src": "120:34:54",
+        "nodes": [],
+        "absolutePath": "src/DataStructure/Objects.sol",
+        "file": "./Objects.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 36637,
+        "sourceUnit": 36709,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 36583,
+              "name": "Ray",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 36644,
+              "src": "128:3:54",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 36589,
+        "nodeType": "VariableDeclaration",
+        "src": "407:72:54",
+        "nodes": [],
+        "constant": true,
+        "mutability": "constant",
+        "name": "PROTOCOL_SP",
+        "nameLocation": "424:11:54",
+        "scope": 36637,
+        "stateVariable": false,
+        "storageLocation": "default",
+        "typeDescriptions": {
+          "typeIdentifier": "t_bytes32",
+          "typeString": "bytes32"
+        },
+        "typeName": {
+          "id": 36585,
+          "name": "bytes32",
+          "nodeType": "ElementaryTypeName",
+          "src": "407:7:54",
+          "typeDescriptions": {
+            "typeIdentifier": "t_bytes32",
+            "typeString": "bytes32"
+          }
+        },
+        "value": {
+          "arguments": [
+            {
+              "hexValue": "6574682e6b6169726f736c6f616e2e70726f746f636f6c2e76312e30",
+              "id": 36587,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "448:30:54",
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_84e508d57dadc535817af594804944c3bc341cdb6befa5a0747e20285912a7eb",
+                "typeString": "literal_string \"eth.kairosloan.protocol.v1.0\""
+              },
+              "value": "eth.kairosloan.protocol.v1.0"
+            }
+          ],
+          "expression": {
+            "argumentTypes": [
+              {
+                "typeIdentifier": "t_stringliteral_84e508d57dadc535817af594804944c3bc341cdb6befa5a0747e20285912a7eb",
+                "typeString": "literal_string \"eth.kairosloan.protocol.v1.0\""
+              }
+            ],
+            "id": 36586,
+            "name": "keccak256",
+            "nodeType": "Identifier",
+            "overloadedDeclarations": [],
+            "referencedDeclaration": -8,
+            "src": "438:9:54",
+            "typeDescriptions": {
+              "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+              "typeString": "function (bytes memory) pure returns (bytes32)"
+            }
+          },
+          "id": 36588,
+          "isConstant": false,
+          "isLValue": false,
+          "isPure": true,
+          "kind": "functionCall",
+          "lValueRequested": false,
+          "nameLocations": [],
+          "names": [],
+          "nodeType": "FunctionCall",
+          "src": "438:41:54",
+          "tryCall": false,
+          "typeDescriptions": {
+            "typeIdentifier": "t_bytes32",
+            "typeString": "bytes32"
+          }
+        },
+        "visibility": "internal"
+      },
+      {
+        "id": 36594,
+        "nodeType": "VariableDeclaration",
+        "src": "481:77:54",
+        "nodes": [],
+        "constant": true,
+        "mutability": "constant",
+        "name": "SUPPLY_SP",
+        "nameLocation": "498:9:54",
+        "scope": 36637,
+        "stateVariable": false,
+        "storageLocation": "default",
+        "typeDescriptions": {
+          "typeIdentifier": "t_bytes32",
+          "typeString": "bytes32"
+        },
+        "typeName": {
+          "id": 36590,
+          "name": "bytes32",
+          "nodeType": "ElementaryTypeName",
+          "src": "481:7:54",
+          "typeDescriptions": {
+            "typeIdentifier": "t_bytes32",
+            "typeString": "bytes32"
+          }
+        },
+        "value": {
+          "arguments": [
+            {
+              "hexValue": "6574682e6b6169726f736c6f616e2e737570706c792d706f736974696f6e2e76312e30",
+              "id": 36592,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "520:37:54",
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_9dcac861a288165fa5a7e007597a30abcd2d73e174280cf7c6967f5a922a4439",
+                "typeString": "literal_string \"eth.kairosloan.supply-position.v1.0\""
+              },
+              "value": "eth.kairosloan.supply-position.v1.0"
+            }
+          ],
+          "expression": {
+            "argumentTypes": [
+              {
+                "typeIdentifier": "t_stringliteral_9dcac861a288165fa5a7e007597a30abcd2d73e174280cf7c6967f5a922a4439",
+                "typeString": "literal_string \"eth.kairosloan.supply-position.v1.0\""
+              }
+            ],
+            "id": 36591,
+            "name": "keccak256",
+            "nodeType": "Identifier",
+            "overloadedDeclarations": [],
+            "referencedDeclaration": -8,
+            "src": "510:9:54",
+            "typeDescriptions": {
+              "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+              "typeString": "function (bytes memory) pure returns (bytes32)"
+            }
+          },
+          "id": 36593,
+          "isConstant": false,
+          "isLValue": false,
+          "isPure": true,
+          "kind": "functionCall",
+          "lValueRequested": false,
+          "nameLocations": [],
+          "names": [],
+          "nodeType": "FunctionCall",
+          "src": "510:48:54",
+          "tryCall": false,
+          "typeDescriptions": {
+            "typeIdentifier": "t_bytes32",
+            "typeString": "bytes32"
+          }
+        },
+        "visibility": "internal"
+      },
+      {
+        "id": 36597,
+        "nodeType": "VariableDeclaration",
+        "src": "697:27:54",
+        "nodes": [],
+        "constant": true,
+        "mutability": "constant",
+        "name": "RAY",
+        "nameLocation": "714:3:54",
+        "scope": 36637,
+        "stateVariable": false,
+        "storageLocation": "default",
+        "typeDescriptions": {
+          "typeIdentifier": "t_uint256",
+          "typeString": "uint256"
+        },
+        "typeName": {
+          "id": 36595,
+          "name": "uint256",
+          "nodeType": "ElementaryTypeName",
+          "src": "697:7:54",
+          "typeDescriptions": {
+            "typeIdentifier": "t_uint256",
+            "typeString": "uint256"
+          }
+        },
+        "value": {
+          "hexValue": "31653237",
+          "id": 36596,
+          "isConstant": false,
+          "isLValue": false,
+          "isPure": true,
+          "kind": "number",
+          "lValueRequested": false,
+          "nodeType": "Literal",
+          "src": "720:4:54",
+          "typeDescriptions": {
+            "typeIdentifier": "t_rational_1000000000000000000000000000_by_1",
+            "typeString": "int_const 1000000000000000000000000000"
+          },
+          "value": "1e27"
+        },
+        "visibility": "internal"
+      },
+      {
+        "id": 36604,
+        "nodeType": "VariableDeclaration",
+        "src": "726:32:54",
+        "nodes": [],
+        "constant": true,
+        "mutability": "constant",
+        "name": "ONE",
+        "nameLocation": "739:3:54",
+        "scope": 36637,
+        "stateVariable": false,
+        "storageLocation": "default",
+        "typeDescriptions": {
+          "typeIdentifier": "t_userDefinedValueType$_Ray_$36644",
+          "typeString": "Ray"
+        },
+        "typeName": {
+          "id": 36599,
+          "nodeType": "UserDefinedTypeName",
+          "pathNode": {
+            "id": 36598,
+            "name": "Ray",
+            "nameLocations": [
+              "726:3:54"
+            ],
+            "nodeType": "IdentifierPath",
+            "referencedDeclaration": 36644,
+            "src": "726:3:54"
+          },
+          "referencedDeclaration": 36644,
+          "src": "726:3:54",
+          "typeDescriptions": {
+            "typeIdentifier": "t_userDefinedValueType$_Ray_$36644",
+            "typeString": "Ray"
+          }
+        },
+        "value": {
+          "arguments": [
+            {
+              "id": 36602,
+              "name": "RAY",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 36597,
+              "src": "754:3:54",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            }
+          ],
+          "expression": {
+            "argumentTypes": [
+              {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            ],
+            "expression": {
+              "id": 36600,
+              "name": "Ray",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 36644,
+              "src": "745:3:54",
+              "typeDescriptions": {
+                "typeIdentifier": "t_type$_t_userDefinedValueType$_Ray_$36644_$",
+                "typeString": "type(Ray)"
+              }
+            },
+            "id": 36601,
+            "isConstant": false,
+            "isLValue": false,
+            "isPure": true,
+            "lValueRequested": false,
+            "memberLocation": "749:4:54",
+            "memberName": "wrap",
+            "nodeType": "MemberAccess",
+            "src": "745:8:54",
+            "typeDescriptions": {
+              "typeIdentifier": "t_function_wrap_pure$_t_uint256_$returns$_t_userDefinedValueType$_Ray_$36644_$",
+              "typeString": "function (uint256) pure returns (Ray)"
+            }
+          },
+          "id": 36603,
+          "isConstant": false,
+          "isLValue": false,
+          "isPure": true,
+          "kind": "functionCall",
+          "lValueRequested": false,
+          "nameLocations": [],
+          "names": [],
+          "nodeType": "FunctionCall",
+          "src": "745:13:54",
+          "tryCall": false,
+          "typeDescriptions": {
+            "typeIdentifier": "t_userDefinedValueType$_Ray_$36644",
+            "typeString": "Ray"
+          }
+        },
+        "visibility": "internal"
+      },
+      {
+        "id": 36611,
+        "nodeType": "VariableDeclaration",
+        "src": "760:31:54",
+        "nodes": [],
+        "constant": true,
+        "mutability": "constant",
+        "name": "ZERO",
+        "nameLocation": "773:4:54",
+        "scope": 36637,
+        "stateVariable": false,
+        "storageLocation": "default",
+        "typeDescriptions": {
+          "typeIdentifier": "t_userDefinedValueType$_Ray_$36644",
+          "typeString": "Ray"
+        },
+        "typeName": {
+          "id": 36606,
+          "nodeType": "UserDefinedTypeName",
+          "pathNode": {
+            "id": 36605,
+            "name": "Ray",
+            "nameLocations": [
+              "760:3:54"
+            ],
+            "nodeType": "IdentifierPath",
+            "referencedDeclaration": 36644,
+            "src": "760:3:54"
+          },
+          "referencedDeclaration": 36644,
+          "src": "760:3:54",
+          "typeDescriptions": {
+            "typeIdentifier": "t_userDefinedValueType$_Ray_$36644",
+            "typeString": "Ray"
+          }
+        },
+        "value": {
+          "arguments": [
+            {
+              "hexValue": "30",
+              "id": 36609,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "789:1:54",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            }
+          ],
+          "expression": {
+            "argumentTypes": [
+              {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              }
+            ],
+            "expression": {
+              "id": 36607,
+              "name": "Ray",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 36644,
+              "src": "780:3:54",
+              "typeDescriptions": {
+                "typeIdentifier": "t_type$_t_userDefinedValueType$_Ray_$36644_$",
+                "typeString": "type(Ray)"
+              }
+            },
+            "id": 36608,
+            "isConstant": false,
+            "isLValue": false,
+            "isPure": true,
+            "lValueRequested": false,
+            "memberLocation": "784:4:54",
+            "memberName": "wrap",
+            "nodeType": "MemberAccess",
+            "src": "780:8:54",
+            "typeDescriptions": {
+              "typeIdentifier": "t_function_wrap_pure$_t_uint256_$returns$_t_userDefinedValueType$_Ray_$36644_$",
+              "typeString": "function (uint256) pure returns (Ray)"
+            }
+          },
+          "id": 36610,
+          "isConstant": false,
+          "isLValue": false,
+          "isPure": true,
+          "kind": "functionCall",
+          "lValueRequested": false,
+          "nameLocations": [],
+          "names": [],
+          "nodeType": "FunctionCall",
+          "src": "780:11:54",
+          "tryCall": false,
+          "typeDescriptions": {
+            "typeIdentifier": "t_userDefinedValueType$_Ray_$36644",
+            "typeString": "Ray"
+          }
+        },
+        "visibility": "internal"
+      },
+      {
+        "id": 36624,
+        "nodeType": "FunctionDefinition",
+        "src": "1002:217:54",
+        "nodes": [],
+        "body": {
+          "id": 36623,
+          "nodeType": "Block",
+          "src": "1070:149:54",
+          "nodes": [],
+          "statements": [
+            {
+              "assignments": [
+                36619
+              ],
+              "declarations": [
+                {
+                  "constant": false,
+                  "id": 36619,
+                  "mutability": "mutable",
+                  "name": "position",
+                  "nameLocation": "1084:8:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36623,
+                  "src": "1076:16:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 36618,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1076:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "id": 36621,
+              "initialValue": {
+                "id": 36620,
+                "name": "PROTOCOL_SP",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 36589,
+                "src": "1095:11:54",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "VariableDeclarationStatement",
+              "src": "1076:30:54"
+            },
+            {
+              "AST": {
+                "nodeType": "YulBlock",
+                "src": "1176:41:54",
+                "statements": [
+                  {
+                    "nodeType": "YulAssignment",
+                    "src": "1186:25:54",
+                    "value": {
+                      "name": "position",
+                      "nodeType": "YulIdentifier",
+                      "src": "1203:8:54"
+                    },
+                    "variableNames": [
+                      {
+                        "name": "protocol.slot",
+                        "nodeType": "YulIdentifier",
+                        "src": "1186:13:54"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "evmVersion": "london",
+              "externalReferences": [
+                {
+                  "declaration": 36619,
+                  "isOffset": false,
+                  "isSlot": false,
+                  "src": "1203:8:54",
+                  "valueSize": 1
+                },
+                {
+                  "declaration": 36616,
+                  "isOffset": false,
+                  "isSlot": true,
+                  "src": "1186:13:54",
+                  "suffix": "slot",
+                  "valueSize": 1
+                }
+              ],
+              "id": 36622,
+              "nodeType": "InlineAssembly",
+              "src": "1167:50:54"
+            }
+          ]
+        },
+        "documentation": {
+          "id": 36612,
+          "nodeType": "StructuredDocumentation",
+          "src": "833:72:54",
+          "text": "@dev getters of storage regions of the contract for specified usage"
+        },
+        "implemented": true,
+        "kind": "freeFunction",
+        "modifiers": [],
+        "name": "protocolStorage",
+        "nameLocation": "1011:15:54",
+        "parameters": {
+          "id": 36613,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "1026:2:54"
+        },
+        "returnParameters": {
+          "id": 36617,
+          "nodeType": "ParameterList",
+          "parameters": [
+            {
+              "constant": false,
+              "id": 36616,
+              "mutability": "mutable",
+              "name": "protocol",
+              "nameLocation": "1060:8:54",
+              "nodeType": "VariableDeclaration",
+              "scope": 36624,
+              "src": "1043:25:54",
+              "stateVariable": false,
+              "storageLocation": "storage",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Protocol_$36749_storage_ptr",
+                "typeString": "struct Protocol"
+              },
+              "typeName": {
+                "id": 36615,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 36614,
+                  "name": "Protocol",
+                  "nameLocations": [
+                    "1043:8:54"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 36749,
+                  "src": "1043:8:54"
+                },
+                "referencedDeclaration": 36749,
+                "src": "1043:8:54",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Protocol_$36749_storage_ptr",
+                  "typeString": "struct Protocol"
+                }
+              },
+              "visibility": "internal"
+            }
+          ],
+          "src": "1042:27:54"
+        },
+        "scope": 36637,
+        "stateMutability": "pure",
+        "virtual": false,
+        "visibility": "internal"
+      },
+      {
+        "id": 36636,
+        "nodeType": "FunctionDefinition",
+        "src": "1221:215:54",
+        "nodes": [],
+        "body": {
+          "id": 36635,
+          "nodeType": "Block",
+          "src": "1295:141:54",
+          "nodes": [],
+          "statements": [
+            {
+              "assignments": [
+                36631
+              ],
+              "declarations": [
+                {
+                  "constant": false,
+                  "id": 36631,
+                  "mutability": "mutable",
+                  "name": "position",
+                  "nameLocation": "1309:8:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36635,
+                  "src": "1301:16:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 36630,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1301:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "id": 36633,
+              "initialValue": {
+                "id": 36632,
+                "name": "SUPPLY_SP",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 36594,
+                "src": "1320:9:54",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "VariableDeclarationStatement",
+              "src": "1301:28:54"
+            },
+            {
+              "AST": {
+                "nodeType": "YulBlock",
+                "src": "1399:35:54",
+                "statements": [
+                  {
+                    "nodeType": "YulAssignment",
+                    "src": "1409:19:54",
+                    "value": {
+                      "name": "position",
+                      "nodeType": "YulIdentifier",
+                      "src": "1420:8:54"
+                    },
+                    "variableNames": [
+                      {
+                        "name": "sp.slot",
+                        "nodeType": "YulIdentifier",
+                        "src": "1409:7:54"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "evmVersion": "london",
+              "externalReferences": [
+                {
+                  "declaration": 36631,
+                  "isOffset": false,
+                  "isSlot": false,
+                  "src": "1420:8:54",
+                  "valueSize": 1
+                },
+                {
+                  "declaration": 36628,
+                  "isOffset": false,
+                  "isSlot": true,
+                  "src": "1409:7:54",
+                  "suffix": "slot",
+                  "valueSize": 1
+                }
+              ],
+              "id": 36634,
+              "nodeType": "InlineAssembly",
+              "src": "1390:44:54"
+            }
+          ]
+        },
+        "implemented": true,
+        "kind": "freeFunction",
+        "modifiers": [],
+        "name": "supplyPositionStorage",
+        "nameLocation": "1230:21:54",
+        "parameters": {
+          "id": 36625,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "1251:2:54"
+        },
+        "returnParameters": {
+          "id": 36629,
+          "nodeType": "ParameterList",
+          "parameters": [
+            {
+              "constant": false,
+              "id": 36628,
+              "mutability": "mutable",
+              "name": "sp",
+              "nameLocation": "1291:2:54",
+              "nodeType": "VariableDeclaration",
+              "scope": 36636,
+              "src": "1268:25:54",
+              "stateVariable": false,
+              "storageLocation": "storage",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_SupplyPosition_$36819_storage_ptr",
+                "typeString": "struct SupplyPosition"
+              },
+              "typeName": {
+                "id": 36627,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 36626,
+                  "name": "SupplyPosition",
+                  "nameLocations": [
+                    "1268:14:54"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 36819,
+                  "src": "1268:14:54"
+                },
+                "referencedDeclaration": 36819,
+                "src": "1268:14:54",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_SupplyPosition_$36819_storage_ptr",
+                  "typeString": "struct SupplyPosition"
+                }
+              },
+              "visibility": "internal"
+            }
+          ],
+          "src": "1267:27:54"
+        },
+        "scope": 36637,
+        "stateMutability": "pure",
+        "virtual": false,
+        "visibility": "internal"
+      }
+    ],
+    "license": "UNLICENSED"
+  },
+  "id": 54
+}

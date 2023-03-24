@@ -1,0 +1,281 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "owner_",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "owner()": "8da5cb5b",
+    "transferOwnership(address)": "f2fde38b"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.18+commit.87f61d96\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"owner_\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/interface/IOwnershipFacet.sol\":\"IOwnershipFacet\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":diamond/=node_modules/diamond/\",\":ds-test/=node_modules/ds-test/src/\",\":forge-std/=node_modules/forge-std/src/\",\":solmate/=node_modules/solmate/\"]},\"sources\":{\"src/interface/IOwnershipFacet.sol\":{\"keccak256\":\"0x505b2f2d275a0aa2861d08564f6d03e44e8d10cd8a1c6fbdea1105383e0e9a4d\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://4ca7e3a48787d056da5f3569965f9c2015e65d8ceb124e9346cf73d55e55c8b2\",\"dweb:/ipfs/QmWJmUsegbVtaJ71yCJZiEpedEvhSuw73NyjBfRFCkxt2z\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.18+commit.87f61d96"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "owner",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "owner_",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_newOwner",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "transferOwnership"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":diamond/=node_modules/diamond/",
+        ":ds-test/=node_modules/ds-test/src/",
+        ":forge-std/=node_modules/forge-std/src/",
+        ":solmate/=node_modules/solmate/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/interface/IOwnershipFacet.sol": "IOwnershipFacet"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/interface/IOwnershipFacet.sol": {
+        "keccak256": "0x505b2f2d275a0aa2861d08564f6d03e44e8d10cd8a1c6fbdea1105383e0e9a4d",
+        "urls": [
+          "bzz-raw://4ca7e3a48787d056da5f3569965f9c2015e65d8ceb124e9346cf73d55e55c8b2",
+          "dweb:/ipfs/QmWJmUsegbVtaJ71yCJZiEpedEvhSuw73NyjBfRFCkxt2z"
+        ],
+        "license": "UNLICENSED"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/interface/IOwnershipFacet.sol",
+    "id": 38676,
+    "exportedSymbols": {
+      "IOwnershipFacet": [
+        38675
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "39:177:73",
+    "nodes": [
+      {
+        "id": 38664,
+        "nodeType": "PragmaDirective",
+        "src": "39:23:73",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".18"
+        ]
+      },
+      {
+        "id": 38675,
+        "nodeType": "ContractDefinition",
+        "src": "64:151:73",
+        "nodes": [
+          {
+            "id": 38669,
+            "nodeType": "FunctionDefinition",
+            "src": "96:55:73",
+            "nodes": [],
+            "functionSelector": "f2fde38b",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "transferOwnership",
+            "nameLocation": "105:17:73",
+            "parameters": {
+              "id": 38667,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38666,
+                  "mutability": "mutable",
+                  "name": "_newOwner",
+                  "nameLocation": "131:9:73",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38669,
+                  "src": "123:17:73",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 38665,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "123:7:73",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "122:19:73"
+            },
+            "returnParameters": {
+              "id": 38668,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "150:0:73"
+            },
+            "scope": 38675,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 38674,
+            "nodeType": "FunctionDefinition",
+            "src": "157:56:73",
+            "nodes": [],
+            "functionSelector": "8da5cb5b",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "owner",
+            "nameLocation": "166:5:73",
+            "parameters": {
+              "id": 38670,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "171:2:73"
+            },
+            "returnParameters": {
+              "id": 38673,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38672,
+                  "mutability": "mutable",
+                  "name": "owner_",
+                  "nameLocation": "205:6:73",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38674,
+                  "src": "197:14:73",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 38671,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "197:7:73",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "196:16:73"
+            },
+            "scope": 38675,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IOwnershipFacet",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          38675
+        ],
+        "name": "IOwnershipFacet",
+        "nameLocation": "74:15:73",
+        "scope": 38676,
+        "usedErrors": []
+      }
+    ],
+    "license": "UNLICENSED"
+  },
+  "id": 73
+}

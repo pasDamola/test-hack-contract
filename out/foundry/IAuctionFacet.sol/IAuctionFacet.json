@@ -1,0 +1,540 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "loanId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "args",
+          "type": "bytes"
+        }
+      ],
+      "name": "Buy",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "loanId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            }
+          ],
+          "internalType": "struct BuyArg[]",
+          "name": "args",
+          "type": "tuple[]"
+        }
+      ],
+      "name": "buy",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "loanId",
+          "type": "uint256"
+        }
+      ],
+      "name": "price",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "buy((uint256,address)[])": "980b13c5",
+    "price(uint256)": "26a49e37"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.18+commit.87f61d96\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"loanId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"args\",\"type\":\"bytes\"}],\"name\":\"Buy\",\"type\":\"event\"},{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"loanId\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"}],\"internalType\":\"struct BuyArg[]\",\"name\":\"args\",\"type\":\"tuple[]\"}],\"name\":\"buy\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"loanId\",\"type\":\"uint256\"}],\"name\":\"price\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"events\":{\"Buy(uint256,bytes)\":{\"params\":{\"args\":\"arguments NFT sold\",\"loanId\":\"identifier of the loan previously backed by the sold collateral\"}}},\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"events\":{\"Buy(uint256,bytes)\":{\"notice\":\"a NFT collateral has been sold as part of a liquidation\"}},\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/interface/IAuctionFacet.sol\":\"IAuctionFacet\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":diamond/=node_modules/diamond/\",\":ds-test/=node_modules/ds-test/src/\",\":forge-std/=node_modules/forge-std/src/\",\":solmate/=node_modules/solmate/\"]},\"sources\":{\"node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34\",\"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr\"]},\"node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol\":{\"keccak256\":\"0xab28a56179c1db258c9bf5235b382698cb650debecb51b23d12be9e241374b68\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://daae589a9d6fa7e55f99f86c0a16796ca490f243fb3693632c3711c0646c1d56\",\"dweb:/ipfs/QmR3zpd7wNw3rcUdekwiv6FYHJqksuTCXLVioTxu6Fbxk3\"]},\"node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol\":{\"keccak256\":\"0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f\",\"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy\"]},\"src/DataStructure/Objects.sol\":{\"keccak256\":\"0x251dd6c3f36c5a2c8a6a867aa29c9ba8b4bb7f2ec1a7321d630fea19f6bbd83a\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://a7f620222a6b6d909e8aa2d7191200b312345b6c704eecdf40729982e238f44e\",\"dweb:/ipfs/QmTikrgA5SKJrsJanid1atHw1M7opEvwuGKNRQTbjeM4sq\"]},\"src/interface/IAuctionFacet.sol\":{\"keccak256\":\"0x142cf5565d929cf20c8b042f791360b7b76289620efcd42c90a37f2d8179e49f\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://3aa1107c4c11a419c7340aff9624e3f539196759ffbe4eed5fde26cbbf1b4567\",\"dweb:/ipfs/QmfS88KKuQskg2RQP6GoVEbk9uUhbmVYH6Fps7yNUpfMCc\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.18+commit.87f61d96"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "loanId",
+              "type": "uint256",
+              "indexed": true
+            },
+            {
+              "internalType": "bytes",
+              "name": "args",
+              "type": "bytes",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "Buy",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "struct BuyArg[]",
+              "name": "args",
+              "type": "tuple[]",
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "loanId",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "address",
+                  "name": "to",
+                  "type": "address"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "buy"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "loanId",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "price",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":diamond/=node_modules/diamond/",
+        ":ds-test/=node_modules/ds-test/src/",
+        ":forge-std/=node_modules/forge-std/src/",
+        ":solmate/=node_modules/solmate/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/interface/IAuctionFacet.sol": "IAuctionFacet"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+        "keccak256": "0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b",
+        "urls": [
+          "bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34",
+          "dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol": {
+        "keccak256": "0xab28a56179c1db258c9bf5235b382698cb650debecb51b23d12be9e241374b68",
+        "urls": [
+          "bzz-raw://daae589a9d6fa7e55f99f86c0a16796ca490f243fb3693632c3711c0646c1d56",
+          "dweb:/ipfs/QmR3zpd7wNw3rcUdekwiv6FYHJqksuTCXLVioTxu6Fbxk3"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+        "keccak256": "0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1",
+        "urls": [
+          "bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f",
+          "dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy"
+        ],
+        "license": "MIT"
+      },
+      "src/DataStructure/Objects.sol": {
+        "keccak256": "0x251dd6c3f36c5a2c8a6a867aa29c9ba8b4bb7f2ec1a7321d630fea19f6bbd83a",
+        "urls": [
+          "bzz-raw://a7f620222a6b6d909e8aa2d7191200b312345b6c704eecdf40729982e238f44e",
+          "dweb:/ipfs/QmTikrgA5SKJrsJanid1atHw1M7opEvwuGKNRQTbjeM4sq"
+        ],
+        "license": "UNLICENSED"
+      },
+      "src/interface/IAuctionFacet.sol": {
+        "keccak256": "0x142cf5565d929cf20c8b042f791360b7b76289620efcd42c90a37f2d8179e49f",
+        "urls": [
+          "bzz-raw://3aa1107c4c11a419c7340aff9624e3f539196759ffbe4eed5fde26cbbf1b4567",
+          "dweb:/ipfs/QmfS88KKuQskg2RQP6GoVEbk9uUhbmVYH6Fps7yNUpfMCc"
+        ],
+        "license": "UNLICENSED"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/interface/IAuctionFacet.sol",
+    "id": 38536,
+    "exportedSymbols": {
+      "BuyArg": [
+        36649
+      ],
+      "IAuctionFacet": [
+        38535
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "39:474:66",
+    "nodes": [
+      {
+        "id": 38511,
+        "nodeType": "PragmaDirective",
+        "src": "39:23:66",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".18"
+        ]
+      },
+      {
+        "id": 38513,
+        "nodeType": "ImportDirective",
+        "src": "64:52:66",
+        "nodes": [],
+        "absolutePath": "src/DataStructure/Objects.sol",
+        "file": "../DataStructure/Objects.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 38536,
+        "sourceUnit": 36709,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 38512,
+              "name": "BuyArg",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 36649,
+              "src": "72:6:66",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 38535,
+        "nodeType": "ContractDefinition",
+        "src": "118:394:66",
+        "nodes": [
+          {
+            "id": 38520,
+            "nodeType": "EventDefinition",
+            "src": "345:46:66",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 38514,
+              "nodeType": "StructuredDocumentation",
+              "src": "148:192:66",
+              "text": "@notice a NFT collateral has been sold as part of a liquidation\n @param loanId identifier of the loan previously backed by the sold collateral\n @param args arguments NFT sold"
+            },
+            "eventSelector": "56fa56fac71c8ba176bf5af94ddd918100d0d8b56a12bbe5e94bac85eca114da",
+            "name": "Buy",
+            "nameLocation": "351:3:66",
+            "parameters": {
+              "id": 38519,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38516,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "loanId",
+                  "nameLocation": "371:6:66",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38520,
+                  "src": "355:22:66",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 38515,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "355:7:66",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 38518,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "args",
+                  "nameLocation": "385:4:66",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38520,
+                  "src": "379:10:66",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 38517,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "379:5:66",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "354:36:66"
+            }
+          },
+          {
+            "id": 38527,
+            "nodeType": "FunctionDefinition",
+            "src": "397:44:66",
+            "nodes": [],
+            "functionSelector": "980b13c5",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "buy",
+            "nameLocation": "406:3:66",
+            "parameters": {
+              "id": 38525,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38524,
+                  "mutability": "mutable",
+                  "name": "args",
+                  "nameLocation": "426:4:66",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38527,
+                  "src": "410:20:66",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_BuyArg_$36649_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct BuyArg[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 38522,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 38521,
+                        "name": "BuyArg",
+                        "nameLocations": [
+                          "410:6:66"
+                        ],
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 36649,
+                        "src": "410:6:66"
+                      },
+                      "referencedDeclaration": 36649,
+                      "src": "410:6:66",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_BuyArg_$36649_storage_ptr",
+                        "typeString": "struct BuyArg"
+                      }
+                    },
+                    "id": 38523,
+                    "nodeType": "ArrayTypeName",
+                    "src": "410:8:66",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_BuyArg_$36649_storage_$dyn_storage_ptr",
+                      "typeString": "struct BuyArg[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "409:22:66"
+            },
+            "returnParameters": {
+              "id": 38526,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "440:0:66"
+            },
+            "scope": 38535,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 38534,
+            "nodeType": "FunctionDefinition",
+            "src": "447:63:66",
+            "nodes": [],
+            "functionSelector": "26a49e37",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "price",
+            "nameLocation": "456:5:66",
+            "parameters": {
+              "id": 38530,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38529,
+                  "mutability": "mutable",
+                  "name": "loanId",
+                  "nameLocation": "470:6:66",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38534,
+                  "src": "462:14:66",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 38528,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "462:7:66",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "461:16:66"
+            },
+            "returnParameters": {
+              "id": 38533,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38532,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38534,
+                  "src": "501:7:66",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 38531,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "501:7:66",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "500:9:66"
+            },
+            "scope": 38535,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IAuctionFacet",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          38535
+        ],
+        "name": "IAuctionFacet",
+        "nameLocation": "128:13:66",
+        "scope": 38536,
+        "usedErrors": []
+      }
+    ],
+    "license": "UNLICENSED"
+  },
+  "id": 66
+}

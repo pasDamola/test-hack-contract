@@ -1,0 +1,1141 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220f44781b330da2b2e8decffc2591d8885d6c225e3ab78b34787bf73f95bd4fc0b64736f6c63430008120033",
+    "sourceMap": "432:878:64:-:0;;;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x6080604052600080fdfea2646970667358221220f44781b330da2b2e8decffc2591d8885d6c225e3ab78b34787bf73f95bd4fc0b64736f6c63430008120033",
+    "sourceMap": "432:878:64:-:0;;;;;",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.18+commit.87f61d96\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"details\":\"inherit this to make an ERC721-compliant facet with added feature internal safeMint\",\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"notice\":\"safeMint internal method added to base ERC721 implementation for supply position minting\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/SupplyPositionLogic/SafeMint.sol\":\"SafeMint\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":diamond/=node_modules/diamond/\",\":ds-test/=node_modules/ds-test/src/\",\":forge-std/=node_modules/forge-std/src/\",\":solmate/=node_modules/solmate/\"]},\"sources\":{\"node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34\",\"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr\"]},\"node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol\":{\"keccak256\":\"0xab28a56179c1db258c9bf5235b382698cb650debecb51b23d12be9e241374b68\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://daae589a9d6fa7e55f99f86c0a16796ca490f243fb3693632c3711c0646c1d56\",\"dweb:/ipfs/QmR3zpd7wNw3rcUdekwiv6FYHJqksuTCXLVioTxu6Fbxk3\"]},\"node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol\":{\"keccak256\":\"0xa82b58eca1ee256be466e536706850163d2ec7821945abd6b4778cfb3bee37da\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6e75cf83beb757b8855791088546b8337e9d4684e169400c20d44a515353b708\",\"dweb:/ipfs/QmYvPafLfoquiDMEj7CKHtvbgHu7TJNPSVPSCjrtjV8HjV\"]},\"node_modules/@openzeppelin/contracts/utils/Address.sol\":{\"keccak256\":\"0xf96f969e24029d43d0df89e59d365f277021dac62b48e1c1e3ebe0acdd7f1ca1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ec772b45a624be516f1c81970caa8a2e144301e9d0921cbc1a2789fef39a1269\",\"dweb:/ipfs/QmNyjwxCrGhQMyzLD93oUobJXVe9ceJvRvfXwbEtuxPiEj\"]},\"node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol\":{\"keccak256\":\"0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f\",\"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy\"]},\"src/DataStructure/ERC721Errors.sol\":{\"keccak256\":\"0x0ee13f898a2d61d6662ef236db05001d14086ff4431bef2ae89c1979819d38d0\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://2e1878fe70994d02159dbf4a5a9c79b3665feaae0d08ff420b3f00cb8ed6355a\",\"dweb:/ipfs/QmNYJDoien8bUQFYuc75GyVGVTYuiUagF4RRUSGTTmZNH7\"]},\"src/DataStructure/Global.sol\":{\"keccak256\":\"0x9596c1bdf1271dd447db6a8f26ca493253674e252c9f63a7bc13c8689a7b6e49\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://3ff822127c6c674400e9730466eb6832d19a72eaf991f3bbf62d251a6e2b49d5\",\"dweb:/ipfs/QmZPGbWwS7rTPF3NiyjivxDseeBW64GhfkGvVNuaCbnzDv\"]},\"src/DataStructure/Objects.sol\":{\"keccak256\":\"0x251dd6c3f36c5a2c8a6a867aa29c9ba8b4bb7f2ec1a7321d630fea19f6bbd83a\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://a7f620222a6b6d909e8aa2d7191200b312345b6c704eecdf40729982e238f44e\",\"dweb:/ipfs/QmTikrgA5SKJrsJanid1atHw1M7opEvwuGKNRQTbjeM4sq\"]},\"src/DataStructure/Storage.sol\":{\"keccak256\":\"0x8f99f5f94641c826d0b4bd2dadb065745ff877b195fb1eb7392362a026d01380\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://f2c2362ee8472e6076f7f18a51264c96e63a346e61da6a7234abe5e3c034de38\",\"dweb:/ipfs/QmW59HJM49LDieB2svjKnYzo7hdYKG24rLKgb7AfiXht4z\"]},\"src/SupplyPositionLogic/NFTUtils.sol\":{\"keccak256\":\"0xc1fdc762292d11504da9d1b999d6364d8c76b721c8f6f7369e0030c9dae9af13\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://dc9d2a3636065c11ad95bc669381dae82218909711ed54e31ee3085671ade192\",\"dweb:/ipfs/QmfX1zJes16PDd9NUGcSNYBMRvaykMhyaEMEQsmMugVtP4\"]},\"src/SupplyPositionLogic/SafeMint.sol\":{\"keccak256\":\"0xfe55649875c4f7c6fa65c01b8abf9e0f6564cab19ec24fb895bdce6dde90764d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5b0e86c734cce67187b23816bbba38c9eaab5e2154606de75866637f4774fd99\",\"dweb:/ipfs/QmPuJk6rhpUNjhftEAzbm26DA5tZw8sHybzYZ6G4PuWG8G\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.18+commit.87f61d96"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":diamond/=node_modules/diamond/",
+        ":ds-test/=node_modules/ds-test/src/",
+        ":forge-std/=node_modules/forge-std/src/",
+        ":solmate/=node_modules/solmate/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/SupplyPositionLogic/SafeMint.sol": "SafeMint"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+        "keccak256": "0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b",
+        "urls": [
+          "bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34",
+          "dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol": {
+        "keccak256": "0xab28a56179c1db258c9bf5235b382698cb650debecb51b23d12be9e241374b68",
+        "urls": [
+          "bzz-raw://daae589a9d6fa7e55f99f86c0a16796ca490f243fb3693632c3711c0646c1d56",
+          "dweb:/ipfs/QmR3zpd7wNw3rcUdekwiv6FYHJqksuTCXLVioTxu6Fbxk3"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol": {
+        "keccak256": "0xa82b58eca1ee256be466e536706850163d2ec7821945abd6b4778cfb3bee37da",
+        "urls": [
+          "bzz-raw://6e75cf83beb757b8855791088546b8337e9d4684e169400c20d44a515353b708",
+          "dweb:/ipfs/QmYvPafLfoquiDMEj7CKHtvbgHu7TJNPSVPSCjrtjV8HjV"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/utils/Address.sol": {
+        "keccak256": "0xf96f969e24029d43d0df89e59d365f277021dac62b48e1c1e3ebe0acdd7f1ca1",
+        "urls": [
+          "bzz-raw://ec772b45a624be516f1c81970caa8a2e144301e9d0921cbc1a2789fef39a1269",
+          "dweb:/ipfs/QmNyjwxCrGhQMyzLD93oUobJXVe9ceJvRvfXwbEtuxPiEj"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+        "keccak256": "0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1",
+        "urls": [
+          "bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f",
+          "dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy"
+        ],
+        "license": "MIT"
+      },
+      "src/DataStructure/ERC721Errors.sol": {
+        "keccak256": "0x0ee13f898a2d61d6662ef236db05001d14086ff4431bef2ae89c1979819d38d0",
+        "urls": [
+          "bzz-raw://2e1878fe70994d02159dbf4a5a9c79b3665feaae0d08ff420b3f00cb8ed6355a",
+          "dweb:/ipfs/QmNYJDoien8bUQFYuc75GyVGVTYuiUagF4RRUSGTTmZNH7"
+        ],
+        "license": "UNLICENSED"
+      },
+      "src/DataStructure/Global.sol": {
+        "keccak256": "0x9596c1bdf1271dd447db6a8f26ca493253674e252c9f63a7bc13c8689a7b6e49",
+        "urls": [
+          "bzz-raw://3ff822127c6c674400e9730466eb6832d19a72eaf991f3bbf62d251a6e2b49d5",
+          "dweb:/ipfs/QmZPGbWwS7rTPF3NiyjivxDseeBW64GhfkGvVNuaCbnzDv"
+        ],
+        "license": "UNLICENSED"
+      },
+      "src/DataStructure/Objects.sol": {
+        "keccak256": "0x251dd6c3f36c5a2c8a6a867aa29c9ba8b4bb7f2ec1a7321d630fea19f6bbd83a",
+        "urls": [
+          "bzz-raw://a7f620222a6b6d909e8aa2d7191200b312345b6c704eecdf40729982e238f44e",
+          "dweb:/ipfs/QmTikrgA5SKJrsJanid1atHw1M7opEvwuGKNRQTbjeM4sq"
+        ],
+        "license": "UNLICENSED"
+      },
+      "src/DataStructure/Storage.sol": {
+        "keccak256": "0x8f99f5f94641c826d0b4bd2dadb065745ff877b195fb1eb7392362a026d01380",
+        "urls": [
+          "bzz-raw://f2c2362ee8472e6076f7f18a51264c96e63a346e61da6a7234abe5e3c034de38",
+          "dweb:/ipfs/QmW59HJM49LDieB2svjKnYzo7hdYKG24rLKgb7AfiXht4z"
+        ],
+        "license": "UNLICENSED"
+      },
+      "src/SupplyPositionLogic/NFTUtils.sol": {
+        "keccak256": "0xc1fdc762292d11504da9d1b999d6364d8c76b721c8f6f7369e0030c9dae9af13",
+        "urls": [
+          "bzz-raw://dc9d2a3636065c11ad95bc669381dae82218909711ed54e31ee3085671ade192",
+          "dweb:/ipfs/QmfX1zJes16PDd9NUGcSNYBMRvaykMhyaEMEQsmMugVtP4"
+        ],
+        "license": "MIT"
+      },
+      "src/SupplyPositionLogic/SafeMint.sol": {
+        "keccak256": "0xfe55649875c4f7c6fa65c01b8abf9e0f6564cab19ec24fb895bdce6dde90764d",
+        "urls": [
+          "bzz-raw://5b0e86c734cce67187b23816bbba38c9eaab5e2154606de75866637f4774fd99",
+          "dweb:/ipfs/QmPuJk6rhpUNjhftEAzbm26DA5tZw8sHybzYZ6G4PuWG8G"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/SupplyPositionLogic/SafeMint.sol",
+    "id": 38433,
+    "exportedSymbols": {
+      "NFTUtils": [
+        38349
+      ],
+      "Provision": [
+        36827
+      ],
+      "SafeMint": [
+        38432
+      ],
+      "SupplyPosition": [
+        36819
+      ],
+      "supplyPositionStorage": [
+        36636
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:1279:64",
+    "nodes": [
+      {
+        "id": 38351,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:64",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".18"
+        ]
+      },
+      {
+        "id": 38353,
+        "nodeType": "ImportDirective",
+        "src": "57:40:64",
+        "nodes": [],
+        "absolutePath": "src/SupplyPositionLogic/NFTUtils.sol",
+        "file": "./NFTUtils.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 38433,
+        "sourceUnit": 38350,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 38352,
+              "name": "NFTUtils",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 38349,
+              "src": "65:8:64",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 38356,
+        "nodeType": "ImportDirective",
+        "src": "98:71:64",
+        "nodes": [],
+        "absolutePath": "src/DataStructure/Storage.sol",
+        "file": "../DataStructure/Storage.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 38433,
+        "sourceUnit": 36828,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 38354,
+              "name": "Provision",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 36827,
+              "src": "106:9:64",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 38355,
+              "name": "SupplyPosition",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 36819,
+              "src": "117:14:64",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 38358,
+        "nodeType": "ImportDirective",
+        "src": "170:66:64",
+        "nodes": [],
+        "absolutePath": "src/DataStructure/Global.sol",
+        "file": "../DataStructure/Global.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 38433,
+        "sourceUnit": 36637,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 38357,
+              "name": "supplyPositionStorage",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 36636,
+              "src": "178:21:64",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 38432,
+        "nodeType": "ContractDefinition",
+        "src": "432:878:64",
+        "nodes": [
+          {
+            "id": 38398,
+            "nodeType": "FunctionDefinition",
+            "src": "678:273:64",
+            "nodes": [],
+            "body": {
+              "id": 38397,
+              "nodeType": "Block",
+              "src": "771:180:64",
+              "nodes": [],
+              "statements": [
+                {
+                  "assignments": [
+                    38374
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 38374,
+                      "mutability": "mutable",
+                      "name": "sp",
+                      "nameLocation": "804:2:64",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 38397,
+                      "src": "781:25:64",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_SupplyPosition_$36819_storage_ptr",
+                        "typeString": "struct SupplyPosition"
+                      },
+                      "typeName": {
+                        "id": 38373,
+                        "nodeType": "UserDefinedTypeName",
+                        "pathNode": {
+                          "id": 38372,
+                          "name": "SupplyPosition",
+                          "nameLocations": [
+                            "781:14:64"
+                          ],
+                          "nodeType": "IdentifierPath",
+                          "referencedDeclaration": 36819,
+                          "src": "781:14:64"
+                        },
+                        "referencedDeclaration": 36819,
+                        "src": "781:14:64",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_SupplyPosition_$36819_storage_ptr",
+                          "typeString": "struct SupplyPosition"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 38377,
+                  "initialValue": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 38375,
+                      "name": "supplyPositionStorage",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 36636,
+                      "src": "809:21:64",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$__$returns$_t_struct$_SupplyPosition_$36819_storage_ptr_$",
+                        "typeString": "function () pure returns (struct SupplyPosition storage pointer)"
+                      }
+                    },
+                    "id": 38376,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "809:23:64",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_SupplyPosition_$36819_storage_ptr",
+                      "typeString": "struct SupplyPosition storage pointer"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "781:51:64"
+                },
+                {
+                  "expression": {
+                    "id": 38382,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 38378,
+                      "name": "tokenId",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 38370,
+                      "src": "843:7:64",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 38381,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "UnaryOperation",
+                      "operator": "++",
+                      "prefix": true,
+                      "src": "853:16:64",
+                      "subExpression": {
+                        "expression": {
+                          "id": 38379,
+                          "name": "sp",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 38374,
+                          "src": "855:2:64",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_SupplyPosition_$36819_storage_ptr",
+                            "typeString": "struct SupplyPosition storage pointer"
+                          }
+                        },
+                        "id": 38380,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": true,
+                        "memberLocation": "858:11:64",
+                        "memberName": "totalSupply",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 36795,
+                        "src": "855:14:64",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "843:26:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 38383,
+                  "nodeType": "ExpressionStatement",
+                  "src": "843:26:64"
+                },
+                {
+                  "expression": {
+                    "id": 38390,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "baseExpression": {
+                        "expression": {
+                          "id": 38384,
+                          "name": "sp",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 38374,
+                          "src": "879:2:64",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_SupplyPosition_$36819_storage_ptr",
+                            "typeString": "struct SupplyPosition storage pointer"
+                          }
+                        },
+                        "id": 38387,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "882:9:64",
+                        "memberName": "provision",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 36818,
+                        "src": "879:12:64",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Provision_$36827_storage_$",
+                          "typeString": "mapping(uint256 => struct Provision storage ref)"
+                        }
+                      },
+                      "id": 38388,
+                      "indexExpression": {
+                        "id": 38386,
+                        "name": "tokenId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 38370,
+                        "src": "892:7:64",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "879:21:64",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Provision_$36827_storage",
+                        "typeString": "struct Provision storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 38389,
+                      "name": "provision",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 38367,
+                      "src": "903:9:64",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Provision_$36827_memory_ptr",
+                        "typeString": "struct Provision memory"
+                      }
+                    },
+                    "src": "879:33:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Provision_$36827_storage",
+                      "typeString": "struct Provision storage ref"
+                    }
+                  },
+                  "id": 38391,
+                  "nodeType": "ExpressionStatement",
+                  "src": "879:33:64"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 38393,
+                        "name": "to",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 38364,
+                        "src": "932:2:64",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 38394,
+                        "name": "tokenId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 38370,
+                        "src": "936:7:64",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 38392,
+                      "name": "_safeMint",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        37935,
+                        37965
+                      ],
+                      "referencedDeclaration": 37935,
+                      "src": "922:9:64",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$__$",
+                        "typeString": "function (address,uint256)"
+                      }
+                    },
+                    "id": 38395,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "922:22:64",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 38396,
+                  "nodeType": "ExpressionStatement",
+                  "src": "922:22:64"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 38362,
+              "nodeType": "StructuredDocumentation",
+              "src": "468:205:64",
+              "text": "@notice mints a new supply position to `to`\n @param to receiver of the position\n @param provision metadata of the supply position\n @return tokenId identifier of the supply position"
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "safeMint",
+            "nameLocation": "687:8:64",
+            "parameters": {
+              "id": 38368,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38364,
+                  "mutability": "mutable",
+                  "name": "to",
+                  "nameLocation": "704:2:64",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38398,
+                  "src": "696:10:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 38363,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "696:7:64",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 38367,
+                  "mutability": "mutable",
+                  "name": "provision",
+                  "nameLocation": "725:9:64",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38398,
+                  "src": "708:26:64",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Provision_$36827_memory_ptr",
+                    "typeString": "struct Provision"
+                  },
+                  "typeName": {
+                    "id": 38366,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 38365,
+                      "name": "Provision",
+                      "nameLocations": [
+                        "708:9:64"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 36827,
+                      "src": "708:9:64"
+                    },
+                    "referencedDeclaration": 36827,
+                    "src": "708:9:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Provision_$36827_storage_ptr",
+                      "typeString": "struct Provision"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "695:40:64"
+            },
+            "returnParameters": {
+              "id": 38371,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38370,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "762:7:64",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38398,
+                  "src": "754:15:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 38369,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "754:7:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "753:17:64"
+            },
+            "scope": 38432,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 38409,
+            "nodeType": "FunctionDefinition",
+            "src": "999:93:64",
+            "nodes": [],
+            "body": {
+              "id": 38408,
+              "nodeType": "Block",
+              "src": "1090:2:64",
+              "nodes": [],
+              "statements": []
+            },
+            "baseFunctions": [
+              37813
+            ],
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "emitTransfer",
+            "nameLocation": "1008:12:64",
+            "overrides": {
+              "id": 38406,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "1081:8:64"
+            },
+            "parameters": {
+              "id": 38405,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38400,
+                  "mutability": "mutable",
+                  "name": "from",
+                  "nameLocation": "1029:4:64",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38409,
+                  "src": "1021:12:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 38399,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1021:7:64",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 38402,
+                  "mutability": "mutable",
+                  "name": "to",
+                  "nameLocation": "1043:2:64",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38409,
+                  "src": "1035:10:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 38401,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1035:7:64",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 38404,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "1055:7:64",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38409,
+                  "src": "1047:15:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 38403,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1047:7:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1020:43:64"
+            },
+            "returnParameters": {
+              "id": 38407,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1090:0:64"
+            },
+            "scope": 38432,
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "internal"
+          },
+          {
+            "id": 38420,
+            "nodeType": "FunctionDefinition",
+            "src": "1098:100:64",
+            "nodes": [],
+            "body": {
+              "id": 38419,
+              "nodeType": "Block",
+              "src": "1196:2:64",
+              "nodes": [],
+              "statements": []
+            },
+            "baseFunctions": [
+              37822
+            ],
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "emitApproval",
+            "nameLocation": "1107:12:64",
+            "overrides": {
+              "id": 38417,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "1187:8:64"
+            },
+            "parameters": {
+              "id": 38416,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38411,
+                  "mutability": "mutable",
+                  "name": "owner",
+                  "nameLocation": "1128:5:64",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38420,
+                  "src": "1120:13:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 38410,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1120:7:64",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 38413,
+                  "mutability": "mutable",
+                  "name": "approved",
+                  "nameLocation": "1143:8:64",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38420,
+                  "src": "1135:16:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 38412,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1135:7:64",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 38415,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "1161:7:64",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38420,
+                  "src": "1153:15:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 38414,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1153:7:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1119:50:64"
+            },
+            "returnParameters": {
+              "id": 38418,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1196:0:64"
+            },
+            "scope": 38432,
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "internal"
+          },
+          {
+            "id": 38431,
+            "nodeType": "FunctionDefinition",
+            "src": "1204:104:64",
+            "nodes": [],
+            "body": {
+              "id": 38430,
+              "nodeType": "Block",
+              "src": "1306:2:64",
+              "nodes": [],
+              "statements": []
+            },
+            "baseFunctions": [
+              37831
+            ],
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "emitApprovalForAll",
+            "nameLocation": "1213:18:64",
+            "overrides": {
+              "id": 38428,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "1297:8:64"
+            },
+            "parameters": {
+              "id": 38427,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38422,
+                  "mutability": "mutable",
+                  "name": "owner",
+                  "nameLocation": "1240:5:64",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38431,
+                  "src": "1232:13:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 38421,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1232:7:64",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 38424,
+                  "mutability": "mutable",
+                  "name": "operator",
+                  "nameLocation": "1255:8:64",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38431,
+                  "src": "1247:16:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 38423,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1247:7:64",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 38426,
+                  "mutability": "mutable",
+                  "name": "approved",
+                  "nameLocation": "1270:8:64",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38431,
+                  "src": "1265:13:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 38425,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1265:4:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1231:48:64"
+            },
+            "returnParameters": {
+              "id": 38429,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1306:0:64"
+            },
+            "scope": 38432,
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "internal"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 38360,
+              "name": "NFTUtils",
+              "nameLocations": [
+                "453:8:64"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 38349,
+              "src": "453:8:64"
+            },
+            "id": 38361,
+            "nodeType": "InheritanceSpecifier",
+            "src": "453:8:64"
+          }
+        ],
+        "canonicalName": "SafeMint",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 38359,
+          "nodeType": "StructuredDocumentation",
+          "src": "238:194:64",
+          "text": "@notice safeMint internal method added to base ERC721 implementation for supply position minting\n @dev inherit this to make an ERC721-compliant facet with added feature internal safeMint"
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          38432,
+          38349
+        ],
+        "name": "SafeMint",
+        "nameLocation": "441:8:64",
+        "scope": 38433,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 64
+}

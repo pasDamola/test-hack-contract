@@ -1,0 +1,3330 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "approved",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Approval",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bool",
+          "name": "approved",
+          "type": "bool"
+        }
+      ],
+      "name": "ApprovalForAll",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "loanId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "loan",
+          "type": "bytes"
+        }
+      ],
+      "name": "Borrow",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "loanId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "args",
+          "type": "bytes"
+        }
+      ],
+      "name": "Buy",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "claimant",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "claimed",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "loanId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Claim",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "facetAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "enum IDiamond.FacetCutAction",
+              "name": "action",
+              "type": "uint8"
+            },
+            {
+              "internalType": "bytes4[]",
+              "name": "functionSelectors",
+              "type": "bytes4[]"
+            }
+          ],
+          "indexed": false,
+          "internalType": "struct IDiamond.FacetCut[]",
+          "name": "_diamondCut",
+          "type": "tuple[]"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_init",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "_calldata",
+          "type": "bytes"
+        }
+      ],
+      "name": "DiamondCut",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "newAuctionDuration",
+          "type": "uint256"
+        }
+      ],
+      "name": "NewAuctionDuration",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "Ray",
+          "name": "newAuctionPriceFactor",
+          "type": "uint256"
+        }
+      ],
+      "name": "NewAuctionPriceFactor",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "contract IERC20",
+          "name": "currency",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "newLowerBound",
+          "type": "uint256"
+        }
+      ],
+      "name": "NewBorrowAmountPerOfferLowerBound",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "contract IERC20",
+          "name": "currency",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "newMinOfferCost",
+          "type": "uint256"
+        }
+      ],
+      "name": "NewMininimumOfferCost",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "Ray",
+          "name": "tranche",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "newTrancheId",
+          "type": "uint256"
+        }
+      ],
+      "name": "NewTranche",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "loanId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Repay",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Transfer",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "approve",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "balance",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "components": [
+                {
+                  "internalType": "contract IERC721",
+                  "name": "implem",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "id",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct NFToken",
+              "name": "nft",
+              "type": "tuple"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "bytes",
+                  "name": "signature",
+                  "type": "bytes"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount",
+                  "type": "uint256"
+                },
+                {
+                  "components": [
+                    {
+                      "internalType": "contract IERC20",
+                      "name": "assetToLend",
+                      "type": "address"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "loanToValue",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "duration",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "expirationDate",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "tranche",
+                      "type": "uint256"
+                    },
+                    {
+                      "components": [
+                        {
+                          "internalType": "contract IERC721",
+                          "name": "implem",
+                          "type": "address"
+                        },
+                        {
+                          "internalType": "uint256",
+                          "name": "id",
+                          "type": "uint256"
+                        }
+                      ],
+                      "internalType": "struct NFToken",
+                      "name": "collateral",
+                      "type": "tuple"
+                    }
+                  ],
+                  "internalType": "struct Offer",
+                  "name": "offer",
+                  "type": "tuple"
+                }
+              ],
+              "internalType": "struct OfferArg[]",
+              "name": "args",
+              "type": "tuple[]"
+            }
+          ],
+          "internalType": "struct BorrowArg[]",
+          "name": "args",
+          "type": "tuple[]"
+        }
+      ],
+      "name": "borrow",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "loanId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            }
+          ],
+          "internalType": "struct BuyArg[]",
+          "name": "args",
+          "type": "tuple[]"
+        }
+      ],
+      "name": "buy",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "positionIds",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "claim",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "sent",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "loanIds",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "claimAsBorrower",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "sent",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "Ray",
+          "name": "newTranche",
+          "type": "uint256"
+        }
+      ],
+      "name": "createTranche",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "newTrancheId",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "facetAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "enum IDiamond.FacetCutAction",
+              "name": "action",
+              "type": "uint8"
+            },
+            {
+              "internalType": "bytes4[]",
+              "name": "functionSelectors",
+              "type": "bytes4[]"
+            }
+          ],
+          "internalType": "struct IDiamond.FacetCut[]",
+          "name": "_diamondCut",
+          "type": "tuple[]"
+        },
+        {
+          "internalType": "address",
+          "name": "_init",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_calldata",
+          "type": "bytes"
+        }
+      ],
+      "name": "diamondCut",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "_functionSelector",
+          "type": "bytes4"
+        }
+      ],
+      "name": "facetAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "facetAddress_",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "facetAddresses",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "facetAddresses_",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_facet",
+          "type": "address"
+        }
+      ],
+      "name": "facetFunctionSelectors",
+      "outputs": [
+        {
+          "internalType": "bytes4[]",
+          "name": "facetFunctionSelectors_",
+          "type": "bytes4[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "facets",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "facetAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes4[]",
+              "name": "functionSelectors",
+              "type": "bytes4[]"
+            }
+          ],
+          "internalType": "struct IDiamondLoupe.Facet[]",
+          "name": "facets_",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getApproved",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "name": "getLoan",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "contract IERC20",
+              "name": "assetLent",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "lent",
+              "type": "uint256"
+            },
+            {
+              "internalType": "Ray",
+              "name": "shareLent",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "startDate",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "endDate",
+              "type": "uint256"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "duration",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "Ray",
+                  "name": "priceFactor",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct Auction",
+              "name": "auction",
+              "type": "tuple"
+            },
+            {
+              "internalType": "Ray",
+              "name": "interestPerSecond",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "borrower",
+              "type": "address"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "contract IERC721",
+                  "name": "implem",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "id",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct NFToken",
+              "name": "collateral",
+              "type": "tuple"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "paid",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "minInterestsToRepay",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "bool",
+                  "name": "liquidated",
+                  "type": "bool"
+                },
+                {
+                  "internalType": "bool",
+                  "name": "borrowerClaimed",
+                  "type": "bool"
+                }
+              ],
+              "internalType": "struct Payment",
+              "name": "payment",
+              "type": "tuple"
+            },
+            {
+              "internalType": "uint256",
+              "name": "supplyPositionIndex",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "nbOfPositions",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct Loan",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract IERC20",
+          "name": "currency",
+          "type": "address"
+        }
+      ],
+      "name": "getMinOfferCostAndBorrowableAmount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "minOfferCost",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "offerBorrowAmountLowerBound",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getParameters",
+      "outputs": [
+        {
+          "internalType": "Ray",
+          "name": "auctionPriceFactor",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "auctionDuration",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "nbOfLoans",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "nbOfTranches",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "name": "getRateOfTranche",
+      "outputs": [
+        {
+          "internalType": "Ray",
+          "name": "rate",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        }
+      ],
+      "name": "isApprovedForAll",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "contract IERC20",
+              "name": "assetToLend",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "loanToValue",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "duration",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "expirationDate",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tranche",
+              "type": "uint256"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "contract IERC721",
+                  "name": "implem",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "id",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct NFToken",
+              "name": "collateral",
+              "type": "tuple"
+            }
+          ],
+          "internalType": "struct Offer",
+          "name": "offer",
+          "type": "tuple"
+        }
+      ],
+      "name": "offerDigest",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "onERC721Received",
+      "outputs": [
+        {
+          "internalType": "bytes4",
+          "name": "",
+          "type": "bytes4"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "owner_",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "ownerOf",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "position",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "Ray",
+              "name": "share",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "loanId",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct Provision",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "loanId",
+          "type": "uint256"
+        }
+      ],
+      "name": "price",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "loanIds",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "repay",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "safeTransferFrom",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "safeTransferFrom",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "_approved",
+          "type": "bool"
+        }
+      ],
+      "name": "setApprovalForAll",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "newAuctionDuration",
+          "type": "uint256"
+        }
+      ],
+      "name": "setAuctionDuration",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "Ray",
+          "name": "newAuctionPriceFactor",
+          "type": "uint256"
+        }
+      ],
+      "name": "setAuctionPriceFactor",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract IERC20",
+          "name": "currency",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "newLowerBound",
+          "type": "uint256"
+        }
+      ],
+      "name": "setBorrowAmountPerOfferLowerBound",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract IERC20",
+          "name": "currency",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "newMinOfferCost",
+          "type": "uint256"
+        }
+      ],
+      "name": "setMinOfferCost",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "interfaceId",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "totalSupply",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferFrom",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "approve(address,uint256)": "095ea7b3",
+    "balanceOf(address)": "70a08231",
+    "borrow(((address,uint256),(bytes,uint256,(address,uint256,uint256,uint256,uint256,(address,uint256)))[])[])": "b1ce7a6a",
+    "buy((uint256,address)[])": "980b13c5",
+    "claim(uint256[])": "6ba4c138",
+    "claimAsBorrower(uint256[])": "3d6fd5be",
+    "createTranche(uint256)": "92eab80e",
+    "diamondCut((address,uint8,bytes4[])[],address,bytes)": "1f931c1c",
+    "facetAddress(bytes4)": "cdffacc6",
+    "facetAddresses()": "52ef6b2c",
+    "facetFunctionSelectors(address)": "adfca15e",
+    "facets()": "7a0ed627",
+    "getApproved(uint256)": "081812fc",
+    "getLoan(uint256)": "504006ca",
+    "getMinOfferCostAndBorrowableAmount(address)": "8d116c7a",
+    "getParameters()": "a5ea11da",
+    "getRateOfTranche(uint256)": "14aab74f",
+    "isApprovedForAll(address,address)": "e985e9c5",
+    "offerDigest((address,uint256,uint256,uint256,uint256,(address,uint256)))": "1fbc8a74",
+    "onERC721Received(address,address,uint256,bytes)": "150b7a02",
+    "owner()": "8da5cb5b",
+    "ownerOf(uint256)": "6352211e",
+    "position(uint256)": "f7a95a9e",
+    "price(uint256)": "26a49e37",
+    "repay(uint256[])": "0c72ad20",
+    "safeTransferFrom(address,address,uint256)": "42842e0e",
+    "safeTransferFrom(address,address,uint256,bytes)": "b88d4fde",
+    "setApprovalForAll(address,bool)": "a22cb465",
+    "setAuctionDuration(uint256)": "a497e674",
+    "setAuctionPriceFactor(uint256)": "e7af8fed",
+    "setBorrowAmountPerOfferLowerBound(address,uint256)": "7660e109",
+    "setMinOfferCost(address,uint256)": "1a34c700",
+    "supportsInterface(bytes4)": "01ffc9a7",
+    "totalSupply()": "18160ddd",
+    "transferFrom(address,address,uint256)": "23b872dd",
+    "transferOwnership(address)": "f2fde38b"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.18+commit.87f61d96\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"approved\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"Approval\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"approved\",\"type\":\"bool\"}],\"name\":\"ApprovalForAll\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"loanId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"loan\",\"type\":\"bytes\"}],\"name\":\"Borrow\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"loanId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"args\",\"type\":\"bytes\"}],\"name\":\"Buy\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"claimant\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"claimed\",\"type\":\"uint256\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"loanId\",\"type\":\"uint256\"}],\"name\":\"Claim\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"facetAddress\",\"type\":\"address\"},{\"internalType\":\"enum IDiamond.FacetCutAction\",\"name\":\"action\",\"type\":\"uint8\"},{\"internalType\":\"bytes4[]\",\"name\":\"functionSelectors\",\"type\":\"bytes4[]\"}],\"indexed\":false,\"internalType\":\"struct IDiamond.FacetCut[]\",\"name\":\"_diamondCut\",\"type\":\"tuple[]\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_init\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"_calldata\",\"type\":\"bytes\"}],\"name\":\"DiamondCut\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"newAuctionDuration\",\"type\":\"uint256\"}],\"name\":\"NewAuctionDuration\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"Ray\",\"name\":\"newAuctionPriceFactor\",\"type\":\"uint256\"}],\"name\":\"NewAuctionPriceFactor\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"contract IERC20\",\"name\":\"currency\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"newLowerBound\",\"type\":\"uint256\"}],\"name\":\"NewBorrowAmountPerOfferLowerBound\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"contract IERC20\",\"name\":\"currency\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"newMinOfferCost\",\"type\":\"uint256\"}],\"name\":\"NewMininimumOfferCost\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"Ray\",\"name\":\"tranche\",\"type\":\"uint256\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"newTrancheId\",\"type\":\"uint256\"}],\"name\":\"NewTranche\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"loanId\",\"type\":\"uint256\"}],\"name\":\"Repay\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"Transfer\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"approve\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"balance\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"components\":[{\"internalType\":\"contract IERC721\",\"name\":\"implem\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"internalType\":\"struct NFToken\",\"name\":\"nft\",\"type\":\"tuple\"},{\"components\":[{\"internalType\":\"bytes\",\"name\":\"signature\",\"type\":\"bytes\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"components\":[{\"internalType\":\"contract IERC20\",\"name\":\"assetToLend\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"loanToValue\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"duration\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"expirationDate\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"tranche\",\"type\":\"uint256\"},{\"components\":[{\"internalType\":\"contract IERC721\",\"name\":\"implem\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"internalType\":\"struct NFToken\",\"name\":\"collateral\",\"type\":\"tuple\"}],\"internalType\":\"struct Offer\",\"name\":\"offer\",\"type\":\"tuple\"}],\"internalType\":\"struct OfferArg[]\",\"name\":\"args\",\"type\":\"tuple[]\"}],\"internalType\":\"struct BorrowArg[]\",\"name\":\"args\",\"type\":\"tuple[]\"}],\"name\":\"borrow\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"loanId\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"}],\"internalType\":\"struct BuyArg[]\",\"name\":\"args\",\"type\":\"tuple[]\"}],\"name\":\"buy\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256[]\",\"name\":\"positionIds\",\"type\":\"uint256[]\"}],\"name\":\"claim\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"sent\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256[]\",\"name\":\"loanIds\",\"type\":\"uint256[]\"}],\"name\":\"claimAsBorrower\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"sent\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"Ray\",\"name\":\"newTranche\",\"type\":\"uint256\"}],\"name\":\"createTranche\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"newTrancheId\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"facetAddress\",\"type\":\"address\"},{\"internalType\":\"enum IDiamond.FacetCutAction\",\"name\":\"action\",\"type\":\"uint8\"},{\"internalType\":\"bytes4[]\",\"name\":\"functionSelectors\",\"type\":\"bytes4[]\"}],\"internalType\":\"struct IDiamond.FacetCut[]\",\"name\":\"_diamondCut\",\"type\":\"tuple[]\"},{\"internalType\":\"address\",\"name\":\"_init\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"_calldata\",\"type\":\"bytes\"}],\"name\":\"diamondCut\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"_functionSelector\",\"type\":\"bytes4\"}],\"name\":\"facetAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"facetAddress_\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"facetAddresses\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"facetAddresses_\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_facet\",\"type\":\"address\"}],\"name\":\"facetFunctionSelectors\",\"outputs\":[{\"internalType\":\"bytes4[]\",\"name\":\"facetFunctionSelectors_\",\"type\":\"bytes4[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"facets\",\"outputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"facetAddress\",\"type\":\"address\"},{\"internalType\":\"bytes4[]\",\"name\":\"functionSelectors\",\"type\":\"bytes4[]\"}],\"internalType\":\"struct IDiamondLoupe.Facet[]\",\"name\":\"facets_\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"getApproved\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"getLoan\",\"outputs\":[{\"components\":[{\"internalType\":\"contract IERC20\",\"name\":\"assetLent\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"lent\",\"type\":\"uint256\"},{\"internalType\":\"Ray\",\"name\":\"shareLent\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"startDate\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"endDate\",\"type\":\"uint256\"},{\"components\":[{\"internalType\":\"uint256\",\"name\":\"duration\",\"type\":\"uint256\"},{\"internalType\":\"Ray\",\"name\":\"priceFactor\",\"type\":\"uint256\"}],\"internalType\":\"struct Auction\",\"name\":\"auction\",\"type\":\"tuple\"},{\"internalType\":\"Ray\",\"name\":\"interestPerSecond\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"borrower\",\"type\":\"address\"},{\"components\":[{\"internalType\":\"contract IERC721\",\"name\":\"implem\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"internalType\":\"struct NFToken\",\"name\":\"collateral\",\"type\":\"tuple\"},{\"components\":[{\"internalType\":\"uint256\",\"name\":\"paid\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"minInterestsToRepay\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"liquidated\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"borrowerClaimed\",\"type\":\"bool\"}],\"internalType\":\"struct Payment\",\"name\":\"payment\",\"type\":\"tuple\"},{\"internalType\":\"uint256\",\"name\":\"supplyPositionIndex\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"nbOfPositions\",\"type\":\"uint256\"}],\"internalType\":\"struct Loan\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"currency\",\"type\":\"address\"}],\"name\":\"getMinOfferCostAndBorrowableAmount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"minOfferCost\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"offerBorrowAmountLowerBound\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getParameters\",\"outputs\":[{\"internalType\":\"Ray\",\"name\":\"auctionPriceFactor\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"auctionDuration\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"nbOfLoans\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"nbOfTranches\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"getRateOfTranche\",\"outputs\":[{\"internalType\":\"Ray\",\"name\":\"rate\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"}],\"name\":\"isApprovedForAll\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"contract IERC20\",\"name\":\"assetToLend\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"loanToValue\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"duration\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"expirationDate\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"tranche\",\"type\":\"uint256\"},{\"components\":[{\"internalType\":\"contract IERC721\",\"name\":\"implem\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"internalType\":\"struct NFToken\",\"name\":\"collateral\",\"type\":\"tuple\"}],\"internalType\":\"struct Offer\",\"name\":\"offer\",\"type\":\"tuple\"}],\"name\":\"offerDigest\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"onERC721Received\",\"outputs\":[{\"internalType\":\"bytes4\",\"name\":\"\",\"type\":\"bytes4\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"owner_\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"ownerOf\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"position\",\"outputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"Ray\",\"name\":\"share\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"loanId\",\"type\":\"uint256\"}],\"internalType\":\"struct Provision\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"loanId\",\"type\":\"uint256\"}],\"name\":\"price\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256[]\",\"name\":\"loanIds\",\"type\":\"uint256[]\"}],\"name\":\"repay\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"safeTransferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"safeTransferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"_approved\",\"type\":\"bool\"}],\"name\":\"setApprovalForAll\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"newAuctionDuration\",\"type\":\"uint256\"}],\"name\":\"setAuctionDuration\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"Ray\",\"name\":\"newAuctionPriceFactor\",\"type\":\"uint256\"}],\"name\":\"setAuctionPriceFactor\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"currency\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"newLowerBound\",\"type\":\"uint256\"}],\"name\":\"setBorrowAmountPerOfferLowerBound\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"currency\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"newMinOfferCost\",\"type\":\"uint256\"}],\"name\":\"setMinOfferCost\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"transferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"events\":{\"Approval(address,address,uint256)\":{\"details\":\"Emitted when `owner` enables `approved` to manage the `tokenId` token.\"},\"ApprovalForAll(address,address,bool)\":{\"details\":\"Emitted when `owner` enables or disables (`approved`) `operator` to manage all of its assets.\"},\"Borrow(uint256,bytes)\":{\"params\":{\"loan\":\"the loan created\",\"loanId\":\"id of the loan\"}},\"Buy(uint256,bytes)\":{\"params\":{\"args\":\"arguments NFT sold\",\"loanId\":\"identifier of the loan previously backed by the sold collateral\"}},\"Claim(address,uint256,uint256)\":{\"params\":{\"claimant\":\"who received the liquidity\",\"claimed\":\"amount sent\",\"loanId\":\"loan identifier where the claim rights come from\"}},\"NewAuctionDuration(uint256)\":{\"params\":{\"newAuctionDuration\":\"duration of liquidation for new loans\"}},\"NewAuctionPriceFactor(uint256)\":{\"params\":{\"newAuctionPriceFactor\":\"factor of loan to value setting initial price of auctions\"}},\"NewBorrowAmountPerOfferLowerBound(address,uint256)\":{\"params\":{\"currency\":\"the erc20 on which a new borrow amount lower bound is taking effect\",\"newLowerBound\":\"the new lower bound\"}},\"NewMininimumOfferCost(address,uint256)\":{\"params\":{\"currency\":\"the erc20 on which a new minimum borrow cost is taking effect\",\"newMinOfferCost\":\"the new minimum amount that will need to be repaid per loan offer used\"}},\"NewTranche(uint256,uint256)\":{\"params\":{\"newTrancheId\":\"identifier of the new tranche\",\"tranche\":\"the interest rate of the new tranche, in multiplier per second\"}},\"Repay(uint256)\":{\"params\":{\"loanId\":\"loan identifier\"}},\"Transfer(address,address,uint256)\":{\"details\":\"Emitted when `tokenId` token is transferred from `from` to `to`.\"}},\"kind\":\"dev\",\"methods\":{\"approve(address,uint256)\":{\"details\":\"Gives permission to `to` to transfer `tokenId` token to another account. The approval is cleared when the token is transferred. Only a single account can be approved at a time, so approving the zero address clears previous approvals. Requirements: - The caller must own the token or be an approved operator. - `tokenId` must exist. Emits an {Approval} event.\"},\"balanceOf(address)\":{\"details\":\"Returns the number of tokens in ``owner``'s account.\"},\"diamondCut((address,uint8,bytes4[])[],address,bytes)\":{\"params\":{\"_calldata\":\"A function call, including function selector and arguments                  _calldata is executed with delegatecall on _init\",\"_diamondCut\":\"Contains the facet addresses and function selectors\",\"_init\":\"The address of the contract or facet to execute _calldata\"}},\"facetAddress(bytes4)\":{\"details\":\"If facet is not found return address(0).\",\"params\":{\"_functionSelector\":\"The function selector.\"},\"returns\":{\"facetAddress_\":\"The facet address.\"}},\"facetAddresses()\":{\"returns\":{\"facetAddresses_\":\"facetAddresses_\"}},\"facetFunctionSelectors(address)\":{\"params\":{\"_facet\":\"The facet address.\"},\"returns\":{\"facetFunctionSelectors_\":\"facetFunctionSelectors_\"}},\"facets()\":{\"returns\":{\"facets_\":\"Facet\"}},\"getApproved(uint256)\":{\"details\":\"Returns the account approved for `tokenId` token. Requirements: - `tokenId` must exist.\"},\"isApprovedForAll(address,address)\":{\"details\":\"Returns if the `operator` is allowed to manage all of the assets of `owner`. See {setApprovalForAll}\"},\"onERC721Received(address,address,uint256,bytes)\":{\"details\":\"Whenever an {IERC721} `tokenId` token is transferred to this contract via {IERC721-safeTransferFrom} by `operator` from `from`, this function is called. It must return its Solidity selector to confirm the token transfer. If any other value is returned or the interface is not implemented by the recipient, the transfer will be reverted. The selector can be obtained in Solidity with `IERC721Receiver.onERC721Received.selector`.\"},\"ownerOf(uint256)\":{\"details\":\"Returns the owner of the `tokenId` token. Requirements: - `tokenId` must exist.\"},\"safeTransferFrom(address,address,uint256)\":{\"details\":\"Safely transfers `tokenId` token from `from` to `to`, checking first that contract recipients are aware of the ERC721 protocol to prevent tokens from being forever locked. Requirements: - `from` cannot be the zero address. - `to` cannot be the zero address. - `tokenId` token must exist and be owned by `from`. - If the caller is not `from`, it must have been allowed to move this token by either {approve} or {setApprovalForAll}. - If `to` refers to a smart contract, it must implement {IERC721Receiver-onERC721Received}, which is called upon a safe transfer. Emits a {Transfer} event.\"},\"safeTransferFrom(address,address,uint256,bytes)\":{\"details\":\"Safely transfers `tokenId` token from `from` to `to`. Requirements: - `from` cannot be the zero address. - `to` cannot be the zero address. - `tokenId` token must exist and be owned by `from`. - If the caller is not `from`, it must be approved to move this token by either {approve} or {setApprovalForAll}. - If `to` refers to a smart contract, it must implement {IERC721Receiver-onERC721Received}, which is called upon a safe transfer. Emits a {Transfer} event.\"},\"setApprovalForAll(address,bool)\":{\"details\":\"Approve or remove `operator` as an operator for the caller. Operators can call {transferFrom} or {safeTransferFrom} for any token owned by the caller. Requirements: - The `operator` cannot be the caller. Emits an {ApprovalForAll} event.\"},\"supportsInterface(bytes4)\":{\"details\":\"Returns true if this contract implements the interface defined by `interfaceId`. See the corresponding https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[EIP section] to learn more about how these ids are created. This function call must use less than 30 000 gas.\"},\"transferFrom(address,address,uint256)\":{\"details\":\"Transfers `tokenId` token from `from` to `to`. WARNING: Note that the caller is responsible to confirm that the recipient is capable of receiving ERC721 or else they may be permanently lost. Usage of {safeTransferFrom} prevents loss, though the caller must understand this adds an external call which potentially creates a reentrancy vulnerability. Requirements: - `from` cannot be the zero address. - `to` cannot be the zero address. - `tokenId` token must be owned by `from`. - If the caller is not `from`, it must be approved to move this token by either {approve} or {setApprovalForAll}. Emits a {Transfer} event.\"}},\"version\":1},\"userdoc\":{\"events\":{\"Borrow(uint256,bytes)\":{\"notice\":\"one loan has been initiated\"},\"Buy(uint256,bytes)\":{\"notice\":\"a NFT collateral has been sold as part of a liquidation\"},\"Claim(address,uint256,uint256)\":{\"notice\":\"some liquidity has been claimed as principal plus interests or share of liquidation\"},\"NewAuctionDuration(uint256)\":{\"notice\":\"duration of future auctions has been updated\"},\"NewAuctionPriceFactor(uint256)\":{\"notice\":\"initial price factor of future auctions has been updated\"},\"NewBorrowAmountPerOfferLowerBound(address,uint256)\":{\"notice\":\"the borrow amount lower bound per offer has been updated\"},\"NewMininimumOfferCost(address,uint256)\":{\"notice\":\"the minimum cost to repay per used loan offer     when borrowing a certain currency has been updated\"},\"NewTranche(uint256,uint256)\":{\"notice\":\"a new interest rate tranche has been created\"},\"Repay(uint256)\":{\"notice\":\"a loan has been repaid with interests by its borrower\"}},\"kind\":\"user\",\"methods\":{\"diamondCut((address,uint8,bytes4[])[],address,bytes)\":{\"notice\":\"Add/replace/remove any number of functions and optionally execute         a function with delegatecall\"},\"facetAddress(bytes4)\":{\"notice\":\"Gets the facet that supports the given selector.\"},\"facetAddresses()\":{\"notice\":\"Get all the facet addresses used by a diamond.\"},\"facetFunctionSelectors(address)\":{\"notice\":\"Gets all the function selectors supported by a specific facet.\"},\"facets()\":{\"notice\":\"Gets all facet addresses and their four byte function selectors.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/interface/IKairos.sol\":\"IKairos\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":diamond/=node_modules/diamond/\",\":ds-test/=node_modules/ds-test/src/\",\":forge-std/=node_modules/forge-std/src/\",\":solmate/=node_modules/solmate/\"]},\"sources\":{\"node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34\",\"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr\"]},\"node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol\":{\"keccak256\":\"0xab28a56179c1db258c9bf5235b382698cb650debecb51b23d12be9e241374b68\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://daae589a9d6fa7e55f99f86c0a16796ca490f243fb3693632c3711c0646c1d56\",\"dweb:/ipfs/QmR3zpd7wNw3rcUdekwiv6FYHJqksuTCXLVioTxu6Fbxk3\"]},\"node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol\":{\"keccak256\":\"0xa82b58eca1ee256be466e536706850163d2ec7821945abd6b4778cfb3bee37da\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6e75cf83beb757b8855791088546b8337e9d4684e169400c20d44a515353b708\",\"dweb:/ipfs/QmYvPafLfoquiDMEj7CKHtvbgHu7TJNPSVPSCjrtjV8HjV\"]},\"node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol\":{\"keccak256\":\"0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f\",\"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy\"]},\"node_modules/diamond/contracts/interfaces/IDiamond.sol\":{\"keccak256\":\"0x37be579b243559c0c16a8de037d2c428e8fafdfdd9cde69fa165a07f5adfda2c\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0f16b9edb01e35edf96566f6460c4986fcc3fb9bff6291fab5be17d256cd0fd2\",\"dweb:/ipfs/Qmdq869cYabBjfnYZgcF5BSHsFQXT1EZNg2umHMAxZqWEH\"]},\"node_modules/diamond/contracts/interfaces/IDiamondCut.sol\":{\"keccak256\":\"0x9ecd4a637b7cb44c26a4ab7760766defce42a6dc36a355b92dfeef9ce4391fee\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://cd0e7ad69374bc41bc62c90428f9795c8a06360599c4c6b06e76bd8a1b91e28f\",\"dweb:/ipfs/QmfZk5ZiKQQaudjYf3qEumVsW87gELxcYMNRu3AHSLuk4n\"]},\"node_modules/diamond/contracts/interfaces/IDiamondLoupe.sol\":{\"keccak256\":\"0x10884024af2c0f7deca0fac4ddf84e76da5dba35b6e02fabeac8ea54c1a5c6f7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://df3404a4aed3bbda2f5e441d7035b354237d8c9d7c27b149ccf66d13a1d81d45\",\"dweb:/ipfs/QmZvHWgRCge8tLJ3x3Lf3JQkbNTgAN6LzwCGBabbgk8tew\"]},\"src/DataStructure/Objects.sol\":{\"keccak256\":\"0x251dd6c3f36c5a2c8a6a867aa29c9ba8b4bb7f2ec1a7321d630fea19f6bbd83a\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://a7f620222a6b6d909e8aa2d7191200b312345b6c704eecdf40729982e238f44e\",\"dweb:/ipfs/QmTikrgA5SKJrsJanid1atHw1M7opEvwuGKNRQTbjeM4sq\"]},\"src/DataStructure/Storage.sol\":{\"keccak256\":\"0x8f99f5f94641c826d0b4bd2dadb065745ff877b195fb1eb7392362a026d01380\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://f2c2362ee8472e6076f7f18a51264c96e63a346e61da6a7234abe5e3c034de38\",\"dweb:/ipfs/QmW59HJM49LDieB2svjKnYzo7hdYKG24rLKgb7AfiXht4z\"]},\"src/interface/IAdminFacet.sol\":{\"keccak256\":\"0xfc9606029a4ef8d26d8c86c377d77c3caf1e26335f3e155f279581e487bcc640\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://5a04932fe22d016e66e172bff16c0611abcb8804e1039f99678a5d22e130daee\",\"dweb:/ipfs/QmUKzRKB5CPD3tE81Pbn8HHesuY1j64L5Xfbi4E8xsja8h\"]},\"src/interface/IAuctionFacet.sol\":{\"keccak256\":\"0x142cf5565d929cf20c8b042f791360b7b76289620efcd42c90a37f2d8179e49f\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://3aa1107c4c11a419c7340aff9624e3f539196759ffbe4eed5fde26cbbf1b4567\",\"dweb:/ipfs/QmfS88KKuQskg2RQP6GoVEbk9uUhbmVYH6Fps7yNUpfMCc\"]},\"src/interface/IBorrowCheckers.sol\":{\"keccak256\":\"0x581d912358ce65c74e7e3f089486d5c2cc7f45be7cb02ef5ee26a293c9ba1f18\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://18d4d2dee4cf9ccbeb8a33b037dc0021b1315fd3fca864a2127834f36cb6aaba\",\"dweb:/ipfs/QmUWvZMWUqv2DJpooXCHmQuBcr4kTzBhwApQniouAKdEJn\"]},\"src/interface/IBorrowFacet.sol\":{\"keccak256\":\"0xc2351fa73840199deb8c9ecd663294517ce6e457e198d699d53d651b72f1fe43\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://2094053b1d81f799877ee2ccd44a38601d80b97f93d54a14e0dfbc8ba8f3aba7\",\"dweb:/ipfs/QmZwEsKquQgH1H5tnKCQuBEeU9mRcnNBPC2bXZGt8XVuHF\"]},\"src/interface/IBorrowHandlers.sol\":{\"keccak256\":\"0x420bed3254df51bff3c728e252b74a9603fa3f834330c1edf0f0d257444f03ce\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://200955bcca9610fd1a0e3230f761ade89a12285bf60c91a758ef4045f5b55f54\",\"dweb:/ipfs/QmV9vYWeLVvo5ykdi8x6scgK4QDwYuPkhd4KETKWPA5tMv\"]},\"src/interface/IClaimFacet.sol\":{\"keccak256\":\"0xa797f893096a5828eb1614b941df05b54afcf72ff1fde42a106976bf70d5e71c\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://19be4abca0237cf076fb66e9d4fa9119c7bd9004a9e34a39c162cc3a1bb8e0cc\",\"dweb:/ipfs/QmaLkzLvZLwbcWn8CXmL9JYwVYPHeNWsMKD9JPMRozDBSQ\"]},\"src/interface/IKairos.sol\":{\"keccak256\":\"0xa8ab00a2701f5c8a41a63897189c39f8961c140ddb323197cb9479298a180df0\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://052230a7b5471ff739ae4a25a572c16d2a56fa229cf05cbb7276f0124523cfe9\",\"dweb:/ipfs/QmNc1r3XnE88Qq2FSe6bYj3XCAPFBqb8twQdphTzgsafK4\"]},\"src/interface/IOwnershipFacet.sol\":{\"keccak256\":\"0x505b2f2d275a0aa2861d08564f6d03e44e8d10cd8a1c6fbdea1105383e0e9a4d\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://4ca7e3a48787d056da5f3569965f9c2015e65d8ceb124e9346cf73d55e55c8b2\",\"dweb:/ipfs/QmWJmUsegbVtaJ71yCJZiEpedEvhSuw73NyjBfRFCkxt2z\"]},\"src/interface/IProtocolFacet.sol\":{\"keccak256\":\"0x41ef10bad154ed0a98a1fa46046869d6d6ab744953186caa287ced95b80ddc4a\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://8a45399f560a088b94d3d5e14a104a3cbc02cec1083cf1eec5a8b135341c7d53\",\"dweb:/ipfs/QmcCDJmFCkRZoeHojqmvaMsavwZXcBeZV54i5eAfxmjcH5\"]},\"src/interface/IRepayFacet.sol\":{\"keccak256\":\"0x932b0a489b740c46361e4cd5f5103c765b954cedfd41a823dd0549f435f0b7d4\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://fddbb0a0401cd79a17b794c9caaa6f3c2e9381a1a3fd6ea04c43e2148786c572\",\"dweb:/ipfs/QmUKSTezv4twtFPVCXRSQZBfKNW5Zkd22w4HWFfJrV7VyQ\"]},\"src/interface/ISignature.sol\":{\"keccak256\":\"0x6dadc10c64bc681b36624c2937fd3e108e87ca0056d311510e53a25cd009d065\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://a813951b3d9f26315a9363a779c745c58ad261ee9fa8a997727ea7ddc6c90da1\",\"dweb:/ipfs/QmR8G8XQDm7xjKzPH29PmYw2LnHakapvkdavJXZCT3vKFT\"]},\"src/interface/ISupplyPositionFacet.sol\":{\"keccak256\":\"0x408ba970d85e2352b881db0b38ec31753974160b197998fa180f596e51912d54\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://b71ae1620633c5d498939a0e869ce3da60676069fd8fdbb0f77ff4e7f1764047\",\"dweb:/ipfs/QmPBDCZPqVFcyUD3BW2LnHocZu6Fttarv8dMonSoSrUiik\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.18+commit.87f61d96"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "approved",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "Approval",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "operator",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "bool",
+              "name": "approved",
+              "type": "bool",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "ApprovalForAll",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "loanId",
+              "type": "uint256",
+              "indexed": true
+            },
+            {
+              "internalType": "bytes",
+              "name": "loan",
+              "type": "bytes",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "Borrow",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "loanId",
+              "type": "uint256",
+              "indexed": true
+            },
+            {
+              "internalType": "bytes",
+              "name": "args",
+              "type": "bytes",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "Buy",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "claimant",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "claimed",
+              "type": "uint256",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "loanId",
+              "type": "uint256",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "Claim",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "struct IDiamond.FacetCut[]",
+              "name": "_diamondCut",
+              "type": "tuple[]",
+              "components": [
+                {
+                  "internalType": "address",
+                  "name": "facetAddress",
+                  "type": "address"
+                },
+                {
+                  "internalType": "enum IDiamond.FacetCutAction",
+                  "name": "action",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "bytes4[]",
+                  "name": "functionSelectors",
+                  "type": "bytes4[]"
+                }
+              ],
+              "indexed": false
+            },
+            {
+              "internalType": "address",
+              "name": "_init",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "bytes",
+              "name": "_calldata",
+              "type": "bytes",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "DiamondCut",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "newAuctionDuration",
+              "type": "uint256",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "NewAuctionDuration",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "Ray",
+              "name": "newAuctionPriceFactor",
+              "type": "uint256",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "NewAuctionPriceFactor",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "contract IERC20",
+              "name": "currency",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "newLowerBound",
+              "type": "uint256",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "NewBorrowAmountPerOfferLowerBound",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "contract IERC20",
+              "name": "currency",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "newMinOfferCost",
+              "type": "uint256",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "NewMininimumOfferCost",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "Ray",
+              "name": "tranche",
+              "type": "uint256",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "newTrancheId",
+              "type": "uint256",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "NewTranche",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "loanId",
+              "type": "uint256",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "Repay",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "Transfer",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "approve"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "balanceOf",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "balance",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "struct BorrowArg[]",
+              "name": "args",
+              "type": "tuple[]",
+              "components": [
+                {
+                  "internalType": "struct NFToken",
+                  "name": "nft",
+                  "type": "tuple",
+                  "components": [
+                    {
+                      "internalType": "contract IERC721",
+                      "name": "implem",
+                      "type": "address"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "id",
+                      "type": "uint256"
+                    }
+                  ]
+                },
+                {
+                  "internalType": "struct OfferArg[]",
+                  "name": "args",
+                  "type": "tuple[]",
+                  "components": [
+                    {
+                      "internalType": "bytes",
+                      "name": "signature",
+                      "type": "bytes"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "amount",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "struct Offer",
+                      "name": "offer",
+                      "type": "tuple",
+                      "components": [
+                        {
+                          "internalType": "contract IERC20",
+                          "name": "assetToLend",
+                          "type": "address"
+                        },
+                        {
+                          "internalType": "uint256",
+                          "name": "loanToValue",
+                          "type": "uint256"
+                        },
+                        {
+                          "internalType": "uint256",
+                          "name": "duration",
+                          "type": "uint256"
+                        },
+                        {
+                          "internalType": "uint256",
+                          "name": "expirationDate",
+                          "type": "uint256"
+                        },
+                        {
+                          "internalType": "uint256",
+                          "name": "tranche",
+                          "type": "uint256"
+                        },
+                        {
+                          "internalType": "struct NFToken",
+                          "name": "collateral",
+                          "type": "tuple",
+                          "components": [
+                            {
+                              "internalType": "contract IERC721",
+                              "name": "implem",
+                              "type": "address"
+                            },
+                            {
+                              "internalType": "uint256",
+                              "name": "id",
+                              "type": "uint256"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "borrow"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "struct BuyArg[]",
+              "name": "args",
+              "type": "tuple[]",
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "loanId",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "address",
+                  "name": "to",
+                  "type": "address"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "buy"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256[]",
+              "name": "positionIds",
+              "type": "uint256[]"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "claim",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "sent",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256[]",
+              "name": "loanIds",
+              "type": "uint256[]"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "claimAsBorrower",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "sent",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "Ray",
+              "name": "newTranche",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "createTranche",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "newTrancheId",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "struct IDiamond.FacetCut[]",
+              "name": "_diamondCut",
+              "type": "tuple[]",
+              "components": [
+                {
+                  "internalType": "address",
+                  "name": "facetAddress",
+                  "type": "address"
+                },
+                {
+                  "internalType": "enum IDiamond.FacetCutAction",
+                  "name": "action",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "bytes4[]",
+                  "name": "functionSelectors",
+                  "type": "bytes4[]"
+                }
+              ]
+            },
+            {
+              "internalType": "address",
+              "name": "_init",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes",
+              "name": "_calldata",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "diamondCut"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes4",
+              "name": "_functionSelector",
+              "type": "bytes4"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "facetAddress",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "facetAddress_",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "facetAddresses",
+          "outputs": [
+            {
+              "internalType": "address[]",
+              "name": "facetAddresses_",
+              "type": "address[]"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_facet",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "facetFunctionSelectors",
+          "outputs": [
+            {
+              "internalType": "bytes4[]",
+              "name": "facetFunctionSelectors_",
+              "type": "bytes4[]"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "facets",
+          "outputs": [
+            {
+              "internalType": "struct IDiamondLoupe.Facet[]",
+              "name": "facets_",
+              "type": "tuple[]",
+              "components": [
+                {
+                  "internalType": "address",
+                  "name": "facetAddress",
+                  "type": "address"
+                },
+                {
+                  "internalType": "bytes4[]",
+                  "name": "functionSelectors",
+                  "type": "bytes4[]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getApproved",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "operator",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getLoan",
+          "outputs": [
+            {
+              "internalType": "struct Loan",
+              "name": "",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "contract IERC20",
+                  "name": "assetLent",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "lent",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "Ray",
+                  "name": "shareLent",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "startDate",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "endDate",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "struct Auction",
+                  "name": "auction",
+                  "type": "tuple",
+                  "components": [
+                    {
+                      "internalType": "uint256",
+                      "name": "duration",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "Ray",
+                      "name": "priceFactor",
+                      "type": "uint256"
+                    }
+                  ]
+                },
+                {
+                  "internalType": "Ray",
+                  "name": "interestPerSecond",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "address",
+                  "name": "borrower",
+                  "type": "address"
+                },
+                {
+                  "internalType": "struct NFToken",
+                  "name": "collateral",
+                  "type": "tuple",
+                  "components": [
+                    {
+                      "internalType": "contract IERC721",
+                      "name": "implem",
+                      "type": "address"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "id",
+                      "type": "uint256"
+                    }
+                  ]
+                },
+                {
+                  "internalType": "struct Payment",
+                  "name": "payment",
+                  "type": "tuple",
+                  "components": [
+                    {
+                      "internalType": "uint256",
+                      "name": "paid",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "minInterestsToRepay",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "bool",
+                      "name": "liquidated",
+                      "type": "bool"
+                    },
+                    {
+                      "internalType": "bool",
+                      "name": "borrowerClaimed",
+                      "type": "bool"
+                    }
+                  ]
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "supplyPositionIndex",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "nbOfPositions",
+                  "type": "uint256"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "contract IERC20",
+              "name": "currency",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getMinOfferCostAndBorrowableAmount",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "minOfferCost",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "offerBorrowAmountLowerBound",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getParameters",
+          "outputs": [
+            {
+              "internalType": "Ray",
+              "name": "auctionPriceFactor",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "auctionDuration",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "nbOfLoans",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "nbOfTranches",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getRateOfTranche",
+          "outputs": [
+            {
+              "internalType": "Ray",
+              "name": "rate",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "operator",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "isApprovedForAll",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "struct Offer",
+              "name": "offer",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "contract IERC20",
+                  "name": "assetToLend",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "loanToValue",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "duration",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "expirationDate",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "tranche",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "struct NFToken",
+                  "name": "collateral",
+                  "type": "tuple",
+                  "components": [
+                    {
+                      "internalType": "contract IERC721",
+                      "name": "implem",
+                      "type": "address"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "id",
+                      "type": "uint256"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "offerDigest",
+          "outputs": [
+            {
+              "internalType": "bytes32",
+              "name": "",
+              "type": "bytes32"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "operator",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "onERC721Received",
+          "outputs": [
+            {
+              "internalType": "bytes4",
+              "name": "",
+              "type": "bytes4"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "owner",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "owner_",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "ownerOf",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "position",
+          "outputs": [
+            {
+              "internalType": "struct Provision",
+              "name": "",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "amount",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "Ray",
+                  "name": "share",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "loanId",
+                  "type": "uint256"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "loanId",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "price",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256[]",
+              "name": "loanIds",
+              "type": "uint256[]"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "repay"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "safeTransferFrom"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "safeTransferFrom"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "operator",
+              "type": "address"
+            },
+            {
+              "internalType": "bool",
+              "name": "_approved",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setApprovalForAll"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "newAuctionDuration",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setAuctionDuration"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "Ray",
+              "name": "newAuctionPriceFactor",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setAuctionPriceFactor"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "contract IERC20",
+              "name": "currency",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "newLowerBound",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setBorrowAmountPerOfferLowerBound"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "contract IERC20",
+              "name": "currency",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "newMinOfferCost",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setMinOfferCost"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes4",
+              "name": "interfaceId",
+              "type": "bytes4"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "supportsInterface",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "totalSupply",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "transferFrom"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_newOwner",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "transferOwnership"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "approve(address,uint256)": {
+            "details": "Gives permission to `to` to transfer `tokenId` token to another account. The approval is cleared when the token is transferred. Only a single account can be approved at a time, so approving the zero address clears previous approvals. Requirements: - The caller must own the token or be an approved operator. - `tokenId` must exist. Emits an {Approval} event."
+          },
+          "balanceOf(address)": {
+            "details": "Returns the number of tokens in ``owner``'s account."
+          },
+          "diamondCut((address,uint8,bytes4[])[],address,bytes)": {
+            "params": {
+              "_calldata": "A function call, including function selector and arguments                  _calldata is executed with delegatecall on _init",
+              "_diamondCut": "Contains the facet addresses and function selectors",
+              "_init": "The address of the contract or facet to execute _calldata"
+            }
+          },
+          "facetAddress(bytes4)": {
+            "details": "If facet is not found return address(0).",
+            "params": {
+              "_functionSelector": "The function selector."
+            },
+            "returns": {
+              "facetAddress_": "The facet address."
+            }
+          },
+          "facetAddresses()": {
+            "returns": {
+              "facetAddresses_": "facetAddresses_"
+            }
+          },
+          "facetFunctionSelectors(address)": {
+            "params": {
+              "_facet": "The facet address."
+            },
+            "returns": {
+              "facetFunctionSelectors_": "facetFunctionSelectors_"
+            }
+          },
+          "facets()": {
+            "returns": {
+              "facets_": "Facet"
+            }
+          },
+          "getApproved(uint256)": {
+            "details": "Returns the account approved for `tokenId` token. Requirements: - `tokenId` must exist."
+          },
+          "isApprovedForAll(address,address)": {
+            "details": "Returns if the `operator` is allowed to manage all of the assets of `owner`. See {setApprovalForAll}"
+          },
+          "onERC721Received(address,address,uint256,bytes)": {
+            "details": "Whenever an {IERC721} `tokenId` token is transferred to this contract via {IERC721-safeTransferFrom} by `operator` from `from`, this function is called. It must return its Solidity selector to confirm the token transfer. If any other value is returned or the interface is not implemented by the recipient, the transfer will be reverted. The selector can be obtained in Solidity with `IERC721Receiver.onERC721Received.selector`."
+          },
+          "ownerOf(uint256)": {
+            "details": "Returns the owner of the `tokenId` token. Requirements: - `tokenId` must exist."
+          },
+          "safeTransferFrom(address,address,uint256)": {
+            "details": "Safely transfers `tokenId` token from `from` to `to`, checking first that contract recipients are aware of the ERC721 protocol to prevent tokens from being forever locked. Requirements: - `from` cannot be the zero address. - `to` cannot be the zero address. - `tokenId` token must exist and be owned by `from`. - If the caller is not `from`, it must have been allowed to move this token by either {approve} or {setApprovalForAll}. - If `to` refers to a smart contract, it must implement {IERC721Receiver-onERC721Received}, which is called upon a safe transfer. Emits a {Transfer} event."
+          },
+          "safeTransferFrom(address,address,uint256,bytes)": {
+            "details": "Safely transfers `tokenId` token from `from` to `to`. Requirements: - `from` cannot be the zero address. - `to` cannot be the zero address. - `tokenId` token must exist and be owned by `from`. - If the caller is not `from`, it must be approved to move this token by either {approve} or {setApprovalForAll}. - If `to` refers to a smart contract, it must implement {IERC721Receiver-onERC721Received}, which is called upon a safe transfer. Emits a {Transfer} event."
+          },
+          "setApprovalForAll(address,bool)": {
+            "details": "Approve or remove `operator` as an operator for the caller. Operators can call {transferFrom} or {safeTransferFrom} for any token owned by the caller. Requirements: - The `operator` cannot be the caller. Emits an {ApprovalForAll} event."
+          },
+          "supportsInterface(bytes4)": {
+            "details": "Returns true if this contract implements the interface defined by `interfaceId`. See the corresponding https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[EIP section] to learn more about how these ids are created. This function call must use less than 30 000 gas."
+          },
+          "transferFrom(address,address,uint256)": {
+            "details": "Transfers `tokenId` token from `from` to `to`. WARNING: Note that the caller is responsible to confirm that the recipient is capable of receiving ERC721 or else they may be permanently lost. Usage of {safeTransferFrom} prevents loss, though the caller must understand this adds an external call which potentially creates a reentrancy vulnerability. Requirements: - `from` cannot be the zero address. - `to` cannot be the zero address. - `tokenId` token must be owned by `from`. - If the caller is not `from`, it must be approved to move this token by either {approve} or {setApprovalForAll}. Emits a {Transfer} event."
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "diamondCut((address,uint8,bytes4[])[],address,bytes)": {
+            "notice": "Add/replace/remove any number of functions and optionally execute         a function with delegatecall"
+          },
+          "facetAddress(bytes4)": {
+            "notice": "Gets the facet that supports the given selector."
+          },
+          "facetAddresses()": {
+            "notice": "Get all the facet addresses used by a diamond."
+          },
+          "facetFunctionSelectors(address)": {
+            "notice": "Gets all the function selectors supported by a specific facet."
+          },
+          "facets()": {
+            "notice": "Gets all facet addresses and their four byte function selectors."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":diamond/=node_modules/diamond/",
+        ":ds-test/=node_modules/ds-test/src/",
+        ":forge-std/=node_modules/forge-std/src/",
+        ":solmate/=node_modules/solmate/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/interface/IKairos.sol": "IKairos"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+        "keccak256": "0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b",
+        "urls": [
+          "bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34",
+          "dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol": {
+        "keccak256": "0xab28a56179c1db258c9bf5235b382698cb650debecb51b23d12be9e241374b68",
+        "urls": [
+          "bzz-raw://daae589a9d6fa7e55f99f86c0a16796ca490f243fb3693632c3711c0646c1d56",
+          "dweb:/ipfs/QmR3zpd7wNw3rcUdekwiv6FYHJqksuTCXLVioTxu6Fbxk3"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol": {
+        "keccak256": "0xa82b58eca1ee256be466e536706850163d2ec7821945abd6b4778cfb3bee37da",
+        "urls": [
+          "bzz-raw://6e75cf83beb757b8855791088546b8337e9d4684e169400c20d44a515353b708",
+          "dweb:/ipfs/QmYvPafLfoquiDMEj7CKHtvbgHu7TJNPSVPSCjrtjV8HjV"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+        "keccak256": "0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1",
+        "urls": [
+          "bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f",
+          "dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/diamond/contracts/interfaces/IDiamond.sol": {
+        "keccak256": "0x37be579b243559c0c16a8de037d2c428e8fafdfdd9cde69fa165a07f5adfda2c",
+        "urls": [
+          "bzz-raw://0f16b9edb01e35edf96566f6460c4986fcc3fb9bff6291fab5be17d256cd0fd2",
+          "dweb:/ipfs/Qmdq869cYabBjfnYZgcF5BSHsFQXT1EZNg2umHMAxZqWEH"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/diamond/contracts/interfaces/IDiamondCut.sol": {
+        "keccak256": "0x9ecd4a637b7cb44c26a4ab7760766defce42a6dc36a355b92dfeef9ce4391fee",
+        "urls": [
+          "bzz-raw://cd0e7ad69374bc41bc62c90428f9795c8a06360599c4c6b06e76bd8a1b91e28f",
+          "dweb:/ipfs/QmfZk5ZiKQQaudjYf3qEumVsW87gELxcYMNRu3AHSLuk4n"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/diamond/contracts/interfaces/IDiamondLoupe.sol": {
+        "keccak256": "0x10884024af2c0f7deca0fac4ddf84e76da5dba35b6e02fabeac8ea54c1a5c6f7",
+        "urls": [
+          "bzz-raw://df3404a4aed3bbda2f5e441d7035b354237d8c9d7c27b149ccf66d13a1d81d45",
+          "dweb:/ipfs/QmZvHWgRCge8tLJ3x3Lf3JQkbNTgAN6LzwCGBabbgk8tew"
+        ],
+        "license": "MIT"
+      },
+      "src/DataStructure/Objects.sol": {
+        "keccak256": "0x251dd6c3f36c5a2c8a6a867aa29c9ba8b4bb7f2ec1a7321d630fea19f6bbd83a",
+        "urls": [
+          "bzz-raw://a7f620222a6b6d909e8aa2d7191200b312345b6c704eecdf40729982e238f44e",
+          "dweb:/ipfs/QmTikrgA5SKJrsJanid1atHw1M7opEvwuGKNRQTbjeM4sq"
+        ],
+        "license": "UNLICENSED"
+      },
+      "src/DataStructure/Storage.sol": {
+        "keccak256": "0x8f99f5f94641c826d0b4bd2dadb065745ff877b195fb1eb7392362a026d01380",
+        "urls": [
+          "bzz-raw://f2c2362ee8472e6076f7f18a51264c96e63a346e61da6a7234abe5e3c034de38",
+          "dweb:/ipfs/QmW59HJM49LDieB2svjKnYzo7hdYKG24rLKgb7AfiXht4z"
+        ],
+        "license": "UNLICENSED"
+      },
+      "src/interface/IAdminFacet.sol": {
+        "keccak256": "0xfc9606029a4ef8d26d8c86c377d77c3caf1e26335f3e155f279581e487bcc640",
+        "urls": [
+          "bzz-raw://5a04932fe22d016e66e172bff16c0611abcb8804e1039f99678a5d22e130daee",
+          "dweb:/ipfs/QmUKzRKB5CPD3tE81Pbn8HHesuY1j64L5Xfbi4E8xsja8h"
+        ],
+        "license": "UNLICENSED"
+      },
+      "src/interface/IAuctionFacet.sol": {
+        "keccak256": "0x142cf5565d929cf20c8b042f791360b7b76289620efcd42c90a37f2d8179e49f",
+        "urls": [
+          "bzz-raw://3aa1107c4c11a419c7340aff9624e3f539196759ffbe4eed5fde26cbbf1b4567",
+          "dweb:/ipfs/QmfS88KKuQskg2RQP6GoVEbk9uUhbmVYH6Fps7yNUpfMCc"
+        ],
+        "license": "UNLICENSED"
+      },
+      "src/interface/IBorrowCheckers.sol": {
+        "keccak256": "0x581d912358ce65c74e7e3f089486d5c2cc7f45be7cb02ef5ee26a293c9ba1f18",
+        "urls": [
+          "bzz-raw://18d4d2dee4cf9ccbeb8a33b037dc0021b1315fd3fca864a2127834f36cb6aaba",
+          "dweb:/ipfs/QmUWvZMWUqv2DJpooXCHmQuBcr4kTzBhwApQniouAKdEJn"
+        ],
+        "license": "UNLICENSED"
+      },
+      "src/interface/IBorrowFacet.sol": {
+        "keccak256": "0xc2351fa73840199deb8c9ecd663294517ce6e457e198d699d53d651b72f1fe43",
+        "urls": [
+          "bzz-raw://2094053b1d81f799877ee2ccd44a38601d80b97f93d54a14e0dfbc8ba8f3aba7",
+          "dweb:/ipfs/QmZwEsKquQgH1H5tnKCQuBEeU9mRcnNBPC2bXZGt8XVuHF"
+        ],
+        "license": "UNLICENSED"
+      },
+      "src/interface/IBorrowHandlers.sol": {
+        "keccak256": "0x420bed3254df51bff3c728e252b74a9603fa3f834330c1edf0f0d257444f03ce",
+        "urls": [
+          "bzz-raw://200955bcca9610fd1a0e3230f761ade89a12285bf60c91a758ef4045f5b55f54",
+          "dweb:/ipfs/QmV9vYWeLVvo5ykdi8x6scgK4QDwYuPkhd4KETKWPA5tMv"
+        ],
+        "license": "UNLICENSED"
+      },
+      "src/interface/IClaimFacet.sol": {
+        "keccak256": "0xa797f893096a5828eb1614b941df05b54afcf72ff1fde42a106976bf70d5e71c",
+        "urls": [
+          "bzz-raw://19be4abca0237cf076fb66e9d4fa9119c7bd9004a9e34a39c162cc3a1bb8e0cc",
+          "dweb:/ipfs/QmaLkzLvZLwbcWn8CXmL9JYwVYPHeNWsMKD9JPMRozDBSQ"
+        ],
+        "license": "UNLICENSED"
+      },
+      "src/interface/IKairos.sol": {
+        "keccak256": "0xa8ab00a2701f5c8a41a63897189c39f8961c140ddb323197cb9479298a180df0",
+        "urls": [
+          "bzz-raw://052230a7b5471ff739ae4a25a572c16d2a56fa229cf05cbb7276f0124523cfe9",
+          "dweb:/ipfs/QmNc1r3XnE88Qq2FSe6bYj3XCAPFBqb8twQdphTzgsafK4"
+        ],
+        "license": "UNLICENSED"
+      },
+      "src/interface/IOwnershipFacet.sol": {
+        "keccak256": "0x505b2f2d275a0aa2861d08564f6d03e44e8d10cd8a1c6fbdea1105383e0e9a4d",
+        "urls": [
+          "bzz-raw://4ca7e3a48787d056da5f3569965f9c2015e65d8ceb124e9346cf73d55e55c8b2",
+          "dweb:/ipfs/QmWJmUsegbVtaJ71yCJZiEpedEvhSuw73NyjBfRFCkxt2z"
+        ],
+        "license": "UNLICENSED"
+      },
+      "src/interface/IProtocolFacet.sol": {
+        "keccak256": "0x41ef10bad154ed0a98a1fa46046869d6d6ab744953186caa287ced95b80ddc4a",
+        "urls": [
+          "bzz-raw://8a45399f560a088b94d3d5e14a104a3cbc02cec1083cf1eec5a8b135341c7d53",
+          "dweb:/ipfs/QmcCDJmFCkRZoeHojqmvaMsavwZXcBeZV54i5eAfxmjcH5"
+        ],
+        "license": "UNLICENSED"
+      },
+      "src/interface/IRepayFacet.sol": {
+        "keccak256": "0x932b0a489b740c46361e4cd5f5103c765b954cedfd41a823dd0549f435f0b7d4",
+        "urls": [
+          "bzz-raw://fddbb0a0401cd79a17b794c9caaa6f3c2e9381a1a3fd6ea04c43e2148786c572",
+          "dweb:/ipfs/QmUKSTezv4twtFPVCXRSQZBfKNW5Zkd22w4HWFfJrV7VyQ"
+        ],
+        "license": "UNLICENSED"
+      },
+      "src/interface/ISignature.sol": {
+        "keccak256": "0x6dadc10c64bc681b36624c2937fd3e108e87ca0056d311510e53a25cd009d065",
+        "urls": [
+          "bzz-raw://a813951b3d9f26315a9363a779c745c58ad261ee9fa8a997727ea7ddc6c90da1",
+          "dweb:/ipfs/QmR8G8XQDm7xjKzPH29PmYw2LnHakapvkdavJXZCT3vKFT"
+        ],
+        "license": "UNLICENSED"
+      },
+      "src/interface/ISupplyPositionFacet.sol": {
+        "keccak256": "0x408ba970d85e2352b881db0b38ec31753974160b197998fa180f596e51912d54",
+        "urls": [
+          "bzz-raw://b71ae1620633c5d498939a0e869ce3da60676069fd8fdbb0f77ff4e7f1764047",
+          "dweb:/ipfs/QmPBDCZPqVFcyUD3BW2LnHocZu6Fttarv8dMonSoSrUiik"
+        ],
+        "license": "UNLICENSED"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/interface/IKairos.sol",
+    "id": 38663,
+    "exportedSymbols": {
+      "IAdminFacet": [
+        38509
+      ],
+      "IAuctionFacet": [
+        38535
+      ],
+      "IBorrowFacet": [
+        38562
+      ],
+      "IClaimFacet": [
+        38607
+      ],
+      "IDiamondCut": [
+        4786
+      ],
+      "IDiamondLoupe": [
+        4827
+      ],
+      "IKairos": [
+        38662
+      ],
+      "IOwnershipFacet": [
+        38675
+      ],
+      "IProtocolFacet": [
+        38722
+      ],
+      "IRepayFacet": [
+        38736
+      ],
+      "ISupplyPositionFacet": [
+        38771
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "39:857:72",
+    "nodes": [
+      {
+        "id": 38621,
+        "nodeType": "PragmaDirective",
+        "src": "39:23:72",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".18"
+        ]
+      },
+      {
+        "id": 38623,
+        "nodeType": "ImportDirective",
+        "src": "64:77:72",
+        "nodes": [],
+        "absolutePath": "node_modules/diamond/contracts/interfaces/IDiamondLoupe.sol",
+        "file": "diamond/contracts/interfaces/IDiamondLoupe.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 38663,
+        "sourceUnit": 4828,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 38622,
+              "name": "IDiamondLoupe",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 4827,
+              "src": "72:13:72",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 38625,
+        "nodeType": "ImportDirective",
+        "src": "142:73:72",
+        "nodes": [],
+        "absolutePath": "node_modules/diamond/contracts/interfaces/IDiamondCut.sol",
+        "file": "diamond/contracts/interfaces/IDiamondCut.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 38663,
+        "sourceUnit": 4787,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 38624,
+              "name": "IDiamondCut",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 4786,
+              "src": "150:11:72",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 38627,
+        "nodeType": "ImportDirective",
+        "src": "217:46:72",
+        "nodes": [],
+        "absolutePath": "src/interface/IAdminFacet.sol",
+        "file": "./IAdminFacet.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 38663,
+        "sourceUnit": 38510,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 38626,
+              "name": "IAdminFacet",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 38509,
+              "src": "225:11:72",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 38629,
+        "nodeType": "ImportDirective",
+        "src": "264:50:72",
+        "nodes": [],
+        "absolutePath": "src/interface/IAuctionFacet.sol",
+        "file": "./IAuctionFacet.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 38663,
+        "sourceUnit": 38536,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 38628,
+              "name": "IAuctionFacet",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 38535,
+              "src": "272:13:72",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 38631,
+        "nodeType": "ImportDirective",
+        "src": "315:48:72",
+        "nodes": [],
+        "absolutePath": "src/interface/IBorrowFacet.sol",
+        "file": "./IBorrowFacet.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 38663,
+        "sourceUnit": 38563,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 38630,
+              "name": "IBorrowFacet",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 38562,
+              "src": "323:12:72",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 38633,
+        "nodeType": "ImportDirective",
+        "src": "364:46:72",
+        "nodes": [],
+        "absolutePath": "src/interface/IClaimFacet.sol",
+        "file": "./IClaimFacet.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 38663,
+        "sourceUnit": 38608,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 38632,
+              "name": "IClaimFacet",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 38607,
+              "src": "372:11:72",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 38635,
+        "nodeType": "ImportDirective",
+        "src": "411:54:72",
+        "nodes": [],
+        "absolutePath": "src/interface/IOwnershipFacet.sol",
+        "file": "./IOwnershipFacet.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 38663,
+        "sourceUnit": 38676,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 38634,
+              "name": "IOwnershipFacet",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 38675,
+              "src": "419:15:72",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 38637,
+        "nodeType": "ImportDirective",
+        "src": "466:52:72",
+        "nodes": [],
+        "absolutePath": "src/interface/IProtocolFacet.sol",
+        "file": "./IProtocolFacet.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 38663,
+        "sourceUnit": 38723,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 38636,
+              "name": "IProtocolFacet",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 38722,
+              "src": "474:14:72",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 38639,
+        "nodeType": "ImportDirective",
+        "src": "519:46:72",
+        "nodes": [],
+        "absolutePath": "src/interface/IRepayFacet.sol",
+        "file": "./IRepayFacet.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 38663,
+        "sourceUnit": 38737,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 38638,
+              "name": "IRepayFacet",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 38736,
+              "src": "527:11:72",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 38641,
+        "nodeType": "ImportDirective",
+        "src": "566:64:72",
+        "nodes": [],
+        "absolutePath": "src/interface/ISupplyPositionFacet.sol",
+        "file": "./ISupplyPositionFacet.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 38663,
+        "sourceUnit": 38772,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 38640,
+              "name": "ISupplyPositionFacet",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 38771,
+              "src": "574:20:72",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 38662,
+        "nodeType": "ContractDefinition",
+        "src": "680:215:72",
+        "nodes": [],
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 38642,
+              "name": "IDiamondLoupe",
+              "nameLocations": [
+                "705:13:72"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 4827,
+              "src": "705:13:72"
+            },
+            "id": 38643,
+            "nodeType": "InheritanceSpecifier",
+            "src": "705:13:72"
+          },
+          {
+            "baseName": {
+              "id": 38644,
+              "name": "IDiamondCut",
+              "nameLocations": [
+                "724:11:72"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 4786,
+              "src": "724:11:72"
+            },
+            "id": 38645,
+            "nodeType": "InheritanceSpecifier",
+            "src": "724:11:72"
+          },
+          {
+            "baseName": {
+              "id": 38646,
+              "name": "IAdminFacet",
+              "nameLocations": [
+                "741:11:72"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 38509,
+              "src": "741:11:72"
+            },
+            "id": 38647,
+            "nodeType": "InheritanceSpecifier",
+            "src": "741:11:72"
+          },
+          {
+            "baseName": {
+              "id": 38648,
+              "name": "IAuctionFacet",
+              "nameLocations": [
+                "758:13:72"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 38535,
+              "src": "758:13:72"
+            },
+            "id": 38649,
+            "nodeType": "InheritanceSpecifier",
+            "src": "758:13:72"
+          },
+          {
+            "baseName": {
+              "id": 38650,
+              "name": "IBorrowFacet",
+              "nameLocations": [
+                "777:12:72"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 38562,
+              "src": "777:12:72"
+            },
+            "id": 38651,
+            "nodeType": "InheritanceSpecifier",
+            "src": "777:12:72"
+          },
+          {
+            "baseName": {
+              "id": 38652,
+              "name": "IClaimFacet",
+              "nameLocations": [
+                "795:11:72"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 38607,
+              "src": "795:11:72"
+            },
+            "id": 38653,
+            "nodeType": "InheritanceSpecifier",
+            "src": "795:11:72"
+          },
+          {
+            "baseName": {
+              "id": 38654,
+              "name": "IOwnershipFacet",
+              "nameLocations": [
+                "812:15:72"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 38675,
+              "src": "812:15:72"
+            },
+            "id": 38655,
+            "nodeType": "InheritanceSpecifier",
+            "src": "812:15:72"
+          },
+          {
+            "baseName": {
+              "id": 38656,
+              "name": "IProtocolFacet",
+              "nameLocations": [
+                "833:14:72"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 38722,
+              "src": "833:14:72"
+            },
+            "id": 38657,
+            "nodeType": "InheritanceSpecifier",
+            "src": "833:14:72"
+          },
+          {
+            "baseName": {
+              "id": 38658,
+              "name": "IRepayFacet",
+              "nameLocations": [
+                "853:11:72"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 38736,
+              "src": "853:11:72"
+            },
+            "id": 38659,
+            "nodeType": "InheritanceSpecifier",
+            "src": "853:11:72"
+          },
+          {
+            "baseName": {
+              "id": 38660,
+              "name": "ISupplyPositionFacet",
+              "nameLocations": [
+                "870:20:72"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 38771,
+              "src": "870:20:72"
+            },
+            "id": 38661,
+            "nodeType": "InheritanceSpecifier",
+            "src": "870:20:72"
+          }
+        ],
+        "canonicalName": "IKairos",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          38662,
+          38771,
+          1732,
+          3267,
+          38736,
+          38722,
+          38675,
+          38607,
+          38588,
+          38562,
+          1750,
+          38576,
+          38542,
+          38749,
+          38535,
+          38509,
+          4786,
+          4767,
+          4827
+        ],
+        "name": "IKairos",
+        "nameLocation": "690:7:72",
+        "scope": 38663,
+        "usedErrors": []
+      }
+    ],
+    "license": "UNLICENSED"
+  },
+  "id": 72
+}

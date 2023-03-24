@@ -1,0 +1,396 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "contract IERC20",
+              "name": "assetToLend",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "loanToValue",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "duration",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "expirationDate",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tranche",
+              "type": "uint256"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "contract IERC721",
+                  "name": "implem",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "id",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct NFToken",
+              "name": "collateral",
+              "type": "tuple"
+            }
+          ],
+          "internalType": "struct Offer",
+          "name": "offer",
+          "type": "tuple"
+        }
+      ],
+      "name": "offerDigest",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "offerDigest((address,uint256,uint256,uint256,uint256,(address,uint256)))": "1fbc8a74"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.18+commit.87f61d96\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"components\":[{\"internalType\":\"contract IERC20\",\"name\":\"assetToLend\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"loanToValue\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"duration\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"expirationDate\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"tranche\",\"type\":\"uint256\"},{\"components\":[{\"internalType\":\"contract IERC721\",\"name\":\"implem\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"internalType\":\"struct NFToken\",\"name\":\"collateral\",\"type\":\"tuple\"}],\"internalType\":\"struct Offer\",\"name\":\"offer\",\"type\":\"tuple\"}],\"name\":\"offerDigest\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/interface/ISignature.sol\":\"ISignature\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":diamond/=node_modules/diamond/\",\":ds-test/=node_modules/ds-test/src/\",\":forge-std/=node_modules/forge-std/src/\",\":solmate/=node_modules/solmate/\"]},\"sources\":{\"node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34\",\"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr\"]},\"node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol\":{\"keccak256\":\"0xab28a56179c1db258c9bf5235b382698cb650debecb51b23d12be9e241374b68\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://daae589a9d6fa7e55f99f86c0a16796ca490f243fb3693632c3711c0646c1d56\",\"dweb:/ipfs/QmR3zpd7wNw3rcUdekwiv6FYHJqksuTCXLVioTxu6Fbxk3\"]},\"node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol\":{\"keccak256\":\"0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f\",\"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy\"]},\"src/DataStructure/Objects.sol\":{\"keccak256\":\"0x251dd6c3f36c5a2c8a6a867aa29c9ba8b4bb7f2ec1a7321d630fea19f6bbd83a\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://a7f620222a6b6d909e8aa2d7191200b312345b6c704eecdf40729982e238f44e\",\"dweb:/ipfs/QmTikrgA5SKJrsJanid1atHw1M7opEvwuGKNRQTbjeM4sq\"]},\"src/interface/ISignature.sol\":{\"keccak256\":\"0x6dadc10c64bc681b36624c2937fd3e108e87ca0056d311510e53a25cd009d065\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://a813951b3d9f26315a9363a779c745c58ad261ee9fa8a997727ea7ddc6c90da1\",\"dweb:/ipfs/QmR8G8XQDm7xjKzPH29PmYw2LnHakapvkdavJXZCT3vKFT\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.18+commit.87f61d96"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "struct Offer",
+              "name": "offer",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "contract IERC20",
+                  "name": "assetToLend",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "loanToValue",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "duration",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "expirationDate",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "tranche",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "struct NFToken",
+                  "name": "collateral",
+                  "type": "tuple",
+                  "components": [
+                    {
+                      "internalType": "contract IERC721",
+                      "name": "implem",
+                      "type": "address"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "id",
+                      "type": "uint256"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "offerDigest",
+          "outputs": [
+            {
+              "internalType": "bytes32",
+              "name": "",
+              "type": "bytes32"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":diamond/=node_modules/diamond/",
+        ":ds-test/=node_modules/ds-test/src/",
+        ":forge-std/=node_modules/forge-std/src/",
+        ":solmate/=node_modules/solmate/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/interface/ISignature.sol": "ISignature"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+        "keccak256": "0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b",
+        "urls": [
+          "bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34",
+          "dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol": {
+        "keccak256": "0xab28a56179c1db258c9bf5235b382698cb650debecb51b23d12be9e241374b68",
+        "urls": [
+          "bzz-raw://daae589a9d6fa7e55f99f86c0a16796ca490f243fb3693632c3711c0646c1d56",
+          "dweb:/ipfs/QmR3zpd7wNw3rcUdekwiv6FYHJqksuTCXLVioTxu6Fbxk3"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+        "keccak256": "0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1",
+        "urls": [
+          "bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f",
+          "dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy"
+        ],
+        "license": "MIT"
+      },
+      "src/DataStructure/Objects.sol": {
+        "keccak256": "0x251dd6c3f36c5a2c8a6a867aa29c9ba8b4bb7f2ec1a7321d630fea19f6bbd83a",
+        "urls": [
+          "bzz-raw://a7f620222a6b6d909e8aa2d7191200b312345b6c704eecdf40729982e238f44e",
+          "dweb:/ipfs/QmTikrgA5SKJrsJanid1atHw1M7opEvwuGKNRQTbjeM4sq"
+        ],
+        "license": "UNLICENSED"
+      },
+      "src/interface/ISignature.sol": {
+        "keccak256": "0x6dadc10c64bc681b36624c2937fd3e108e87ca0056d311510e53a25cd009d065",
+        "urls": [
+          "bzz-raw://a813951b3d9f26315a9363a779c745c58ad261ee9fa8a997727ea7ddc6c90da1",
+          "dweb:/ipfs/QmR8G8XQDm7xjKzPH29PmYw2LnHakapvkdavJXZCT3vKFT"
+        ],
+        "license": "UNLICENSED"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/interface/ISignature.sol",
+    "id": 38750,
+    "exportedSymbols": {
+      "ISignature": [
+        38749
+      ],
+      "Offer": [
+        36702
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "39:181:76",
+    "nodes": [
+      {
+        "id": 38738,
+        "nodeType": "PragmaDirective",
+        "src": "39:23:76",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".18"
+        ]
+      },
+      {
+        "id": 38740,
+        "nodeType": "ImportDirective",
+        "src": "64:51:76",
+        "nodes": [],
+        "absolutePath": "src/DataStructure/Objects.sol",
+        "file": "../DataStructure/Objects.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 38750,
+        "sourceUnit": 36709,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 38739,
+              "name": "Offer",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 36702,
+              "src": "72:5:76",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 38749,
+        "nodeType": "ContractDefinition",
+        "src": "117:102:76",
+        "nodes": [
+          {
+            "id": 38748,
+            "nodeType": "FunctionDefinition",
+            "src": "144:73:76",
+            "nodes": [],
+            "functionSelector": "1fbc8a74",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "offerDigest",
+            "nameLocation": "153:11:76",
+            "parameters": {
+              "id": 38744,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38743,
+                  "mutability": "mutable",
+                  "name": "offer",
+                  "nameLocation": "178:5:76",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38748,
+                  "src": "165:18:76",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Offer_$36702_memory_ptr",
+                    "typeString": "struct Offer"
+                  },
+                  "typeName": {
+                    "id": 38742,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 38741,
+                      "name": "Offer",
+                      "nameLocations": [
+                        "165:5:76"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 36702,
+                      "src": "165:5:76"
+                    },
+                    "referencedDeclaration": 36702,
+                    "src": "165:5:76",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Offer_$36702_storage_ptr",
+                      "typeString": "struct Offer"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "164:20:76"
+            },
+            "returnParameters": {
+              "id": 38747,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38746,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38748,
+                  "src": "208:7:76",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 38745,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "208:7:76",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "207:9:76"
+            },
+            "scope": 38749,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ISignature",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          38749
+        ],
+        "name": "ISignature",
+        "nameLocation": "127:10:76",
+        "scope": 38750,
+        "usedErrors": []
+      }
+    ],
+    "license": "UNLICENSED"
+  },
+  "id": 76
+}

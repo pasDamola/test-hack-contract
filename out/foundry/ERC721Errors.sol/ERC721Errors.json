@@ -1,0 +1,232 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "src/DataStructure/ERC721Errors.sol",
+    "id": 36466,
+    "exportedSymbols": {
+      "ERC721AddressZeroIsNotAValidOwner": [
+        36445
+      ],
+      "ERC721ApprovalToCurrentOwner": [
+        36449
+      ],
+      "ERC721ApproveToCaller": [
+        36465
+      ],
+      "ERC721CallerIsNotOwnerNorApproved": [
+        36453
+      ],
+      "ERC721CallerIsNotOwnerNorApprovedForAll": [
+        36451
+      ],
+      "ERC721InvalidTokenId": [
+        36447
+      ],
+      "ERC721MintToTheZeroAddress": [
+        36457
+      ],
+      "ERC721TokenAlreadyMinted": [
+        36459
+      ],
+      "ERC721TransferFromIncorrectOwner": [
+        36461
+      ],
+      "ERC721TransferToNonERC721ReceiverImplementer": [
+        36455
+      ],
+      "ERC721TransferToTheZeroAddress": [
+        36463
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "39:465:52",
+    "nodes": [
+      {
+        "id": 36443,
+        "nodeType": "PragmaDirective",
+        "src": "39:23:52",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".18"
+        ]
+      },
+      {
+        "id": 36445,
+        "nodeType": "ErrorDefinition",
+        "src": "64:42:52",
+        "nodes": [],
+        "errorSelector": "16a0b83a",
+        "name": "ERC721AddressZeroIsNotAValidOwner",
+        "nameLocation": "70:33:52",
+        "parameters": {
+          "id": 36444,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "103:2:52"
+        }
+      },
+      {
+        "id": 36447,
+        "nodeType": "ErrorDefinition",
+        "src": "107:29:52",
+        "nodes": [],
+        "errorSelector": "89ba7e10",
+        "name": "ERC721InvalidTokenId",
+        "nameLocation": "113:20:52",
+        "parameters": {
+          "id": 36446,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "133:2:52"
+        }
+      },
+      {
+        "id": 36449,
+        "nodeType": "ErrorDefinition",
+        "src": "137:37:52",
+        "nodes": [],
+        "errorSelector": "0591db6d",
+        "name": "ERC721ApprovalToCurrentOwner",
+        "nameLocation": "143:28:52",
+        "parameters": {
+          "id": 36448,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "171:2:52"
+        }
+      },
+      {
+        "id": 36451,
+        "nodeType": "ErrorDefinition",
+        "src": "175:48:52",
+        "nodes": [],
+        "errorSelector": "e495e687",
+        "name": "ERC721CallerIsNotOwnerNorApprovedForAll",
+        "nameLocation": "181:39:52",
+        "parameters": {
+          "id": 36450,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "220:2:52"
+        }
+      },
+      {
+        "id": 36453,
+        "nodeType": "ErrorDefinition",
+        "src": "224:42:52",
+        "nodes": [],
+        "errorSelector": "dd62e55a",
+        "name": "ERC721CallerIsNotOwnerNorApproved",
+        "nameLocation": "230:33:52",
+        "parameters": {
+          "id": 36452,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "263:2:52"
+        }
+      },
+      {
+        "id": 36455,
+        "nodeType": "ErrorDefinition",
+        "src": "267:53:52",
+        "nodes": [],
+        "errorSelector": "1ad78a40",
+        "name": "ERC721TransferToNonERC721ReceiverImplementer",
+        "nameLocation": "273:44:52",
+        "parameters": {
+          "id": 36454,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "317:2:52"
+        }
+      },
+      {
+        "id": 36457,
+        "nodeType": "ErrorDefinition",
+        "src": "321:35:52",
+        "nodes": [],
+        "errorSelector": "25bd6bd3",
+        "name": "ERC721MintToTheZeroAddress",
+        "nameLocation": "327:26:52",
+        "parameters": {
+          "id": 36456,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "353:2:52"
+        }
+      },
+      {
+        "id": 36459,
+        "nodeType": "ErrorDefinition",
+        "src": "357:33:52",
+        "nodes": [],
+        "errorSelector": "c5a8d371",
+        "name": "ERC721TokenAlreadyMinted",
+        "nameLocation": "363:24:52",
+        "parameters": {
+          "id": 36458,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "387:2:52"
+        }
+      },
+      {
+        "id": 36461,
+        "nodeType": "ErrorDefinition",
+        "src": "391:41:52",
+        "nodes": [],
+        "errorSelector": "e146af6f",
+        "name": "ERC721TransferFromIncorrectOwner",
+        "nameLocation": "397:32:52",
+        "parameters": {
+          "id": 36460,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "429:2:52"
+        }
+      },
+      {
+        "id": 36463,
+        "nodeType": "ErrorDefinition",
+        "src": "433:39:52",
+        "nodes": [],
+        "errorSelector": "e3d91bfc",
+        "name": "ERC721TransferToTheZeroAddress",
+        "nameLocation": "439:30:52",
+        "parameters": {
+          "id": 36462,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "469:2:52"
+        }
+      },
+      {
+        "id": 36465,
+        "nodeType": "ErrorDefinition",
+        "src": "473:30:52",
+        "nodes": [],
+        "errorSelector": "2dee66e4",
+        "name": "ERC721ApproveToCaller",
+        "nameLocation": "479:21:52",
+        "parameters": {
+          "id": 36464,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "500:2:52"
+        }
+      }
+    ],
+    "license": "UNLICENSED"
+  },
+  "id": 52
+}

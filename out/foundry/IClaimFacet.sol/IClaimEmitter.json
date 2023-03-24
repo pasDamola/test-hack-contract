@@ -1,0 +1,497 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "claimant",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "claimed",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "loanId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Claim",
+      "type": "event"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.18+commit.87f61d96\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"claimant\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"claimed\",\"type\":\"uint256\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"loanId\",\"type\":\"uint256\"}],\"name\":\"Claim\",\"type\":\"event\"}],\"devdoc\":{\"events\":{\"Claim(address,uint256,uint256)\":{\"params\":{\"claimant\":\"who received the liquidity\",\"claimed\":\"amount sent\",\"loanId\":\"loan identifier where the claim rights come from\"}}},\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"events\":{\"Claim(address,uint256,uint256)\":{\"notice\":\"some liquidity has been claimed as principal plus interests or share of liquidation\"}},\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/interface/IClaimFacet.sol\":\"IClaimEmitter\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":diamond/=node_modules/diamond/\",\":ds-test/=node_modules/ds-test/src/\",\":forge-std/=node_modules/forge-std/src/\",\":solmate/=node_modules/solmate/\"]},\"sources\":{\"src/interface/IClaimFacet.sol\":{\"keccak256\":\"0xa797f893096a5828eb1614b941df05b54afcf72ff1fde42a106976bf70d5e71c\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://19be4abca0237cf076fb66e9d4fa9119c7bd9004a9e34a39c162cc3a1bb8e0cc\",\"dweb:/ipfs/QmaLkzLvZLwbcWn8CXmL9JYwVYPHeNWsMKD9JPMRozDBSQ\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.18+commit.87f61d96"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "claimant",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "claimed",
+              "type": "uint256",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "loanId",
+              "type": "uint256",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "Claim",
+          "anonymous": false
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":diamond/=node_modules/diamond/",
+        ":ds-test/=node_modules/ds-test/src/",
+        ":forge-std/=node_modules/forge-std/src/",
+        ":solmate/=node_modules/solmate/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/interface/IClaimFacet.sol": "IClaimEmitter"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/interface/IClaimFacet.sol": {
+        "keccak256": "0xa797f893096a5828eb1614b941df05b54afcf72ff1fde42a106976bf70d5e71c",
+        "urls": [
+          "bzz-raw://19be4abca0237cf076fb66e9d4fa9119c7bd9004a9e34a39c162cc3a1bb8e0cc",
+          "dweb:/ipfs/QmaLkzLvZLwbcWn8CXmL9JYwVYPHeNWsMKD9JPMRozDBSQ"
+        ],
+        "license": "UNLICENSED"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/interface/IClaimFacet.sol",
+    "id": 38608,
+    "exportedSymbols": {
+      "IClaimEmitter": [
+        38588
+      ],
+      "IClaimFacet": [
+        38607
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "39:621:70",
+    "nodes": [
+      {
+        "id": 38578,
+        "nodeType": "PragmaDirective",
+        "src": "39:23:70",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".18"
+        ]
+      },
+      {
+        "id": 38588,
+        "nodeType": "ContractDefinition",
+        "src": "64:376:70",
+        "nodes": [
+          {
+            "id": 38587,
+            "nodeType": "EventDefinition",
+            "src": "351:87:70",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 38579,
+              "nodeType": "StructuredDocumentation",
+              "src": "94:252:70",
+              "text": "@notice some liquidity has been claimed as principal plus interests or share of liquidation\n @param claimant who received the liquidity\n @param claimed amount sent\n @param loanId loan identifier where the claim rights come from"
+            },
+            "eventSelector": "34fcbac0073d7c3d388e51312faf357774904998eeb8fca628b9e6f65ee1cbf7",
+            "name": "Claim",
+            "nameLocation": "357:5:70",
+            "parameters": {
+              "id": 38586,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38581,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "claimant",
+                  "nameLocation": "379:8:70",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38587,
+                  "src": "363:24:70",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 38580,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "363:7:70",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 38583,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "claimed",
+                  "nameLocation": "405:7:70",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38587,
+                  "src": "389:23:70",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 38582,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "389:7:70",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 38585,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "loanId",
+                  "nameLocation": "430:6:70",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38587,
+                  "src": "414:22:70",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 38584,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "414:7:70",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "362:75:70"
+            }
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IClaimEmitter",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          38588
+        ],
+        "name": "IClaimEmitter",
+        "nameLocation": "74:13:70",
+        "scope": 38608,
+        "usedErrors": []
+      },
+      {
+        "id": 38607,
+        "nodeType": "ContractDefinition",
+        "src": "442:217:70",
+        "nodes": [
+          {
+            "id": 38598,
+            "nodeType": "FunctionDefinition",
+            "src": "487:79:70",
+            "nodes": [],
+            "functionSelector": "6ba4c138",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "claim",
+            "nameLocation": "496:5:70",
+            "parameters": {
+              "id": 38594,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38593,
+                  "mutability": "mutable",
+                  "name": "positionIds",
+                  "nameLocation": "521:11:70",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38598,
+                  "src": "502:30:70",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_calldata_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 38591,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "502:7:70",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 38592,
+                    "nodeType": "ArrayTypeName",
+                    "src": "502:9:70",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "501:32:70"
+            },
+            "returnParameters": {
+              "id": 38597,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38596,
+                  "mutability": "mutable",
+                  "name": "sent",
+                  "nameLocation": "560:4:70",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38598,
+                  "src": "552:12:70",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 38595,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "552:7:70",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "551:14:70"
+            },
+            "scope": 38607,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 38606,
+            "nodeType": "FunctionDefinition",
+            "src": "572:85:70",
+            "nodes": [],
+            "functionSelector": "3d6fd5be",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "claimAsBorrower",
+            "nameLocation": "581:15:70",
+            "parameters": {
+              "id": 38602,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38601,
+                  "mutability": "mutable",
+                  "name": "loanIds",
+                  "nameLocation": "616:7:70",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38606,
+                  "src": "597:26:70",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_calldata_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 38599,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "597:7:70",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 38600,
+                    "nodeType": "ArrayTypeName",
+                    "src": "597:9:70",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "596:28:70"
+            },
+            "returnParameters": {
+              "id": 38605,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38604,
+                  "mutability": "mutable",
+                  "name": "sent",
+                  "nameLocation": "651:4:70",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38606,
+                  "src": "643:12:70",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 38603,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "643:7:70",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "642:14:70"
+            },
+            "scope": 38607,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 38589,
+              "name": "IClaimEmitter",
+              "nameLocations": [
+                "467:13:70"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 38588,
+              "src": "467:13:70"
+            },
+            "id": 38590,
+            "nodeType": "InheritanceSpecifier",
+            "src": "467:13:70"
+          }
+        ],
+        "canonicalName": "IClaimFacet",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          38607,
+          38588
+        ],
+        "name": "IClaimFacet",
+        "nameLocation": "452:11:70",
+        "scope": 38608,
+        "usedErrors": []
+      }
+    ],
+    "license": "UNLICENSED"
+  },
+  "id": 70
+}

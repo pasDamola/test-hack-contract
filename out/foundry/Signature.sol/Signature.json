@@ -1,0 +1,1604 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "contract IERC20",
+              "name": "assetToLend",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "loanToValue",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "duration",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "expirationDate",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tranche",
+              "type": "uint256"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "contract IERC721",
+                  "name": "implem",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "id",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct NFToken",
+              "name": "collateral",
+              "type": "tuple"
+            }
+          ],
+          "internalType": "struct Offer",
+          "name": "offer",
+          "type": "tuple"
+        }
+      ],
+      "name": "offerDigest",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "offerDigest((address,uint256,uint256,uint256,uint256,(address,uint256)))": "1fbc8a74"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.18+commit.87f61d96\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"components\":[{\"internalType\":\"contract IERC20\",\"name\":\"assetToLend\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"loanToValue\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"duration\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"expirationDate\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"tranche\",\"type\":\"uint256\"},{\"components\":[{\"internalType\":\"contract IERC721\",\"name\":\"implem\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"internalType\":\"struct NFToken\",\"name\":\"collateral\",\"type\":\"tuple\"}],\"internalType\":\"struct Offer\",\"name\":\"offer\",\"type\":\"tuple\"}],\"name\":\"offerDigest\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"offerDigest((address,uint256,uint256,uint256,uint256,(address,uint256)))\":{\"params\":{\"offer\":\"the loan offer signed/to sign by a supplier\"},\"returns\":{\"_0\":\"digest the digest, ecdsa sign as is to produce a valid loan offer signature\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"offerDigest((address,uint256,uint256,uint256,uint256,(address,uint256)))\":{\"notice\":\"computes EIP-712 compliant digest of a loan offer\"}},\"notice\":\"handles signature verification\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/Signature.sol\":\"Signature\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":diamond/=node_modules/diamond/\",\":ds-test/=node_modules/ds-test/src/\",\":forge-std/=node_modules/forge-std/src/\",\":solmate/=node_modules/solmate/\"]},\"sources\":{\"node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34\",\"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr\"]},\"node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol\":{\"keccak256\":\"0xab28a56179c1db258c9bf5235b382698cb650debecb51b23d12be9e241374b68\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://daae589a9d6fa7e55f99f86c0a16796ca490f243fb3693632c3711c0646c1d56\",\"dweb:/ipfs/QmR3zpd7wNw3rcUdekwiv6FYHJqksuTCXLVioTxu6Fbxk3\"]},\"node_modules/@openzeppelin/contracts/utils/Strings.sol\":{\"keccak256\":\"0xa4d1d62251f8574deb032a35fc948386a9b4de74b812d4f545a1ac120486b48a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8c969013129ba9e651a20735ef659fef6d8a1139ea3607bd4b26ddea2d645634\",\"dweb:/ipfs/QmVhVa6LGuzAcB8qgDtVHRkucn4ihj5UZr8xBLcJkP6ucb\"]},\"node_modules/@openzeppelin/contracts/utils/cryptography/ECDSA.sol\":{\"keccak256\":\"0xda898fa084aa1ddfdb346e6a40459e00a59d87071cce7c315a46d648dd71d0ba\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ce501a941f4aa1555c04dabb5e07992503bb6a9b32ff8f7cdcefdb4a742210cb\",\"dweb:/ipfs/QmeScPrUpdrGYs9BytV3Z5ZWJcBXtuAgCW4BLHua4xFUxx\"]},\"node_modules/@openzeppelin/contracts/utils/cryptography/EIP712.sol\":{\"keccak256\":\"0x948d8b2d18f38141ec78c5229d770d950ebc781ed3f44cc9e3ccbb9fded5846a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7311ac950ed2d81f3ccf1784a926efbfc82a86dcb5c98d41eb3792c0cac63a2f\",\"dweb:/ipfs/QmRRwCUHewkPmehx8QRYENFoWyLNx8UEZGULxWYUeSZdTS\"]},\"node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol\":{\"keccak256\":\"0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f\",\"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy\"]},\"node_modules/@openzeppelin/contracts/utils/math/Math.sol\":{\"keccak256\":\"0xa1e8e83cd0087785df04ac79fb395d9f3684caeaf973d9e2c71caef723a3a5d6\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://33bbf48cc069be677705037ba7520c22b1b622c23b33e1a71495f2d36549d40b\",\"dweb:/ipfs/Qmct36zWXv3j7LZB83uwbg7TXwnZSN1fqHNDZ93GG98bGz\"]},\"src/DataStructure/Objects.sol\":{\"keccak256\":\"0x251dd6c3f36c5a2c8a6a867aa29c9ba8b4bb7f2ec1a7321d630fea19f6bbd83a\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://a7f620222a6b6d909e8aa2d7191200b312345b6c704eecdf40729982e238f44e\",\"dweb:/ipfs/QmTikrgA5SKJrsJanid1atHw1M7opEvwuGKNRQTbjeM4sq\"]},\"src/Signature.sol\":{\"keccak256\":\"0x37073550ae20735f42ae719377540c0bedd633aad9ce97d40e0facb965e4d137\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://d57bda44ce2f1e48f227c8b97cb23cd166d3b92421a3436835c81c1bc42a60ca\",\"dweb:/ipfs/QmU5yS6t3d6nhfUeGmwZnFsbo8LZe7MHED738pZBaUkPna\"]},\"src/interface/ISignature.sol\":{\"keccak256\":\"0x6dadc10c64bc681b36624c2937fd3e108e87ca0056d311510e53a25cd009d065\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://a813951b3d9f26315a9363a779c745c58ad261ee9fa8a997727ea7ddc6c90da1\",\"dweb:/ipfs/QmR8G8XQDm7xjKzPH29PmYw2LnHakapvkdavJXZCT3vKFT\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.18+commit.87f61d96"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "struct Offer",
+              "name": "offer",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "contract IERC20",
+                  "name": "assetToLend",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "loanToValue",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "duration",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "expirationDate",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "tranche",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "struct NFToken",
+                  "name": "collateral",
+                  "type": "tuple",
+                  "components": [
+                    {
+                      "internalType": "contract IERC721",
+                      "name": "implem",
+                      "type": "address"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "id",
+                      "type": "uint256"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "offerDigest",
+          "outputs": [
+            {
+              "internalType": "bytes32",
+              "name": "",
+              "type": "bytes32"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "offerDigest((address,uint256,uint256,uint256,uint256,(address,uint256)))": {
+            "params": {
+              "offer": "the loan offer signed/to sign by a supplier"
+            },
+            "returns": {
+              "_0": "digest the digest, ecdsa sign as is to produce a valid loan offer signature"
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "offerDigest((address,uint256,uint256,uint256,uint256,(address,uint256)))": {
+            "notice": "computes EIP-712 compliant digest of a loan offer"
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":diamond/=node_modules/diamond/",
+        ":ds-test/=node_modules/ds-test/src/",
+        ":forge-std/=node_modules/forge-std/src/",
+        ":solmate/=node_modules/solmate/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/Signature.sol": "Signature"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+        "keccak256": "0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b",
+        "urls": [
+          "bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34",
+          "dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol": {
+        "keccak256": "0xab28a56179c1db258c9bf5235b382698cb650debecb51b23d12be9e241374b68",
+        "urls": [
+          "bzz-raw://daae589a9d6fa7e55f99f86c0a16796ca490f243fb3693632c3711c0646c1d56",
+          "dweb:/ipfs/QmR3zpd7wNw3rcUdekwiv6FYHJqksuTCXLVioTxu6Fbxk3"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/utils/Strings.sol": {
+        "keccak256": "0xa4d1d62251f8574deb032a35fc948386a9b4de74b812d4f545a1ac120486b48a",
+        "urls": [
+          "bzz-raw://8c969013129ba9e651a20735ef659fef6d8a1139ea3607bd4b26ddea2d645634",
+          "dweb:/ipfs/QmVhVa6LGuzAcB8qgDtVHRkucn4ihj5UZr8xBLcJkP6ucb"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/utils/cryptography/ECDSA.sol": {
+        "keccak256": "0xda898fa084aa1ddfdb346e6a40459e00a59d87071cce7c315a46d648dd71d0ba",
+        "urls": [
+          "bzz-raw://ce501a941f4aa1555c04dabb5e07992503bb6a9b32ff8f7cdcefdb4a742210cb",
+          "dweb:/ipfs/QmeScPrUpdrGYs9BytV3Z5ZWJcBXtuAgCW4BLHua4xFUxx"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/utils/cryptography/EIP712.sol": {
+        "keccak256": "0x948d8b2d18f38141ec78c5229d770d950ebc781ed3f44cc9e3ccbb9fded5846a",
+        "urls": [
+          "bzz-raw://7311ac950ed2d81f3ccf1784a926efbfc82a86dcb5c98d41eb3792c0cac63a2f",
+          "dweb:/ipfs/QmRRwCUHewkPmehx8QRYENFoWyLNx8UEZGULxWYUeSZdTS"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+        "keccak256": "0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1",
+        "urls": [
+          "bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f",
+          "dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/utils/math/Math.sol": {
+        "keccak256": "0xa1e8e83cd0087785df04ac79fb395d9f3684caeaf973d9e2c71caef723a3a5d6",
+        "urls": [
+          "bzz-raw://33bbf48cc069be677705037ba7520c22b1b622c23b33e1a71495f2d36549d40b",
+          "dweb:/ipfs/Qmct36zWXv3j7LZB83uwbg7TXwnZSN1fqHNDZ93GG98bGz"
+        ],
+        "license": "MIT"
+      },
+      "src/DataStructure/Objects.sol": {
+        "keccak256": "0x251dd6c3f36c5a2c8a6a867aa29c9ba8b4bb7f2ec1a7321d630fea19f6bbd83a",
+        "urls": [
+          "bzz-raw://a7f620222a6b6d909e8aa2d7191200b312345b6c704eecdf40729982e238f44e",
+          "dweb:/ipfs/QmTikrgA5SKJrsJanid1atHw1M7opEvwuGKNRQTbjeM4sq"
+        ],
+        "license": "UNLICENSED"
+      },
+      "src/Signature.sol": {
+        "keccak256": "0x37073550ae20735f42ae719377540c0bedd633aad9ce97d40e0facb965e4d137",
+        "urls": [
+          "bzz-raw://d57bda44ce2f1e48f227c8b97cb23cd166d3b92421a3436835c81c1bc42a60ca",
+          "dweb:/ipfs/QmU5yS6t3d6nhfUeGmwZnFsbo8LZe7MHED738pZBaUkPna"
+        ],
+        "license": "UNLICENSED"
+      },
+      "src/interface/ISignature.sol": {
+        "keccak256": "0x6dadc10c64bc681b36624c2937fd3e108e87ca0056d311510e53a25cd009d065",
+        "urls": [
+          "bzz-raw://a813951b3d9f26315a9363a779c745c58ad261ee9fa8a997727ea7ddc6c90da1",
+          "dweb:/ipfs/QmR8G8XQDm7xjKzPH29PmYw2LnHakapvkdavJXZCT3vKFT"
+        ],
+        "license": "UNLICENSED"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/Signature.sol",
+    "id": 37406,
+    "exportedSymbols": {
+      "EIP712": [
+        3231
+      ],
+      "ISignature": [
+        38749
+      ],
+      "NFToken": [
+        36708
+      ],
+      "Offer": [
+        36702
+      ],
+      "Signature": [
+        37405
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "39:2129:60",
+    "nodes": [
+      {
+        "id": 37308,
+        "nodeType": "PragmaDirective",
+        "src": "39:23:60",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".18"
+        ]
+      },
+      {
+        "id": 37310,
+        "nodeType": "ImportDirective",
+        "src": "64:77:60",
+        "nodes": [],
+        "absolutePath": "node_modules/@openzeppelin/contracts/utils/cryptography/EIP712.sol",
+        "file": "@openzeppelin/contracts/utils/cryptography/EIP712.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 37406,
+        "sourceUnit": 3232,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 37309,
+              "name": "EIP712",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 3231,
+              "src": "72:6:60",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 37312,
+        "nodeType": "ImportDirective",
+        "src": "143:54:60",
+        "nodes": [],
+        "absolutePath": "src/interface/ISignature.sol",
+        "file": "./interface/ISignature.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 37406,
+        "sourceUnit": 38750,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 37311,
+              "name": "ISignature",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 38749,
+              "src": "151:10:60",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 37314,
+        "nodeType": "ImportDirective",
+        "src": "199:52:60",
+        "nodes": [],
+        "absolutePath": "src/DataStructure/Objects.sol",
+        "file": "./DataStructure/Objects.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 37406,
+        "sourceUnit": 36709,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 37313,
+              "name": "NFToken",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 36708,
+              "src": "207:7:60",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 37316,
+        "nodeType": "ImportDirective",
+        "src": "252:50:60",
+        "nodes": [],
+        "absolutePath": "src/DataStructure/Objects.sol",
+        "file": "./DataStructure/Objects.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 37406,
+        "sourceUnit": 36709,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 37315,
+              "name": "Offer",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 36702,
+              "src": "260:5:60",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 37405,
+        "nodeType": "ContractDefinition",
+        "src": "347:1820:60",
+        "nodes": [
+          {
+            "id": 37326,
+            "nodeType": "VariableDeclaration",
+            "src": "403:271:60",
+            "nodes": [],
+            "constant": true,
+            "mutability": "constant",
+            "name": "OFFER_TYPEHASH",
+            "nameLocation": "429:14:60",
+            "scope": 37405,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 37322,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "403:7:60",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "arguments": [
+                {
+                  "hexValue": "4f666665722861646472657373206173736574546f4c656e642c75696e74323536206c6f616e546f56616c75652c75696e74323536206475726174696f6e2c75696e743235362065787069726174696f6e446174652c75696e74323536207472616e6368652c4e46546f6b656e20636f6c6c61746572616c294e46546f6b656e286164647265737320696d706c656d2c75696e7432353620696429",
+                  "id": 37324,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "string",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "477:187:60",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_stringliteral_2ac049b6467232d12ceb145e80f9890371b3f6a4ccb53cdc241cf1a1c6e9dd97",
+                    "typeString": "literal_string \"Offer(address assetToLend,uint256 loanToValue,uint256 duration,uint256 expirationDate,uint256 tranche,NFToken collateral)NFToken(address implem,uint256 id)\""
+                  },
+                  "value": "Offer(address assetToLend,uint256 loanToValue,uint256 duration,uint256 expirationDate,uint256 tranche,NFToken collateral)NFToken(address implem,uint256 id)"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_stringliteral_2ac049b6467232d12ceb145e80f9890371b3f6a4ccb53cdc241cf1a1c6e9dd97",
+                    "typeString": "literal_string \"Offer(address assetToLend,uint256 loanToValue,uint256 duration,uint256 expirationDate,uint256 tranche,NFToken collateral)NFToken(address implem,uint256 id)\""
+                  }
+                ],
+                "id": 37323,
+                "name": "keccak256",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": -8,
+                "src": "454:9:60",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                  "typeString": "function (bytes memory) pure returns (bytes32)"
+                }
+              },
+              "id": 37325,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "nameLocations": [],
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "454:220:60",
+              "tryCall": false,
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 37331,
+            "nodeType": "VariableDeclaration",
+            "src": "717:92:60",
+            "nodes": [],
+            "constant": true,
+            "mutability": "constant",
+            "name": "NFTOKEN_TYPEHASH",
+            "nameLocation": "743:16:60",
+            "scope": 37405,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 37327,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "717:7:60",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "arguments": [
+                {
+                  "hexValue": "4e46546f6b656e286164647265737320696d706c656d2c75696e7432353620696429",
+                  "id": 37329,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "string",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "772:36:60",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_stringliteral_8ee82799d3068521f828767217e880bf7d6bb6ec7d5dbcc3de1e3e4bbb39c9e9",
+                    "typeString": "literal_string \"NFToken(address implem,uint256 id)\""
+                  },
+                  "value": "NFToken(address implem,uint256 id)"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_stringliteral_8ee82799d3068521f828767217e880bf7d6bb6ec7d5dbcc3de1e3e4bbb39c9e9",
+                    "typeString": "literal_string \"NFToken(address implem,uint256 id)\""
+                  }
+                ],
+                "id": 37328,
+                "name": "keccak256",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": -8,
+                "src": "762:9:60",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                  "typeString": "function (bytes memory) pure returns (bytes32)"
+                }
+              },
+              "id": 37330,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "nameLocations": [],
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "762:47:60",
+              "tryCall": false,
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 37339,
+            "nodeType": "FunctionDefinition",
+            "src": "868:54:60",
+            "nodes": [],
+            "body": {
+              "id": 37338,
+              "nodeType": "Block",
+              "src": "920:2:60",
+              "nodes": [],
+              "statements": []
+            },
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "hexValue": "4b6169726f73204c6f616e2070726f746f636f6c",
+                    "id": 37334,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "string",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "889:22:60",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_stringliteral_7994fcad7ead383414dc4804626e3c0dc71a041716d9673289344b83853631b6",
+                      "typeString": "literal_string \"Kairos Loan protocol\""
+                    },
+                    "value": "Kairos Loan protocol"
+                  },
+                  {
+                    "hexValue": "302e31",
+                    "id": 37335,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "string",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "913:5:60",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_stringliteral_8cd160c72d102a6747abd189ac21d4a1f802e3fcc1bb8fc78cc4d558df0c7c21",
+                      "typeString": "literal_string \"0.1\""
+                    },
+                    "value": "0.1"
+                  }
+                ],
+                "id": 37336,
+                "kind": "baseConstructorSpecifier",
+                "modifierName": {
+                  "id": 37333,
+                  "name": "EIP712",
+                  "nameLocations": [
+                    "882:6:60"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 3231,
+                  "src": "882:6:60"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "882:37:60"
+              }
+            ],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "parameters": {
+              "id": 37332,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "879:2:60"
+            },
+            "returnParameters": {
+              "id": 37337,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "920:0:60"
+            },
+            "scope": 37405,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 37355,
+            "nodeType": "FunctionDefinition",
+            "src": "1151:133:60",
+            "nodes": [],
+            "body": {
+              "id": 37354,
+              "nodeType": "Block",
+              "src": "1222:62:60",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "id": 37350,
+                            "name": "offer",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 37343,
+                            "src": "1270:5:60",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_Offer_$36702_memory_ptr",
+                              "typeString": "struct Offer memory"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_struct$_Offer_$36702_memory_ptr",
+                              "typeString": "struct Offer memory"
+                            }
+                          ],
+                          "id": 37349,
+                          "name": "typeHashOffer",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 37404,
+                          "src": "1256:13:60",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_pure$_t_struct$_Offer_$36702_memory_ptr_$returns$_t_bytes32_$",
+                            "typeString": "function (struct Offer memory) pure returns (bytes32)"
+                          }
+                        },
+                        "id": 37351,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1256:20:60",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      ],
+                      "id": 37348,
+                      "name": "_hashTypedDataV4",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3230,
+                      "src": "1239:16:60",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_bytes32_$returns$_t_bytes32_$",
+                        "typeString": "function (bytes32) view returns (bytes32)"
+                      }
+                    },
+                    "id": 37352,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1239:38:60",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "functionReturnParameters": 37347,
+                  "id": 37353,
+                  "nodeType": "Return",
+                  "src": "1232:45:60"
+                }
+              ]
+            },
+            "baseFunctions": [
+              38748
+            ],
+            "documentation": {
+              "id": 37340,
+              "nodeType": "StructuredDocumentation",
+              "src": "928:218:60",
+              "text": "@notice computes EIP-712 compliant digest of a loan offer\n @param offer the loan offer signed/to sign by a supplier\n @return digest the digest, ecdsa sign as is to produce a valid loan offer signature"
+            },
+            "functionSelector": "1fbc8a74",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "offerDigest",
+            "nameLocation": "1160:11:60",
+            "parameters": {
+              "id": 37344,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 37343,
+                  "mutability": "mutable",
+                  "name": "offer",
+                  "nameLocation": "1185:5:60",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 37355,
+                  "src": "1172:18:60",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Offer_$36702_memory_ptr",
+                    "typeString": "struct Offer"
+                  },
+                  "typeName": {
+                    "id": 37342,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 37341,
+                      "name": "Offer",
+                      "nameLocations": [
+                        "1172:5:60"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 36702,
+                      "src": "1172:5:60"
+                    },
+                    "referencedDeclaration": 36702,
+                    "src": "1172:5:60",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Offer_$36702_storage_ptr",
+                      "typeString": "struct Offer"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1171:20:60"
+            },
+            "returnParameters": {
+              "id": 37347,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 37346,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 37355,
+                  "src": "1213:7:60",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 37345,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1213:7:60",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1212:9:60"
+            },
+            "scope": 37405,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 37373,
+            "nodeType": "FunctionDefinition",
+            "src": "1421:145:60",
+            "nodes": [],
+            "body": {
+              "id": 37372,
+              "nodeType": "Block",
+              "src": "1498:68:60",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "id": 37367,
+                            "name": "NFTOKEN_TYPEHASH",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 37331,
+                            "src": "1536:16:60",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            }
+                          },
+                          {
+                            "id": 37368,
+                            "name": "nft",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 37359,
+                            "src": "1554:3:60",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_NFToken_$36708_memory_ptr",
+                              "typeString": "struct NFToken memory"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            },
+                            {
+                              "typeIdentifier": "t_struct$_NFToken_$36708_memory_ptr",
+                              "typeString": "struct NFToken memory"
+                            }
+                          ],
+                          "expression": {
+                            "id": 37365,
+                            "name": "abi",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -1,
+                            "src": "1525:3:60",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_abi",
+                              "typeString": "abi"
+                            }
+                          },
+                          "id": 37366,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "memberLocation": "1529:6:60",
+                          "memberName": "encode",
+                          "nodeType": "MemberAccess",
+                          "src": "1525:10:60",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_abiencode_pure$__$returns$_t_bytes_memory_ptr_$",
+                            "typeString": "function () pure returns (bytes memory)"
+                          }
+                        },
+                        "id": 37369,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1525:33:60",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      ],
+                      "id": 37364,
+                      "name": "keccak256",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": -8,
+                      "src": "1515:9:60",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                        "typeString": "function (bytes memory) pure returns (bytes32)"
+                      }
+                    },
+                    "id": 37370,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1515:44:60",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "functionReturnParameters": 37363,
+                  "id": 37371,
+                  "nodeType": "Return",
+                  "src": "1508:51:60"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 37356,
+              "nodeType": "StructuredDocumentation",
+              "src": "1290:126:60",
+              "text": "@notice computes EIP-712 hashStruct of an nfToken\n @param nft - to get the hash from\n @return the hashStruct"
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "typeHashNFToken",
+            "nameLocation": "1430:15:60",
+            "parameters": {
+              "id": 37360,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 37359,
+                  "mutability": "mutable",
+                  "name": "nft",
+                  "nameLocation": "1461:3:60",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 37373,
+                  "src": "1446:18:60",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_NFToken_$36708_memory_ptr",
+                    "typeString": "struct NFToken"
+                  },
+                  "typeName": {
+                    "id": 37358,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 37357,
+                      "name": "NFToken",
+                      "nameLocations": [
+                        "1446:7:60"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 36708,
+                      "src": "1446:7:60"
+                    },
+                    "referencedDeclaration": 36708,
+                    "src": "1446:7:60",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_NFToken_$36708_storage_ptr",
+                      "typeString": "struct NFToken"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1445:20:60"
+            },
+            "returnParameters": {
+              "id": 37363,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 37362,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 37373,
+                  "src": "1489:7:60",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 37361,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1489:7:60",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1488:9:60"
+            },
+            "scope": 37405,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 37404,
+            "nodeType": "FunctionDefinition",
+            "src": "1703:462:60",
+            "nodes": [],
+            "body": {
+              "id": 37403,
+              "nodeType": "Block",
+              "src": "1778:387:60",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "id": 37385,
+                            "name": "OFFER_TYPEHASH",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 37326,
+                            "src": "1866:14:60",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            }
+                          },
+                          {
+                            "expression": {
+                              "id": 37386,
+                              "name": "offer",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 37377,
+                              "src": "1902:5:60",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_Offer_$36702_memory_ptr",
+                                "typeString": "struct Offer memory"
+                              }
+                            },
+                            "id": 37387,
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberLocation": "1908:11:60",
+                            "memberName": "assetToLend",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 36690,
+                            "src": "1902:17:60",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_IERC20_$664",
+                              "typeString": "contract IERC20"
+                            }
+                          },
+                          {
+                            "expression": {
+                              "id": 37388,
+                              "name": "offer",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 37377,
+                              "src": "1941:5:60",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_Offer_$36702_memory_ptr",
+                                "typeString": "struct Offer memory"
+                              }
+                            },
+                            "id": 37389,
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberLocation": "1947:11:60",
+                            "memberName": "loanToValue",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 36692,
+                            "src": "1941:17:60",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          {
+                            "expression": {
+                              "id": 37390,
+                              "name": "offer",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 37377,
+                              "src": "1980:5:60",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_Offer_$36702_memory_ptr",
+                                "typeString": "struct Offer memory"
+                              }
+                            },
+                            "id": 37391,
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberLocation": "1986:8:60",
+                            "memberName": "duration",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 36694,
+                            "src": "1980:14:60",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          {
+                            "expression": {
+                              "id": 37392,
+                              "name": "offer",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 37377,
+                              "src": "2016:5:60",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_Offer_$36702_memory_ptr",
+                                "typeString": "struct Offer memory"
+                              }
+                            },
+                            "id": 37393,
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberLocation": "2022:14:60",
+                            "memberName": "expirationDate",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 36696,
+                            "src": "2016:20:60",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          {
+                            "expression": {
+                              "id": 37394,
+                              "name": "offer",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 37377,
+                              "src": "2058:5:60",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_Offer_$36702_memory_ptr",
+                                "typeString": "struct Offer memory"
+                              }
+                            },
+                            "id": 37395,
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberLocation": "2064:7:60",
+                            "memberName": "tranche",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 36698,
+                            "src": "2058:13:60",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          {
+                            "arguments": [
+                              {
+                                "expression": {
+                                  "id": 37397,
+                                  "name": "offer",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 37377,
+                                  "src": "2109:5:60",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_struct$_Offer_$36702_memory_ptr",
+                                    "typeString": "struct Offer memory"
+                                  }
+                                },
+                                "id": 37398,
+                                "isConstant": false,
+                                "isLValue": true,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "memberLocation": "2115:10:60",
+                                "memberName": "collateral",
+                                "nodeType": "MemberAccess",
+                                "referencedDeclaration": 36701,
+                                "src": "2109:16:60",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_struct$_NFToken_$36708_memory_ptr",
+                                  "typeString": "struct NFToken memory"
+                                }
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_struct$_NFToken_$36708_memory_ptr",
+                                  "typeString": "struct NFToken memory"
+                                }
+                              ],
+                              "id": 37396,
+                              "name": "typeHashNFToken",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 37373,
+                              "src": "2093:15:60",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_function_internal_pure$_t_struct$_NFToken_$36708_memory_ptr_$returns$_t_bytes32_$",
+                                "typeString": "function (struct NFToken memory) pure returns (bytes32)"
+                              }
+                            },
+                            "id": 37399,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "functionCall",
+                            "lValueRequested": false,
+                            "nameLocations": [],
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "2093:33:60",
+                            "tryCall": false,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            },
+                            {
+                              "typeIdentifier": "t_contract$_IERC20_$664",
+                              "typeString": "contract IERC20"
+                            },
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            }
+                          ],
+                          "expression": {
+                            "id": 37383,
+                            "name": "abi",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -1,
+                            "src": "1834:3:60",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_abi",
+                              "typeString": "abi"
+                            }
+                          },
+                          "id": 37384,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "memberLocation": "1838:6:60",
+                          "memberName": "encode",
+                          "nodeType": "MemberAccess",
+                          "src": "1834:10:60",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_abiencode_pure$__$returns$_t_bytes_memory_ptr_$",
+                            "typeString": "function () pure returns (bytes memory)"
+                          }
+                        },
+                        "id": 37400,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1834:310:60",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      ],
+                      "id": 37382,
+                      "name": "keccak256",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": -8,
+                      "src": "1807:9:60",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                        "typeString": "function (bytes memory) pure returns (bytes32)"
+                      }
+                    },
+                    "id": 37401,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1807:351:60",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "functionReturnParameters": 37381,
+                  "id": 37402,
+                  "nodeType": "Return",
+                  "src": "1788:370:60"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 37374,
+              "nodeType": "StructuredDocumentation",
+              "src": "1572:126:60",
+              "text": "@notice computes EIP-712 hashStruct of an offer\n @param offer the loan offer to hash\n @return the hashStruct"
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "typeHashOffer",
+            "nameLocation": "1712:13:60",
+            "parameters": {
+              "id": 37378,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 37377,
+                  "mutability": "mutable",
+                  "name": "offer",
+                  "nameLocation": "1739:5:60",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 37404,
+                  "src": "1726:18:60",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Offer_$36702_memory_ptr",
+                    "typeString": "struct Offer"
+                  },
+                  "typeName": {
+                    "id": 37376,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 37375,
+                      "name": "Offer",
+                      "nameLocations": [
+                        "1726:5:60"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 36702,
+                      "src": "1726:5:60"
+                    },
+                    "referencedDeclaration": 36702,
+                    "src": "1726:5:60",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Offer_$36702_storage_ptr",
+                      "typeString": "struct Offer"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1725:20:60"
+            },
+            "returnParameters": {
+              "id": 37381,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 37380,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 37404,
+                  "src": "1769:7:60",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 37379,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1769:7:60",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1768:9:60"
+            },
+            "scope": 37405,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 37318,
+              "name": "ISignature",
+              "nameLocations": [
+                "378:10:60"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 38749,
+              "src": "378:10:60"
+            },
+            "id": 37319,
+            "nodeType": "InheritanceSpecifier",
+            "src": "378:10:60"
+          },
+          {
+            "baseName": {
+              "id": 37320,
+              "name": "EIP712",
+              "nameLocations": [
+                "390:6:60"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 3231,
+              "src": "390:6:60"
+            },
+            "id": 37321,
+            "nodeType": "InheritanceSpecifier",
+            "src": "390:6:60"
+          }
+        ],
+        "canonicalName": "Signature",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 37317,
+          "nodeType": "StructuredDocumentation",
+          "src": "304:43:60",
+          "text": "@notice handles signature verification"
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          37405,
+          3231,
+          38749
+        ],
+        "name": "Signature",
+        "nameLocation": "365:9:60",
+        "scope": 37406,
+        "usedErrors": []
+      }
+    ],
+    "license": "UNLICENSED"
+  },
+  "id": 60
+}

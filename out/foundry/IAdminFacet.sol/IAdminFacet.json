@@ -1,0 +1,1314 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "newAuctionDuration",
+          "type": "uint256"
+        }
+      ],
+      "name": "NewAuctionDuration",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "Ray",
+          "name": "newAuctionPriceFactor",
+          "type": "uint256"
+        }
+      ],
+      "name": "NewAuctionPriceFactor",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "contract IERC20",
+          "name": "currency",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "newLowerBound",
+          "type": "uint256"
+        }
+      ],
+      "name": "NewBorrowAmountPerOfferLowerBound",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "contract IERC20",
+          "name": "currency",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "newMinOfferCost",
+          "type": "uint256"
+        }
+      ],
+      "name": "NewMininimumOfferCost",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "Ray",
+          "name": "tranche",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "newTrancheId",
+          "type": "uint256"
+        }
+      ],
+      "name": "NewTranche",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "Ray",
+          "name": "newTranche",
+          "type": "uint256"
+        }
+      ],
+      "name": "createTranche",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "newTrancheId",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "newAuctionDuration",
+          "type": "uint256"
+        }
+      ],
+      "name": "setAuctionDuration",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "Ray",
+          "name": "newAuctionPriceFactor",
+          "type": "uint256"
+        }
+      ],
+      "name": "setAuctionPriceFactor",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract IERC20",
+          "name": "currency",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "newLowerBound",
+          "type": "uint256"
+        }
+      ],
+      "name": "setBorrowAmountPerOfferLowerBound",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract IERC20",
+          "name": "currency",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "newMinOfferCost",
+          "type": "uint256"
+        }
+      ],
+      "name": "setMinOfferCost",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "createTranche(uint256)": "92eab80e",
+    "setAuctionDuration(uint256)": "a497e674",
+    "setAuctionPriceFactor(uint256)": "e7af8fed",
+    "setBorrowAmountPerOfferLowerBound(address,uint256)": "7660e109",
+    "setMinOfferCost(address,uint256)": "1a34c700"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.18+commit.87f61d96\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"newAuctionDuration\",\"type\":\"uint256\"}],\"name\":\"NewAuctionDuration\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"Ray\",\"name\":\"newAuctionPriceFactor\",\"type\":\"uint256\"}],\"name\":\"NewAuctionPriceFactor\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"contract IERC20\",\"name\":\"currency\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"newLowerBound\",\"type\":\"uint256\"}],\"name\":\"NewBorrowAmountPerOfferLowerBound\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"contract IERC20\",\"name\":\"currency\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"newMinOfferCost\",\"type\":\"uint256\"}],\"name\":\"NewMininimumOfferCost\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"Ray\",\"name\":\"tranche\",\"type\":\"uint256\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"newTrancheId\",\"type\":\"uint256\"}],\"name\":\"NewTranche\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"Ray\",\"name\":\"newTranche\",\"type\":\"uint256\"}],\"name\":\"createTranche\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"newTrancheId\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"newAuctionDuration\",\"type\":\"uint256\"}],\"name\":\"setAuctionDuration\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"Ray\",\"name\":\"newAuctionPriceFactor\",\"type\":\"uint256\"}],\"name\":\"setAuctionPriceFactor\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"currency\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"newLowerBound\",\"type\":\"uint256\"}],\"name\":\"setBorrowAmountPerOfferLowerBound\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"currency\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"newMinOfferCost\",\"type\":\"uint256\"}],\"name\":\"setMinOfferCost\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"events\":{\"NewAuctionDuration(uint256)\":{\"params\":{\"newAuctionDuration\":\"duration of liquidation for new loans\"}},\"NewAuctionPriceFactor(uint256)\":{\"params\":{\"newAuctionPriceFactor\":\"factor of loan to value setting initial price of auctions\"}},\"NewBorrowAmountPerOfferLowerBound(address,uint256)\":{\"params\":{\"currency\":\"the erc20 on which a new borrow amount lower bound is taking effect\",\"newLowerBound\":\"the new lower bound\"}},\"NewMininimumOfferCost(address,uint256)\":{\"params\":{\"currency\":\"the erc20 on which a new minimum borrow cost is taking effect\",\"newMinOfferCost\":\"the new minimum amount that will need to be repaid per loan offer used\"}},\"NewTranche(uint256,uint256)\":{\"params\":{\"newTrancheId\":\"identifier of the new tranche\",\"tranche\":\"the interest rate of the new tranche, in multiplier per second\"}}},\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"events\":{\"NewAuctionDuration(uint256)\":{\"notice\":\"duration of future auctions has been updated\"},\"NewAuctionPriceFactor(uint256)\":{\"notice\":\"initial price factor of future auctions has been updated\"},\"NewBorrowAmountPerOfferLowerBound(address,uint256)\":{\"notice\":\"the borrow amount lower bound per offer has been updated\"},\"NewMininimumOfferCost(address,uint256)\":{\"notice\":\"the minimum cost to repay per used loan offer     when borrowing a certain currency has been updated\"},\"NewTranche(uint256,uint256)\":{\"notice\":\"a new interest rate tranche has been created\"}},\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/interface/IAdminFacet.sol\":\"IAdminFacet\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":diamond/=node_modules/diamond/\",\":ds-test/=node_modules/ds-test/src/\",\":forge-std/=node_modules/forge-std/src/\",\":solmate/=node_modules/solmate/\"]},\"sources\":{\"node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34\",\"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr\"]},\"node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol\":{\"keccak256\":\"0xab28a56179c1db258c9bf5235b382698cb650debecb51b23d12be9e241374b68\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://daae589a9d6fa7e55f99f86c0a16796ca490f243fb3693632c3711c0646c1d56\",\"dweb:/ipfs/QmR3zpd7wNw3rcUdekwiv6FYHJqksuTCXLVioTxu6Fbxk3\"]},\"node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol\":{\"keccak256\":\"0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f\",\"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy\"]},\"src/DataStructure/Objects.sol\":{\"keccak256\":\"0x251dd6c3f36c5a2c8a6a867aa29c9ba8b4bb7f2ec1a7321d630fea19f6bbd83a\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://a7f620222a6b6d909e8aa2d7191200b312345b6c704eecdf40729982e238f44e\",\"dweb:/ipfs/QmTikrgA5SKJrsJanid1atHw1M7opEvwuGKNRQTbjeM4sq\"]},\"src/interface/IAdminFacet.sol\":{\"keccak256\":\"0xfc9606029a4ef8d26d8c86c377d77c3caf1e26335f3e155f279581e487bcc640\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://5a04932fe22d016e66e172bff16c0611abcb8804e1039f99678a5d22e130daee\",\"dweb:/ipfs/QmUKzRKB5CPD3tE81Pbn8HHesuY1j64L5Xfbi4E8xsja8h\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.18+commit.87f61d96"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "newAuctionDuration",
+              "type": "uint256",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "NewAuctionDuration",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "Ray",
+              "name": "newAuctionPriceFactor",
+              "type": "uint256",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "NewAuctionPriceFactor",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "contract IERC20",
+              "name": "currency",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "newLowerBound",
+              "type": "uint256",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "NewBorrowAmountPerOfferLowerBound",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "contract IERC20",
+              "name": "currency",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "newMinOfferCost",
+              "type": "uint256",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "NewMininimumOfferCost",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "Ray",
+              "name": "tranche",
+              "type": "uint256",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "newTrancheId",
+              "type": "uint256",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "NewTranche",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "Ray",
+              "name": "newTranche",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "createTranche",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "newTrancheId",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "newAuctionDuration",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setAuctionDuration"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "Ray",
+              "name": "newAuctionPriceFactor",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setAuctionPriceFactor"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "contract IERC20",
+              "name": "currency",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "newLowerBound",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setBorrowAmountPerOfferLowerBound"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "contract IERC20",
+              "name": "currency",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "newMinOfferCost",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setMinOfferCost"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":diamond/=node_modules/diamond/",
+        ":ds-test/=node_modules/ds-test/src/",
+        ":forge-std/=node_modules/forge-std/src/",
+        ":solmate/=node_modules/solmate/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/interface/IAdminFacet.sol": "IAdminFacet"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+        "keccak256": "0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b",
+        "urls": [
+          "bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34",
+          "dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol": {
+        "keccak256": "0xab28a56179c1db258c9bf5235b382698cb650debecb51b23d12be9e241374b68",
+        "urls": [
+          "bzz-raw://daae589a9d6fa7e55f99f86c0a16796ca490f243fb3693632c3711c0646c1d56",
+          "dweb:/ipfs/QmR3zpd7wNw3rcUdekwiv6FYHJqksuTCXLVioTxu6Fbxk3"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+        "keccak256": "0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1",
+        "urls": [
+          "bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f",
+          "dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy"
+        ],
+        "license": "MIT"
+      },
+      "src/DataStructure/Objects.sol": {
+        "keccak256": "0x251dd6c3f36c5a2c8a6a867aa29c9ba8b4bb7f2ec1a7321d630fea19f6bbd83a",
+        "urls": [
+          "bzz-raw://a7f620222a6b6d909e8aa2d7191200b312345b6c704eecdf40729982e238f44e",
+          "dweb:/ipfs/QmTikrgA5SKJrsJanid1atHw1M7opEvwuGKNRQTbjeM4sq"
+        ],
+        "license": "UNLICENSED"
+      },
+      "src/interface/IAdminFacet.sol": {
+        "keccak256": "0xfc9606029a4ef8d26d8c86c377d77c3caf1e26335f3e155f279581e487bcc640",
+        "urls": [
+          "bzz-raw://5a04932fe22d016e66e172bff16c0611abcb8804e1039f99678a5d22e130daee",
+          "dweb:/ipfs/QmUKzRKB5CPD3tE81Pbn8HHesuY1j64L5Xfbi4E8xsja8h"
+        ],
+        "license": "UNLICENSED"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/interface/IAdminFacet.sol",
+    "id": 38510,
+    "exportedSymbols": {
+      "IAdminFacet": [
+        38509
+      ],
+      "IERC20": [
+        664
+      ],
+      "Ray": [
+        36644
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "39:2019:65",
+    "nodes": [
+      {
+        "id": 38434,
+        "nodeType": "PragmaDirective",
+        "src": "39:23:65",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".18"
+        ]
+      },
+      {
+        "id": 38436,
+        "nodeType": "ImportDirective",
+        "src": "64:70:65",
+        "nodes": [],
+        "absolutePath": "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "file": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 38510,
+        "sourceUnit": 665,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 38435,
+              "name": "IERC20",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 664,
+              "src": "72:6:65",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 38438,
+        "nodeType": "ImportDirective",
+        "src": "136:49:65",
+        "nodes": [],
+        "absolutePath": "src/DataStructure/Objects.sol",
+        "file": "../DataStructure/Objects.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 38510,
+        "sourceUnit": 36709,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 38437,
+              "name": "Ray",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 36644,
+              "src": "144:3:65",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 38509,
+        "nodeType": "ContractDefinition",
+        "src": "187:1870:65",
+        "nodes": [
+          {
+            "id": 38443,
+            "nodeType": "EventDefinition",
+            "src": "348:61:65",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 38439,
+              "nodeType": "StructuredDocumentation",
+              "src": "215:128:65",
+              "text": "@notice duration of future auctions has been updated\n @param newAuctionDuration duration of liquidation for new loans"
+            },
+            "eventSelector": "99c234461abfab1095b48d0d9527ff204caa62038112f57c795cecb995036762",
+            "name": "NewAuctionDuration",
+            "nameLocation": "354:18:65",
+            "parameters": {
+              "id": 38442,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38441,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "newAuctionDuration",
+                  "nameLocation": "389:18:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38443,
+                  "src": "373:34:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 38440,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "373:7:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "372:36:65"
+            }
+          },
+          {
+            "id": 38449,
+            "nodeType": "EventDefinition",
+            "src": "583:63:65",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 38444,
+              "nodeType": "StructuredDocumentation",
+              "src": "415:163:65",
+              "text": "@notice initial price factor of future auctions has been updated\n @param newAuctionPriceFactor factor of loan to value setting initial price of auctions"
+            },
+            "eventSelector": "1ce4b7127cce448c8a88c8a281145cece8c80a8e53693505547c31fabc92c445",
+            "name": "NewAuctionPriceFactor",
+            "nameLocation": "589:21:65",
+            "parameters": {
+              "id": 38448,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38447,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "newAuctionPriceFactor",
+                  "nameLocation": "623:21:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38449,
+                  "src": "611:33:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_Ray_$36644",
+                    "typeString": "Ray"
+                  },
+                  "typeName": {
+                    "id": 38446,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 38445,
+                      "name": "Ray",
+                      "nameLocations": [
+                        "611:3:65"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 36644,
+                      "src": "611:3:65"
+                    },
+                    "referencedDeclaration": 36644,
+                    "src": "611:3:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Ray_$36644",
+                      "typeString": "Ray"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "610:35:65"
+            }
+          },
+          {
+            "id": 38457,
+            "nodeType": "EventDefinition",
+            "src": "857:68:65",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 38450,
+              "nodeType": "StructuredDocumentation",
+              "src": "652:200:65",
+              "text": "@notice a new interest rate tranche has been created\n @param tranche the interest rate of the new tranche, in multiplier per second\n @param newTrancheId identifier of the new tranche"
+            },
+            "eventSelector": "6da37ad08550ba024c1448b799ac757c4f29bc9fb729b3f370a4fa2ab798fbd5",
+            "name": "NewTranche",
+            "nameLocation": "863:10:65",
+            "parameters": {
+              "id": 38456,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38453,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "tranche",
+                  "nameLocation": "886:7:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38457,
+                  "src": "874:19:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_Ray_$36644",
+                    "typeString": "Ray"
+                  },
+                  "typeName": {
+                    "id": 38452,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 38451,
+                      "name": "Ray",
+                      "nameLocations": [
+                        "874:3:65"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 36644,
+                      "src": "874:3:65"
+                    },
+                    "referencedDeclaration": 36644,
+                    "src": "874:3:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Ray_$36644",
+                      "typeString": "Ray"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 38455,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "newTrancheId",
+                  "nameLocation": "911:12:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38457,
+                  "src": "895:28:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 38454,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "895:7:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "873:51:65"
+            }
+          },
+          {
+            "id": 38465,
+            "nodeType": "EventDefinition",
+            "src": "1244:86:65",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 38458,
+              "nodeType": "StructuredDocumentation",
+              "src": "931:308:65",
+              "text": "@notice the minimum cost to repay per used loan offer\n     when borrowing a certain currency has been updated\n @param currency the erc20 on which a new minimum borrow cost is taking effect\n @param newMinOfferCost the new minimum amount that will need to be repaid per loan offer used"
+            },
+            "eventSelector": "67c648fad0621d49c4ec46cd8bd0f732a5999eb456200b96b1ad475163d8672f",
+            "name": "NewMininimumOfferCost",
+            "nameLocation": "1250:21:65",
+            "parameters": {
+              "id": 38464,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38461,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "currency",
+                  "nameLocation": "1287:8:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38465,
+                  "src": "1272:23:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$664",
+                    "typeString": "contract IERC20"
+                  },
+                  "typeName": {
+                    "id": 38460,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 38459,
+                      "name": "IERC20",
+                      "nameLocations": [
+                        "1272:6:65"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 664,
+                      "src": "1272:6:65"
+                    },
+                    "referencedDeclaration": 664,
+                    "src": "1272:6:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$664",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 38463,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "newMinOfferCost",
+                  "nameLocation": "1313:15:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38465,
+                  "src": "1297:31:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 38462,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1297:7:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1271:58:65"
+            }
+          },
+          {
+            "id": 38473,
+            "nodeType": "EventDefinition",
+            "src": "1550:96:65",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 38466,
+              "nodeType": "StructuredDocumentation",
+              "src": "1336:209:65",
+              "text": "@notice the borrow amount lower bound per offer has been updated\n @param currency the erc20 on which a new borrow amount lower bound is taking effect\n @param newLowerBound the new lower bound"
+            },
+            "eventSelector": "146e1a257ecd0267c391070e1bc23a703eee64ed866c1ceb73cc8b2508f4a371",
+            "name": "NewBorrowAmountPerOfferLowerBound",
+            "nameLocation": "1556:33:65",
+            "parameters": {
+              "id": 38472,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38469,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "currency",
+                  "nameLocation": "1605:8:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38473,
+                  "src": "1590:23:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$664",
+                    "typeString": "contract IERC20"
+                  },
+                  "typeName": {
+                    "id": 38468,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 38467,
+                      "name": "IERC20",
+                      "nameLocations": [
+                        "1590:6:65"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 664,
+                      "src": "1590:6:65"
+                    },
+                    "referencedDeclaration": 664,
+                    "src": "1590:6:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$664",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 38471,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "newLowerBound",
+                  "nameLocation": "1631:13:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38473,
+                  "src": "1615:29:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 38470,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1615:7:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1589:56:65"
+            }
+          },
+          {
+            "id": 38478,
+            "nodeType": "FunctionDefinition",
+            "src": "1652:65:65",
+            "nodes": [],
+            "functionSelector": "a497e674",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setAuctionDuration",
+            "nameLocation": "1661:18:65",
+            "parameters": {
+              "id": 38476,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38475,
+                  "mutability": "mutable",
+                  "name": "newAuctionDuration",
+                  "nameLocation": "1688:18:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38478,
+                  "src": "1680:26:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 38474,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1680:7:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1679:28:65"
+            },
+            "returnParameters": {
+              "id": 38477,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1716:0:65"
+            },
+            "scope": 38509,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 38484,
+            "nodeType": "FunctionDefinition",
+            "src": "1723:67:65",
+            "nodes": [],
+            "functionSelector": "e7af8fed",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setAuctionPriceFactor",
+            "nameLocation": "1732:21:65",
+            "parameters": {
+              "id": 38482,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38481,
+                  "mutability": "mutable",
+                  "name": "newAuctionPriceFactor",
+                  "nameLocation": "1758:21:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38484,
+                  "src": "1754:25:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_Ray_$36644",
+                    "typeString": "Ray"
+                  },
+                  "typeName": {
+                    "id": 38480,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 38479,
+                      "name": "Ray",
+                      "nameLocations": [
+                        "1754:3:65"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 36644,
+                      "src": "1754:3:65"
+                    },
+                    "referencedDeclaration": 36644,
+                    "src": "1754:3:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Ray_$36644",
+                      "typeString": "Ray"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1753:27:65"
+            },
+            "returnParameters": {
+              "id": 38483,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1789:0:65"
+            },
+            "scope": 38509,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 38492,
+            "nodeType": "FunctionDefinition",
+            "src": "1796:79:65",
+            "nodes": [],
+            "functionSelector": "92eab80e",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createTranche",
+            "nameLocation": "1805:13:65",
+            "parameters": {
+              "id": 38488,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38487,
+                  "mutability": "mutable",
+                  "name": "newTranche",
+                  "nameLocation": "1823:10:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38492,
+                  "src": "1819:14:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_Ray_$36644",
+                    "typeString": "Ray"
+                  },
+                  "typeName": {
+                    "id": 38486,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 38485,
+                      "name": "Ray",
+                      "nameLocations": [
+                        "1819:3:65"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 36644,
+                      "src": "1819:3:65"
+                    },
+                    "referencedDeclaration": 36644,
+                    "src": "1819:3:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Ray_$36644",
+                      "typeString": "Ray"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1818:16:65"
+            },
+            "returnParameters": {
+              "id": 38491,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38490,
+                  "mutability": "mutable",
+                  "name": "newTrancheId",
+                  "nameLocation": "1861:12:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38492,
+                  "src": "1853:20:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 38489,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1853:7:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1852:22:65"
+            },
+            "scope": 38509,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 38500,
+            "nodeType": "FunctionDefinition",
+            "src": "1881:76:65",
+            "nodes": [],
+            "functionSelector": "1a34c700",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setMinOfferCost",
+            "nameLocation": "1890:15:65",
+            "parameters": {
+              "id": 38498,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38495,
+                  "mutability": "mutable",
+                  "name": "currency",
+                  "nameLocation": "1913:8:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38500,
+                  "src": "1906:15:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$664",
+                    "typeString": "contract IERC20"
+                  },
+                  "typeName": {
+                    "id": 38494,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 38493,
+                      "name": "IERC20",
+                      "nameLocations": [
+                        "1906:6:65"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 664,
+                      "src": "1906:6:65"
+                    },
+                    "referencedDeclaration": 664,
+                    "src": "1906:6:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$664",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 38497,
+                  "mutability": "mutable",
+                  "name": "newMinOfferCost",
+                  "nameLocation": "1931:15:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38500,
+                  "src": "1923:23:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 38496,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1923:7:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1905:42:65"
+            },
+            "returnParameters": {
+              "id": 38499,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1956:0:65"
+            },
+            "scope": 38509,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 38508,
+            "nodeType": "FunctionDefinition",
+            "src": "1963:92:65",
+            "nodes": [],
+            "functionSelector": "7660e109",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setBorrowAmountPerOfferLowerBound",
+            "nameLocation": "1972:33:65",
+            "parameters": {
+              "id": 38506,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38503,
+                  "mutability": "mutable",
+                  "name": "currency",
+                  "nameLocation": "2013:8:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38508,
+                  "src": "2006:15:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$664",
+                    "typeString": "contract IERC20"
+                  },
+                  "typeName": {
+                    "id": 38502,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 38501,
+                      "name": "IERC20",
+                      "nameLocations": [
+                        "2006:6:65"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 664,
+                      "src": "2006:6:65"
+                    },
+                    "referencedDeclaration": 664,
+                    "src": "2006:6:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$664",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 38505,
+                  "mutability": "mutable",
+                  "name": "newLowerBound",
+                  "nameLocation": "2031:13:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38508,
+                  "src": "2023:21:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 38504,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2023:7:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2005:40:65"
+            },
+            "returnParameters": {
+              "id": 38507,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2054:0:65"
+            },
+            "scope": 38509,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IAdminFacet",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          38509
+        ],
+        "name": "IAdminFacet",
+        "nameLocation": "197:11:65",
+        "scope": 38510,
+        "usedErrors": []
+      }
+    ],
+    "license": "UNLICENSED"
+  },
+  "id": 65
+}

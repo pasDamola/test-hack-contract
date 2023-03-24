@@ -1,0 +1,959 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "src/DataStructure/Objects.sol",
+    "id": 36709,
+    "exportedSymbols": {
+      "BorrowArg": [
+        36657
+      ],
+      "BuyArg": [
+        36649
+      ],
+      "CollateralState": [
+        36687
+      ],
+      "IERC20": [
+        664
+      ],
+      "IERC721": [
+        1732
+      ],
+      "NFToken": [
+        36708
+      ],
+      "Offer": [
+        36702
+      ],
+      "OfferArg": [
+        36665
+      ],
+      "Ray": [
+        36644
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "39:2781:55",
+    "nodes": [
+      {
+        "id": 36638,
+        "nodeType": "PragmaDirective",
+        "src": "39:23:55",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".18"
+        ]
+      },
+      {
+        "id": 36640,
+        "nodeType": "ImportDirective",
+        "src": "64:70:55",
+        "nodes": [],
+        "absolutePath": "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "file": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 36709,
+        "sourceUnit": 665,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 36639,
+              "name": "IERC20",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 664,
+              "src": "72:6:55",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 36642,
+        "nodeType": "ImportDirective",
+        "src": "135:73:55",
+        "nodes": [],
+        "absolutePath": "node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol",
+        "file": "@openzeppelin/contracts/token/ERC721/IERC721.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 36709,
+        "sourceUnit": 1733,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 36641,
+              "name": "IERC721",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 1732,
+              "src": "143:7:55",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 36644,
+        "nodeType": "UserDefinedValueTypeDefinition",
+        "src": "321:20:55",
+        "nodes": [],
+        "canonicalName": "Ray",
+        "name": "Ray",
+        "nameLocation": "326:3:55",
+        "underlyingType": {
+          "id": 36643,
+          "name": "uint256",
+          "nodeType": "ElementaryTypeName",
+          "src": "333:7:55",
+          "typeDescriptions": {
+            "typeIdentifier": "t_uint256",
+            "typeString": "uint256"
+          }
+        }
+      },
+      {
+        "id": 36649,
+        "nodeType": "StructDefinition",
+        "src": "488:53:55",
+        "nodes": [],
+        "canonicalName": "BuyArg",
+        "members": [
+          {
+            "constant": false,
+            "id": 36646,
+            "mutability": "mutable",
+            "name": "loanId",
+            "nameLocation": "516:6:55",
+            "nodeType": "VariableDeclaration",
+            "scope": 36649,
+            "src": "508:14:55",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 36645,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "508:7:55",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 36648,
+            "mutability": "mutable",
+            "name": "to",
+            "nameLocation": "536:2:55",
+            "nodeType": "VariableDeclaration",
+            "scope": 36649,
+            "src": "528:10:55",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 36647,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "528:7:55",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "name": "BuyArg",
+        "nameLocation": "495:6:55",
+        "scope": 36709,
+        "visibility": "public"
+      },
+      {
+        "id": 36657,
+        "nodeType": "StructDefinition",
+        "src": "730:58:55",
+        "nodes": [],
+        "canonicalName": "BorrowArg",
+        "members": [
+          {
+            "constant": false,
+            "id": 36652,
+            "mutability": "mutable",
+            "name": "nft",
+            "nameLocation": "761:3:55",
+            "nodeType": "VariableDeclaration",
+            "scope": 36657,
+            "src": "753:11:55",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_NFToken_$36708_storage_ptr",
+              "typeString": "struct NFToken"
+            },
+            "typeName": {
+              "id": 36651,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 36650,
+                "name": "NFToken",
+                "nameLocations": [
+                  "753:7:55"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 36708,
+                "src": "753:7:55"
+              },
+              "referencedDeclaration": 36708,
+              "src": "753:7:55",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_NFToken_$36708_storage_ptr",
+                "typeString": "struct NFToken"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 36656,
+            "mutability": "mutable",
+            "name": "args",
+            "nameLocation": "781:4:55",
+            "nodeType": "VariableDeclaration",
+            "scope": 36657,
+            "src": "770:15:55",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_OfferArg_$36665_storage_$dyn_storage_ptr",
+              "typeString": "struct OfferArg[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 36654,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 36653,
+                  "name": "OfferArg",
+                  "nameLocations": [
+                    "770:8:55"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 36665,
+                  "src": "770:8:55"
+                },
+                "referencedDeclaration": 36665,
+                "src": "770:8:55",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_OfferArg_$36665_storage_ptr",
+                  "typeString": "struct OfferArg"
+                }
+              },
+              "id": 36655,
+              "nodeType": "ArrayTypeName",
+              "src": "770:10:55",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_OfferArg_$36665_storage_$dyn_storage_ptr",
+                "typeString": "struct OfferArg[]"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "name": "BorrowArg",
+        "nameLocation": "737:9:55",
+        "scope": 36709,
+        "visibility": "public"
+      },
+      {
+        "id": 36665,
+        "nodeType": "StructDefinition",
+        "src": "1004:77:55",
+        "nodes": [],
+        "canonicalName": "OfferArg",
+        "members": [
+          {
+            "constant": false,
+            "id": 36659,
+            "mutability": "mutable",
+            "name": "signature",
+            "nameLocation": "1032:9:55",
+            "nodeType": "VariableDeclaration",
+            "scope": 36665,
+            "src": "1026:15:55",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes_storage_ptr",
+              "typeString": "bytes"
+            },
+            "typeName": {
+              "id": 36658,
+              "name": "bytes",
+              "nodeType": "ElementaryTypeName",
+              "src": "1026:5:55",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes_storage_ptr",
+                "typeString": "bytes"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 36661,
+            "mutability": "mutable",
+            "name": "amount",
+            "nameLocation": "1055:6:55",
+            "nodeType": "VariableDeclaration",
+            "scope": 36665,
+            "src": "1047:14:55",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 36660,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "1047:7:55",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 36664,
+            "mutability": "mutable",
+            "name": "offer",
+            "nameLocation": "1073:5:55",
+            "nodeType": "VariableDeclaration",
+            "scope": 36665,
+            "src": "1067:11:55",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_Offer_$36702_storage_ptr",
+              "typeString": "struct Offer"
+            },
+            "typeName": {
+              "id": 36663,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 36662,
+                "name": "Offer",
+                "nameLocations": [
+                  "1067:5:55"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 36702,
+                "src": "1067:5:55"
+              },
+              "referencedDeclaration": 36702,
+              "src": "1067:5:55",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Offer_$36702_storage_ptr",
+                "typeString": "struct Offer"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "name": "OfferArg",
+        "nameLocation": "1011:8:55",
+        "scope": 36709,
+        "visibility": "public"
+      },
+      {
+        "id": 36687,
+        "nodeType": "StructDefinition",
+        "src": "1687:237:55",
+        "nodes": [],
+        "canonicalName": "CollateralState",
+        "members": [
+          {
+            "constant": false,
+            "id": 36668,
+            "mutability": "mutable",
+            "name": "matched",
+            "nameLocation": "1720:7:55",
+            "nodeType": "VariableDeclaration",
+            "scope": 36687,
+            "src": "1716:11:55",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_userDefinedValueType$_Ray_$36644",
+              "typeString": "Ray"
+            },
+            "typeName": {
+              "id": 36667,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 36666,
+                "name": "Ray",
+                "nameLocations": [
+                  "1716:3:55"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 36644,
+                "src": "1716:3:55"
+              },
+              "referencedDeclaration": 36644,
+              "src": "1716:3:55",
+              "typeDescriptions": {
+                "typeIdentifier": "t_userDefinedValueType$_Ray_$36644",
+                "typeString": "Ray"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 36671,
+            "mutability": "mutable",
+            "name": "assetLent",
+            "nameLocation": "1740:9:55",
+            "nodeType": "VariableDeclaration",
+            "scope": 36687,
+            "src": "1733:16:55",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IERC20_$664",
+              "typeString": "contract IERC20"
+            },
+            "typeName": {
+              "id": 36670,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 36669,
+                "name": "IERC20",
+                "nameLocations": [
+                  "1733:6:55"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 664,
+                "src": "1733:6:55"
+              },
+              "referencedDeclaration": 664,
+              "src": "1733:6:55",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IERC20_$664",
+                "typeString": "contract IERC20"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 36673,
+            "mutability": "mutable",
+            "name": "tranche",
+            "nameLocation": "1763:7:55",
+            "nodeType": "VariableDeclaration",
+            "scope": 36687,
+            "src": "1755:15:55",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 36672,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "1755:7:55",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 36675,
+            "mutability": "mutable",
+            "name": "minOfferDuration",
+            "nameLocation": "1784:16:55",
+            "nodeType": "VariableDeclaration",
+            "scope": 36687,
+            "src": "1776:24:55",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 36674,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "1776:7:55",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 36677,
+            "mutability": "mutable",
+            "name": "minOfferLoanToValue",
+            "nameLocation": "1814:19:55",
+            "nodeType": "VariableDeclaration",
+            "scope": 36687,
+            "src": "1806:27:55",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 36676,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "1806:7:55",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 36679,
+            "mutability": "mutable",
+            "name": "maxOfferLoanToValue",
+            "nameLocation": "1847:19:55",
+            "nodeType": "VariableDeclaration",
+            "scope": 36687,
+            "src": "1839:27:55",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 36678,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "1839:7:55",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 36681,
+            "mutability": "mutable",
+            "name": "from",
+            "nameLocation": "1880:4:55",
+            "nodeType": "VariableDeclaration",
+            "scope": 36687,
+            "src": "1872:12:55",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 36680,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "1872:7:55",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 36684,
+            "mutability": "mutable",
+            "name": "nft",
+            "nameLocation": "1898:3:55",
+            "nodeType": "VariableDeclaration",
+            "scope": 36687,
+            "src": "1890:11:55",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_NFToken_$36708_storage_ptr",
+              "typeString": "struct NFToken"
+            },
+            "typeName": {
+              "id": 36683,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 36682,
+                "name": "NFToken",
+                "nameLocations": [
+                  "1890:7:55"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 36708,
+                "src": "1890:7:55"
+              },
+              "referencedDeclaration": 36708,
+              "src": "1890:7:55",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_NFToken_$36708_storage_ptr",
+                "typeString": "struct NFToken"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 36686,
+            "mutability": "mutable",
+            "name": "loanId",
+            "nameLocation": "1915:6:55",
+            "nodeType": "VariableDeclaration",
+            "scope": 36687,
+            "src": "1907:14:55",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 36685,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "1907:7:55",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "name": "CollateralState",
+        "nameLocation": "1694:15:55",
+        "scope": 36709,
+        "visibility": "public"
+      },
+      {
+        "id": 36702,
+        "nodeType": "StructDefinition",
+        "src": "2339:160:55",
+        "nodes": [],
+        "canonicalName": "Offer",
+        "members": [
+          {
+            "constant": false,
+            "id": 36690,
+            "mutability": "mutable",
+            "name": "assetToLend",
+            "nameLocation": "2365:11:55",
+            "nodeType": "VariableDeclaration",
+            "scope": 36702,
+            "src": "2358:18:55",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IERC20_$664",
+              "typeString": "contract IERC20"
+            },
+            "typeName": {
+              "id": 36689,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 36688,
+                "name": "IERC20",
+                "nameLocations": [
+                  "2358:6:55"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 664,
+                "src": "2358:6:55"
+              },
+              "referencedDeclaration": 664,
+              "src": "2358:6:55",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IERC20_$664",
+                "typeString": "contract IERC20"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 36692,
+            "mutability": "mutable",
+            "name": "loanToValue",
+            "nameLocation": "2390:11:55",
+            "nodeType": "VariableDeclaration",
+            "scope": 36702,
+            "src": "2382:19:55",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 36691,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "2382:7:55",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 36694,
+            "mutability": "mutable",
+            "name": "duration",
+            "nameLocation": "2415:8:55",
+            "nodeType": "VariableDeclaration",
+            "scope": 36702,
+            "src": "2407:16:55",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 36693,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "2407:7:55",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 36696,
+            "mutability": "mutable",
+            "name": "expirationDate",
+            "nameLocation": "2437:14:55",
+            "nodeType": "VariableDeclaration",
+            "scope": 36702,
+            "src": "2429:22:55",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 36695,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "2429:7:55",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 36698,
+            "mutability": "mutable",
+            "name": "tranche",
+            "nameLocation": "2465:7:55",
+            "nodeType": "VariableDeclaration",
+            "scope": 36702,
+            "src": "2457:15:55",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 36697,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "2457:7:55",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 36701,
+            "mutability": "mutable",
+            "name": "collateral",
+            "nameLocation": "2486:10:55",
+            "nodeType": "VariableDeclaration",
+            "scope": 36702,
+            "src": "2478:18:55",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_NFToken_$36708_storage_ptr",
+              "typeString": "struct NFToken"
+            },
+            "typeName": {
+              "id": 36700,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 36699,
+                "name": "NFToken",
+                "nameLocations": [
+                  "2478:7:55"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 36708,
+                "src": "2478:7:55"
+              },
+              "referencedDeclaration": 36708,
+              "src": "2478:7:55",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_NFToken_$36708_storage_ptr",
+                "typeString": "struct NFToken"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "name": "Offer",
+        "nameLocation": "2346:5:55",
+        "scope": 36709,
+        "visibility": "public"
+      },
+      {
+        "id": 36708,
+        "nodeType": "StructDefinition",
+        "src": "2765:54:55",
+        "nodes": [],
+        "canonicalName": "NFToken",
+        "members": [
+          {
+            "constant": false,
+            "id": 36705,
+            "mutability": "mutable",
+            "name": "implem",
+            "nameLocation": "2794:6:55",
+            "nodeType": "VariableDeclaration",
+            "scope": 36708,
+            "src": "2786:14:55",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IERC721_$1732",
+              "typeString": "contract IERC721"
+            },
+            "typeName": {
+              "id": 36704,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 36703,
+                "name": "IERC721",
+                "nameLocations": [
+                  "2786:7:55"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 1732,
+                "src": "2786:7:55"
+              },
+              "referencedDeclaration": 1732,
+              "src": "2786:7:55",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IERC721_$1732",
+                "typeString": "contract IERC721"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 36707,
+            "mutability": "mutable",
+            "name": "id",
+            "nameLocation": "2814:2:55",
+            "nodeType": "VariableDeclaration",
+            "scope": 36708,
+            "src": "2806:10:55",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 36706,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "2806:7:55",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "name": "NFToken",
+        "nameLocation": "2772:7:55",
+        "scope": 36709,
+        "visibility": "public"
+      }
+    ],
+    "license": "UNLICENSED"
+  },
+  "id": 55
+}
